@@ -65,6 +65,7 @@ For an empty manually configured database, activate the environment and run `pyt
 
 | Server environment setting | Purpose |
 |---|---|
+| `SENTIENTALPHA_MODE` | Defaults to `simulation`; live mode is rejected. |
 | `DATABASE_URL` | Explicit SQLite path or separately provisioned PostgreSQL+psycopg URL. |
 | `API_BASE_URL` | Next server upstream; default loopback API port 8000. Set explicitly for alternate ports. |
 | `DASHBOARD_ORIGINS` | Allowed local dashboard origins; match custom ports. |

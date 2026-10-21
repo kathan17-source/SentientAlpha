@@ -6,7 +6,7 @@ Date: 2026-10-21. **READY FOR OWNER REVIEW BEFORE PUBLICATION.** This is a priva
 
 - Repository: https://github.com/kathan17-source/SentientAlpha — PRIVATE, verified through authenticated GitHub access.
 - Branch: `release-candidate/v0.12.0`; target: `main`. No force push, merge, visibility change, release or deployment is authorized.
-- Snapshot commit and private pull request: recorded after upload in the final local copy of this report and the PR. Use `git rev-parse HEAD` for the checkout's exact commit; a report cannot contain its own final commit hash.
+- Initial source snapshot commit: `c790de7c77c0d0d26a72c166c9749544d08f82fe`. Private pull request: https://github.com/kathan17-source/SentientAlpha/pull/1 (OPEN into main). Follow-up release-engineering/report commits are part of the same candidate; use `git rev-parse HEAD` for the exact checkout revision. The final local report records the final branch head, avoiding a self-referential commit hash.
 - Full uploaded file-level hashes: `PUBLICATION_MANIFEST.json` (excludes itself to avoid a self-hash cycle). Git's tree includes the manifest itself.
 - Exclusions: `PUBLICATION_SELECTION.md`, implementing the audit's exact seven recommended exclusions and seventeen held items, plus both environment examples. No source ZIP, private DB, model weights, caches, raw dataset, dependency installation or development Git history is uploaded.
 
@@ -20,7 +20,7 @@ The held/excluded payloads are absent; historical inventories retain only descri
 
 The actual staged bytes and complete proposed ancestry are reviewed for configured credential signatures, private key headers, environment files, embedded credentials, private home paths, database/model/archive artifacts and excessive sizes. The existing three destination commits contain only README, LICENSE and ignore rules; their author/committer emails use GitHub noreply addresses. New commits also use the owner's GitHub noreply identity. Attribution contact addresses and explicitly invalid/test-only credential fixtures remain; no real credential was identified. This is a documented signature/manual review, not a guarantee against every possible secret.
 
-The original project and verified ZIP are unchanged: 557 existing source-tree file hashes match the pre-work snapshot. The ZIP SHA-256 remains `95ffdfac9d5de691341a86e3dd2454f00ee0fdcce2b0339e4350b37596862900`. Runtime implementation, migrations and tests are byte-identical to the verified source; changes are documentation, selection, notices, ignore rules and npm rights metadata.
+The original project and verified ZIP are unchanged: 557 existing source-tree file hashes match the pre-work snapshot. The ZIP SHA-256 remains `95ffdfac9d5de691341a86e3dd2454f00ee0fdcce2b0339e4350b37596862900`. Runtime implementation, migrations and tests are byte-identical to the verified source; changes are documentation, selection, notices, ignore rules, npm rights metadata and optional-dependency type-check configuration.
 
 ## Independent candidate verification
 
@@ -44,7 +44,7 @@ Backend tests ran with candidate `PYTHONPATH=backend`, including actual process-
 
 A fresh frontend `npm ci` passed. A fresh Python 3.12 virtual environment installed the runtime lock and editable candidate successfully; pip check passed and the imported module resolved to this isolated candidate. No environment example is required; server variables are documented in README.
 
-Local native PostgreSQL remains blocked by macOS shared-memory restrictions; Docker runtime has no daemon. Current rendered browser/axe checks remain unverified under the available tool policy. CI includes disposable PostgreSQL and browser tests, but YAML is not a test pass. Actual remote status will be recorded after push; no blocked check is counted as passed. Container runtime, full accessibility and production security are not certified.
+Local native PostgreSQL remains blocked by macOS shared-memory restrictions; Docker runtime has no daemon. Current rendered browser/axe checks remain unverified under the available tool policy. CI includes disposable PostgreSQL and browser tests, but YAML is not a test pass. The initial remote run 39689937470 passed its security job but both backend jobs stopped at mypy because the optional torch/transformers packages are absent in core-only CI. A narrow ignore-missing-imports override for those two optional libraries corrects the release-check configuration; no runtime code or test assertion changed. Final rerun status is recorded in the final local report; no blocked check is counted as passed. Container runtime, full accessibility and production security are not certified.
 
 ## Portfolio assessment and recommendation
 

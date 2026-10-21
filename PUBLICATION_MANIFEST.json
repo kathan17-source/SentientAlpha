@@ -60,9 +60,9 @@
     },
     {
       "path": "GITHUB_PORTFOLIO_PREPARATION.md",
-      "bytes": 6925,
-      "sha256": "114bedb7220438504e9a0b5b7c3d1b89f2c6e5ec818085aa83499d471bda86c5",
-      "git_blob": "0094a8aebd59566e16074dfd7aacaade96436c4d",
+      "bytes": 7490,
+      "sha256": "0591d06c35ebbaeb58fd5e9f448e34758247e6529d2aa94eb2eee2c5e15cfd93",
+      "git_blob": "a3409ebdb6e585ee8f3ec58e0e22f7dbf5a7b2c0",
       "mode": "100644"
     },
     {
@@ -123,9 +123,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 9005,
-      "sha256": "79ec8afb03f8e17b5bfd921b7b59860eadee32d7f45d0ae832a87dcffab540a3",
-      "git_blob": "4056de91830b2b5f76efab0dc0ff9c680664ce84",
+      "bytes": 9081,
+      "sha256": "586a8909229e7a4c99fbbbafd71a0c822bc5e1b738125ce0344d2f1fbc22b730",
+      "git_blob": "74a3f31f0df662cb68d66671bcbb2ec73025e28b",
       "mode": "100644"
     },
     {
@@ -3469,9 +3469,9 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 1367,
-      "sha256": "ee99130906b9d91aa3feb865ef3e3c565f0a996a32f6f5ad2420e435154384a7",
-      "git_blob": "153b1f7981c91c699efca792f9eae625a44743e6",
+      "bytes": 1461,
+      "sha256": "5d1346a3baede2436420fd0e468dd7f56ed7544b35c69a141da963ab3d80e62b",
+      "git_blob": "a408207bbed19eb65549078261c5bb8f7fd8a8f2",
       "mode": "100644"
     },
     {

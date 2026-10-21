@@ -47,3 +47,7 @@ ignore_missing_imports = true
 [[tool.mypy.overrides]]
 module = ["scipy.*", "sklearn.*", "threadpoolctl.*"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["torch.*", "transformers.*"]
+ignore_missing_imports = true
