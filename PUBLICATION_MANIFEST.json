@@ -60,9 +60,9 @@
     },
     {
       "path": "GITHUB_PORTFOLIO_PREPARATION.md",
-      "bytes": 7490,
-      "sha256": "0591d06c35ebbaeb58fd5e9f448e34758247e6529d2aa94eb2eee2c5e15cfd93",
-      "git_blob": "a3409ebdb6e585ee8f3ec58e0e22f7dbf5a7b2c0",
+      "bytes": 12077,
+      "sha256": "cd5acc6c16673c416caa484f769cae326f8f0530c32371fbc6c1f06003367917",
+      "git_blob": "e41a4d111d2a36f5cfa0b3e0438ba544f48bd077",
       "mode": "100644"
     },
     {
@@ -123,9 +123,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 9081,
-      "sha256": "586a8909229e7a4c99fbbbafd71a0c822bc5e1b738125ce0344d2f1fbc22b730",
-      "git_blob": "74a3f31f0df662cb68d66671bcbb2ec73025e28b",
+      "bytes": 9311,
+      "sha256": "834576a289e4eeaebd65b3be1c695cb7131d48fa7b0b9a99860762691aca06f8",
+      "git_blob": "671b2b01e0bd935cfc9b2e7b93d6ef642c3a953c",
       "mode": "100644"
     },
     {
@@ -2097,9 +2097,9 @@
     },
     {
       "path": "docs/verification/github-publication/results.json",
-      "bytes": 692,
-      "sha256": "28839ef9840aefb50024f61cac8b9d69ba6414098c0cfae3ae83eaeeceb47467",
-      "git_blob": "ce9eb56e6a43408ca052dcf40f2dfb9ec66bd3dd",
+      "bytes": 1634,
+      "sha256": "60840ae0a368909be697c05a01a4383b3b7cd39d041f7e34cb7f1c63814dc134",
+      "git_blob": "da94ae9219e3a3656dc25db880bfa44df83fbd34",
       "mode": "100644"
     },
     {

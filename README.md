@@ -77,6 +77,8 @@ Python does not automatically load environment files. No `.env.example` is distr
 
 ## Verification
 
+**Publication gate: blocked.** Hosted browser CI completed with 4 passes and 45 failures involving label locators and portfolio heading structure; axe/layout checks were not reached. Backend, PostgreSQL and security jobs passed.
+
 The cleaned GitHub candidate is tested independently of the original release. Current results and a before/after comparison are recorded in [GITHUB_PORTFOLIO_PREPARATION.md](GITHUB_PORTFOLIO_PREPARATION.md); older reports remain dated historical evidence.
 
 ```sh

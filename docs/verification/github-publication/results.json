@@ -35,5 +35,40 @@
     "Docker runtime",
     "rendered browser/axe"
   ],
-  "implementation_and_tests_unchanged": true
+  "implementation_and_tests_unchanged": true,
+  "remote_ci": {
+    "revision": "4a2bfeb8e482c0cc003ca48e0bdd9d54a1a2454b",
+    "push_run": 39690184592,
+    "pull_request_run": 39690191315,
+    "backend312": {
+      "core_passed": 605,
+      "subtests": 11,
+      "optional_skips": 1,
+      "postgres_passed": 198,
+      "postgres_skipped": 2,
+      "job": "success"
+    },
+    "backend314": {
+      "core_passed": 605,
+      "subtests": 11,
+      "optional_skips": 1,
+      "postgres_passed": 198,
+      "postgres_skipped": 2,
+      "job": "success"
+    },
+    "security": "success",
+    "browser": {
+      "combined_passed": 4,
+      "combined_failed": 45,
+      "axe_reached": false,
+      "standalone_paper_executed": false,
+      "failure_groups": {
+        "connection_label_locator": 40,
+        "portfolio_multiple_h1": 4,
+        "simulation_label_locator": 1
+      }
+    },
+    "workflow_conclusion": "failure"
+  },
+  "decision": "NOT READY FOR OWNER REVIEW BEFORE PUBLICATION"
 }
