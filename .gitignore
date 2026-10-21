@@ -1,0 +1,47 @@
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+
+# Python and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Frontend and builds
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.playwright/
+test-results/
+
+# Databases, generated data, vendor/model downloads
+*.db
+*.sqlite
+*.sqlite3
+data/
+cache/
+models/cache/
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.safetensors
+*.pt
+*.bin
+
+# Generated packaging and logs
+*.zip
+*.tar.gz
+*.log
+.DS_Store
