@@ -1,0 +1,43 @@
+{
+  "modified_baseline_files": [
+    "pyproject.toml",
+    "README.md",
+    "requirements-runtime.lock",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    ".github/workflows/test.yml",
+    "backend/sentientalpha/__init__.py",
+    "backend/sentientalpha/database/models.py",
+    "backend/sentientalpha/backtesting/storage.py",
+    "backend/sentientalpha/api/app.py"
+  ],
+  "new_code_documentation_and_SQL": [
+    "backend/sentientalpha/api/portfolio.py",
+    "backend/sentientalpha/database/optimization_models.py",
+    "backend/sentientalpha/optimization/__init__.py",
+    "backend/sentientalpha/optimization/contracts.py",
+    "backend/sentientalpha/optimization/estimation.py",
+    "backend/sentientalpha/optimization/inputs.py",
+    "backend/sentientalpha/optimization/research.py",
+    "backend/sentientalpha/optimization/sentiment.py",
+    "backend/sentientalpha/optimization/solver.py",
+    "backend/sentientalpha/optimization/storage.py",
+    "backend/tests/test_optimization_integration.py",
+    "backend/tests/test_optimization_math.py",
+    "backend/tests/test_optimization_sentiment.py",
+    "docs/M4_POSTGRESQL_MIGRATION.sql",
+    "docs/M5_POSTGRESQL_MIGRATION.sql",
+    "docs/MILESTONE5_REPORT.md",
+    "docs/PORTFOLIO_OPTIMIZATION.md",
+    "migrations/versions/0007_optimization.py",
+    "scripts/replay_optimization_export.py",
+    "scripts/verify_optimization.py",
+    "scripts/verify_real_optimization.py",
+    "scripts/verify_sentiment_allocation.py"
+  ],
+  "other_modified_files": [
+    "docs/openapi.json"
+  ],
+  "all_309_original_cases_preserved_byte_identically": true,
+  "original_migrations_0001_through_0006_preserved": true
+}

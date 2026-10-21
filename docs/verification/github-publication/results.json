@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-21",
+  "backend312": {
+    "passed": 606,
+    "subtests": 11,
+    "skipped": 0,
+    "seconds": 89.52
+  },
+  "backend314": {
+    "passed": 605,
+    "subtests": 11,
+    "skipped": 1,
+    "seconds": 88.28
+  },
+  "frontend_tests": 59,
+  "http_checks": 38,
+  "demo": {
+    "synthetic": true,
+    "fills": 5,
+    "veto_fills": 0,
+    "replay_equivalent": true
+  },
+  "restart": {
+    "portfolio_equal": true,
+    "fills": 5,
+    "replay_equivalent": true
+  },
+  "advisories": {
+    "core_and_dev": 0,
+    "nlp": 0,
+    "npm": 0
+  },
+  "local_gaps": [
+    "native PostgreSQL",
+    "Docker runtime",
+    "rendered browser/axe"
+  ],
+  "implementation_and_tests_unchanged": true
+}

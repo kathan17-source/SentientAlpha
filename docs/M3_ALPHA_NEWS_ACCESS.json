@@ -1,0 +1,12 @@
+{
+  "provider": "alphavantage_news",
+  "access": "official public demo value only; no private credential used",
+  "feed_received": true,
+  "response_class": "news_feed",
+  "returned_keys": [
+    "items",
+    "sentiment_score_definition",
+    "relevance_score_definition",
+    "feed"
+  ]
+}

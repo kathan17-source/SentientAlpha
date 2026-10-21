@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentientalpha"
+version = "0.12.0"
+description = "Simulation-only quantitative research infrastructure"
+requires-python = ">=3.12"
+dependencies = [
+  "scikit-learn==1.9.1", "threadpoolctl>=3.5,<4", "scipy>=1.18,<2", "numpy>=2.2,<3", "pandas>=2.2,<4", "fastapi>=0.115,<1", "pydantic>=2.10,<3", "uvicorn>=0.34,<1",
+  "exchange-calendars>=4.13,<5", "SQLAlchemy>=2.0.36,<2.1", "alembic>=1.14,<2", "psycopg[binary]>=3.2,<4"
+]
+
+[project.optional-dependencies]
+nlp = ["torch==2.14.1", "transformers==5.20.2"]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.9,<1", "mypy>=1.15,<3", "PyYAML>=6,<7"]
+
+[project.scripts]
+sentientalpha = "sentientalpha.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+files = ["backend/sentientalpha"]
+python_version = "3.12"
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["exchange_calendars.*", "pandas.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "sklearn.*", "threadpoolctl.*"]
+ignore_missing_imports = true

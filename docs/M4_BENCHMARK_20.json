@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED_SYNTHETIC_ENGINE_DEMONSTRATION",
+  "assets": 20,
+  "years": 5,
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "provenance": "Deterministic synthetic weekdays, NOT real-market returns",
+  "python": "3.12.15",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "seed_seconds": 1.6027842079638503,
+  "sma_generation_seconds": 1.922040208010003,
+  "source_load_seconds": 0.8400027090101503,
+  "simulation_seconds": 0.3885640000225976,
+  "net_gross_and_three_baselines_seconds": 1.3632376249879599,
+  "persistence_seconds": 0.8611539580160752,
+  "replay_seconds": 2.0854377080104314,
+  "walk_forward_including_fold_persistence_seconds": 2.8611490830080584,
+  "walk_forward_folds": 7,
+  "process_peak_rss_mib": 709.921875,
+  "memory_scope": "Whole process: ingestion, one M2 SMA output, sources, retained results, replay, API and walk-forward; not comparable to M2 44-output workload.",
+  "input_bars": 26100,
+  "feature_rows": 25720,
+  "orders_processed": 12653,
+  "fills": 12653,
+  "events_processed": 3895,
+  "equity_rows": 1305,
+  "run_id": "c5e1d470-de1d-4f7a-8e92-df87776ab34e",
+  "walk_forward_run_id": "70c1efd3-487b-45c5-aa6e-f522908228c7",
+  "total_return": 0.2855019390341038,
+  "equivalent_replay": true,
+  "api": [
+    {
+      "endpoint": "manifest",
+      "status": 200
+    },
+    {
+      "endpoint": "/metrics",
+      "status": 200
+    },
+    {
+      "endpoint": "/equity",
+      "status": 200
+    },
+    {
+      "endpoint": "/trades",
+      "status": 200
+    },
+    {
+      "endpoint": "/drawdown",
+      "status": 200
+    },
+    {
+      "endpoint": "/report",
+      "status": 200
+    }
+  ],
+  "real_market": null,
+  "database_bytes": 127070208
+}

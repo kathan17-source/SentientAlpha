@@ -1,0 +1,317 @@
+{
+  "5:prevalence": {
+    "importance": {},
+    "prediction_mean_by_fold": [
+      0.5,
+      0.5107684911205609
+    ],
+    "class_prevalence_by_fold": [
+      0.5230769230769231,
+      0.5395348837209303
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "5:logistic": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": -0.01259704312446398,
+        "std_population": 0.0011393917575359038,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.021650707766743917,
+        "std_population": 0.007831510319107038,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": -0.06045673762540864,
+        "std_population": 0.037341350663843344,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.49549650218408925,
+      0.5116472174263754
+    ],
+    "class_prevalence_by_fold": [
+      0.5230769230769231,
+      0.5395348837209303
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "5:forest_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.3402673836079067,
+        "std_population": 0.03294128486003689,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.35410764118737337,
+        "std_population": 0.013783677960297808,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.30562497520471993,
+        "std_population": 0.01915760689973911,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5002915779963863,
+      0.5268445649698252
+    ],
+    "class_prevalence_by_fold": [
+      0.5230769230769231,
+      0.5395348837209303
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "5:boost_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.4239120254016615,
+        "std_population": 0.02267695479846235,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.17848181864429175,
+        "std_population": 0.004682888584255834,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.3976061559540467,
+        "std_population": 0.017994066214206544,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.49704119189515755,
+      0.5047990396574541
+    ],
+    "class_prevalence_by_fold": [
+      0.5230769230769231,
+      0.5395348837209303
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "20:prevalence": {
+    "importance": {},
+    "prediction_mean_by_fold": [
+      0.5070311808796725,
+      0.5199994108481205
+    ],
+    "class_prevalence_by_fold": [
+      0.5053846153846154,
+      0.5135658914728682
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "20:logistic": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.01834044131680136,
+        "std_population": 0.0015501507486880214,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": -0.010439461714897631,
+        "std_population": 0.0018852271799052979,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": -0.013559765986996188,
+        "std_population": 0.0016455693669856792,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5057605490185413,
+      0.5193855316299131
+    ],
+    "class_prevalence_by_fold": [
+      0.5053846153846154,
+      0.5135658914728682
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "20:forest_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.31751095316885314,
+        "std_population": 0.012469322598652993,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.4164070122703898,
+        "std_population": 0.009155109807735012,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.26608203456075713,
+        "std_population": 0.02162443240638802,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.506475180300785,
+      0.5213315037269709
+    ],
+    "class_prevalence_by_fold": [
+      0.5053846153846154,
+      0.5135658914728682
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "20:boost_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.2697699673257703,
+        "std_population": 0.006287406867730078,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.6048368996801095,
+        "std_population": 0.013786074078979915,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.12539313299412028,
+        "std_population": 0.0074986672112499,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5066650967731577,
+      0.5209622377846463
+    ],
+    "class_prevalence_by_fold": [
+      0.5053846153846154,
+      0.5135658914728682
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "50:prevalence": {
+    "importance": {},
+    "prediction_mean_by_fold": [
+      0.5106249079298353,
+      0.511384500426065
+    ],
+    "class_prevalence_by_fold": [
+      0.5036923076923077,
+      0.5031007751937985
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "50:logistic": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.025610075403463294,
+        "std_population": 0.006223811927757283,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": -0.01897874958644443,
+        "std_population": 0.0031133904993027577,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.015227756474266253,
+        "std_population": 0.0035851429487408944,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5115028830743801,
+      0.5131455646350312
+    ],
+    "class_prevalence_by_fold": [
+      0.5036923076923077,
+      0.5031007751937985
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "50:forest_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.31717250288456017,
+        "std_population": 0.00940517425933246,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.4019654315989275,
+        "std_population": 0.015600324018982537,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.28086206551651227,
+        "std_population": 0.006195149759650076,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5106253759243363,
+      0.5114831890649614
+    ],
+    "class_prevalence_by_fold": [
+      0.5036923076923077,
+      0.5031007751937985
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  },
+  "50:boost_classifier": {
+    "importance": {
+      "realized_volatility__annualization_252__window_20": {
+        "folds": 2,
+        "mean": 0.3328431271613508,
+        "std_population": 0.05846164888510377,
+        "sign_agreement": 1.0
+      },
+      "return": {
+        "folds": 2,
+        "mean": 0.41191381658954873,
+        "std_population": 0.026278156559186555,
+        "sign_agreement": 1.0
+      },
+      "sma__window_5": {
+        "folds": 2,
+        "mean": 0.2552430562491005,
+        "std_population": 0.0847398054442903,
+        "sign_agreement": 1.0
+      }
+    },
+    "prediction_mean_by_fold": [
+      0.5106245358797289,
+      0.5117561822309246
+    ],
+    "class_prevalence_by_fold": [
+      0.5036923076923077,
+      0.5031007751937985
+    ],
+    "warning": "Descriptive fold instability, no causal or significance inference"
+  }
+}

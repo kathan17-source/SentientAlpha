@@ -1,0 +1,276 @@
+{
+  "baseline": "original Milestone 1 source snapshot",
+  "original_revision_0001_unchanged": true,
+  "files": [
+    {
+      "path": ".dockerignore",
+      "change": "MODIFIED",
+      "original_sha256": "06ac7837f756d4bae7a82d463baf6c7e2f20706d92ff5baa23a94812513a8cd1",
+      "current_sha256": "bc30121adef764e7678a1c58b339773c72aebc7d58699802963a29cff557a24b"
+    },
+    {
+      "path": ".env.example",
+      "change": "MODIFIED",
+      "original_sha256": "4d42a54b76dc916baf2576664cdddc7d4844ac401e46006a8c0856c2e3e1988c",
+      "current_sha256": "70f2cc0fc6426a262b0b2811e07b4ad15c47170351d3cadbe35380b81f7640e6"
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "change": "MODIFIED",
+      "original_sha256": "2f23d9efb3d5c03572812d14848383fcbf5ae8d05beee070724b2eeb34da95fd",
+      "current_sha256": "2b652f3272b3a73537fdcde93e49aa42a34deb12eace04ceeee2ca5deabb0907"
+    },
+    {
+      "path": ".gitignore",
+      "change": "MODIFIED",
+      "original_sha256": "17a79a4ae6fa32e2c535f99c69c49f575875fc9142833166266a3c1ab0b0d970",
+      "current_sha256": "479dbfd3ba974256288bf25a2634bb30bfda51972a4558a81b5dd3a26b2577ae"
+    },
+    {
+      "path": "Dockerfile",
+      "change": "MODIFIED",
+      "original_sha256": "8e122f011c27e75edb0898027103674374fa431bda20f501ceb3c1c7ab515332",
+      "current_sha256": "8cea37036ff1e21e8c3a972ac7a560eb5fe0ddcdda016f5fcd8005125c6b370c"
+    },
+    {
+      "path": "README.md",
+      "change": "MODIFIED",
+      "original_sha256": "8ad7b20eeb5b317fcfe3fbdd42421ce9986feb13d7be53102d77324d4e2dabe4",
+      "current_sha256": "16656e8e48d6d131a02d94f4d7cc42bf56635b7d8ce03ac2f8ef64317ecdc154"
+    },
+    {
+      "path": "backend/sentientalpha/__init__.py",
+      "change": "MODIFIED",
+      "original_sha256": "2137e4ebb05a91518b53a8d2136f8af76721c7f1d7370b2182bca0cd3f938dda",
+      "current_sha256": "4a522e8608f9d9fbe5685d7c7551f91057468de853a3b48a6c8ce0918ef5d17f"
+    },
+    {
+      "path": "backend/sentientalpha/api/app.py",
+      "change": "MODIFIED",
+      "original_sha256": "1d234bb147f0ee31c703146451e7fbb89a45f7656f5be03885bb1e1b5472ed0f",
+      "current_sha256": "b573b7e38a008afe45935eb3387f2b8ea4b16364f5a299b74226b44fc79e0617"
+    },
+    {
+      "path": "backend/sentientalpha/api/schemas.py",
+      "change": "MODIFIED",
+      "original_sha256": "d47b36fe2a6890030ffc00e32ce9b9ee879281df3cf91a62676632446d83e9d2",
+      "current_sha256": "125a9214baecc43abce766aaed62c5bbd6ebdc4fa4a938966a1c4300467b6459"
+    },
+    {
+      "path": "backend/sentientalpha/cli.py",
+      "change": "MODIFIED",
+      "original_sha256": "ba0f76ca85327c83950f81f0b9368702c336e771e047e2454c33e32385557061",
+      "current_sha256": "5f0d1150eb89f31114930ca7c5f0bcc572d03a23ca803ca329e47d4752d39ea1"
+    },
+    {
+      "path": "backend/sentientalpha/config.py",
+      "change": "MODIFIED",
+      "original_sha256": "90f9623c93d16728950e6db85e6874012d18dc26d0e15b3e64f454b678165ce7",
+      "current_sha256": "27f98721eae3983051ee19363ceac536367a27404db50e56372ac8c3b60a355c"
+    },
+    {
+      "path": "backend/sentientalpha/data/alphavantage.py",
+      "change": "MODIFIED",
+      "original_sha256": "d16c80d6d7517d8df3f851e651d47cf33b8c6b3b2e0938a2d79d4af49fc46486",
+      "current_sha256": "fc193e22e3dfb363d1caae335941dada9cdf68638a0bff1163cd46ea003cd1ac"
+    },
+    {
+      "path": "backend/sentientalpha/data/calendar.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "1281000eed45348ce5ffe3949d832c68bf0e3cc931df81db5f7cf2b741ce1c3f"
+    },
+    {
+      "path": "backend/sentientalpha/data/contracts.py",
+      "change": "MODIFIED",
+      "original_sha256": "1d3d4100154a24bba9b2328599efaeb963b36389f6b31b8867c419798bb3538d",
+      "current_sha256": "30dee5f196a5bfd97e27b3ffce188d4cff476c604660daabed76ad1ce254fc8f"
+    },
+    {
+      "path": "backend/sentientalpha/data/quality.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "f5f00d1b08e2627d7788dc316bdf0a05a7d14fc297ef2a39753f35e78beef05b"
+    },
+    {
+      "path": "backend/sentientalpha/data/synthetic.py",
+      "change": "MODIFIED",
+      "original_sha256": "d29d73d05847596a2c4936f438952100e9434a89501aecbbea01b9997c30df26",
+      "current_sha256": "9ff53e6a6bfd28e70efa9d6552017c54fb5cd8d6ecb41e0079a4fbbaae3ce4d7"
+    },
+    {
+      "path": "backend/sentientalpha/database/models.py",
+      "change": "MODIFIED",
+      "original_sha256": "c21be0e7ad835fb879039a2122f4db100e6f0a4af01ada459e02edc4c129d248",
+      "current_sha256": "959db56cbb60d6f01d929addbc2cf135bf54b0a9100f95edb99e1bb742e3c9ae"
+    },
+    {
+      "path": "backend/sentientalpha/database/repository.py",
+      "change": "MODIFIED",
+      "original_sha256": "ce2b7b0bc9546e901faef99997c428fce713683d8612f27c17907b95cf3df711",
+      "current_sha256": "34574f0d872444eaa52997fea1e63252dc30462eb5034b006e09fc62f76eba6f"
+    },
+    {
+      "path": "backend/sentientalpha/database/session.py",
+      "change": "MODIFIED",
+      "original_sha256": "d1746cd2f2254c9c622adb6540f7c79f38e9fd21945d1db83bda69ad8bca2daf",
+      "current_sha256": "e309e1e27fc8348db286e2862c2a7010bc16dda44e692ecb313d187ad99dcf99"
+    },
+    {
+      "path": "backend/sentientalpha/services/ingestion.py",
+      "change": "MODIFIED",
+      "original_sha256": "2d3014a59ef3cb7e82e0f83c2d3b0eabb98dcd86ad7e2d4e3e50bd0ea59a5814",
+      "current_sha256": "e646a9a31f45c7312b7fc188ecbe083e249b46e6cec8aa58ee4dd4642d03d0c2"
+    },
+    {
+      "path": "backend/tests/test_domain.py",
+      "change": "MODIFIED",
+      "original_sha256": "11ab2363d77562521cc78c9a5c8b131257d1fecf52f849308f8be5d16990c583",
+      "current_sha256": "9bc44daf6c45fc24de2857245b039779e5882a7a12f23fe9c7950d5e57f6288d"
+    },
+    {
+      "path": "backend/tests/test_hardening_domain.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "36029aed2041e3fb833436416ae5ba18a0283ec163db6f175bae8f6ee2e4856e"
+    },
+    {
+      "path": "backend/tests/test_hardening_integration.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "aff64debbe53a131f0a74ca44183d824bc6ec6ae373e12c89bfcf83b16d321a2"
+    },
+    {
+      "path": "backend/tests/test_integration.py",
+      "change": "MODIFIED",
+      "original_sha256": "4f9d43ad0cf7e76843853337a3e4a4fb89060bcd4af28796a536e310d191d82d",
+      "current_sha256": "760db3b618ba50d67112444fc76a4c027cccdf534771a5df941b61679d526ce3"
+    },
+    {
+      "path": "compose.yaml",
+      "change": "MODIFIED",
+      "original_sha256": "b989b67aec12ee238591099c607885215e13893ca996199c7c9aa2cec5bb6e7f",
+      "current_sha256": "bc1bcca95f298878beb4c3a7845e5d4e43aad364213e30276277309e6c6bd008"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "change": "MODIFIED",
+      "original_sha256": "40293587f2ca481899128277a2466cbb5dcb0be843238a23c628dbff38dee17a",
+      "current_sha256": "1c1bd973564212470e90333cc5b6125aecad567573d82c8258a897c6c3e18c43"
+    },
+    {
+      "path": "docs/DATABASE.md",
+      "change": "MODIFIED",
+      "original_sha256": "b131dd5af04979e60d6c3e8e72c2c39d22c44e32f36ba6b3640ad8bfa62f16e7",
+      "current_sha256": "d7a4ce0ff9277abaa28c639993a736bff8b3fd1bac5528be0b01e539289164e6"
+    },
+    {
+      "path": "docs/HARDENING_REPORT.md",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "136729fb2c75772f7b5fc041616b4405b0728d318c669734007a5d9805bd04fd"
+    },
+    {
+      "path": "docs/METHODOLOGY.md",
+      "change": "MODIFIED",
+      "original_sha256": "8367e9895935398940b8481f33e8bb965659422706accfb1948a1cbf5d4d0a20",
+      "current_sha256": "246ce327d10ca0f1ca8d8380d2f92dfe9e5a0635a9f6a3afcce4669fab8069c6"
+    },
+    {
+      "path": "docs/MILESTONE2_READINESS.md",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "4d73f8076a3e1ac1bff0bfa5db2d7997d068f7dddf02a74ae294a24967c03833"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "change": "MODIFIED",
+      "original_sha256": "1e450b554119136ea01bef027950161300540e026f35bcb41d09d8be9d9c1152",
+      "current_sha256": "c9440901dc032a092a8bf7c5c4cfaa5fe3582643504ca3249f8944cb3fbf4018"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "change": "MODIFIED",
+      "original_sha256": "27c0ee3bc4d92c6db8e0187893e71dbf8297620d37d0449754010814c0a567e1",
+      "current_sha256": "ed78e31874ef8048f1901386d465782e737860df704f3e97144f40e6785d605c"
+    },
+    {
+      "path": "docs/openapi.json",
+      "change": "MODIFIED",
+      "original_sha256": "a2255082d111e2fe4256918c65e7a956ffceda73e6d370640b6537cb3ba1a334",
+      "current_sha256": "9efef5b59dd652d549fdda727adfb31395258689d5b3d6a9e391ae320efe0fa5"
+    },
+    {
+      "path": "docs/verification/changes.json",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": null
+    },
+    {
+      "path": "docs/verification/environment-security.json",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "09ebfba941b2815a416fa55dc5869e2693528d64023b8fb8e7292e8a8f67451f"
+    },
+    {
+      "path": "docs/verification/http-smoke.json",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "a01093a6e24c6efe2a1d249921491da21639684bfb124fef0bb569f8a82fc30c"
+    },
+    {
+      "path": "docs/verification/public-provider.json",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "6ed1317f9b61e3f029c9955147367224a78a2820e61b812167f2dbea321b8876"
+    },
+    {
+      "path": "migrations/env.py",
+      "change": "MODIFIED",
+      "original_sha256": "54a64a137ae053b5e068587f7fc97817dc7c4880df13b563e80cc41445cd366c",
+      "current_sha256": "a23ddc66b26a34c7de1aefcb323352619a6de1ab5359ba6a05f33065be7ee937"
+    },
+    {
+      "path": "migrations/versions/0002_data_contract.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "56f0139dbfdcc730dc22a69ac69fc704d22d8781c57b043267f4da3069d79214"
+    },
+    {
+      "path": "migrations/versions/0003_exact_sqlite_prices.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "85484e54de16f72bdf673bcc3900a87e938dd872382fd72b09b386293e5468a3"
+    },
+    {
+      "path": "pyproject.toml",
+      "change": "MODIFIED",
+      "original_sha256": "2838e5f446f93f3614fc0aaca7dcb111a62e66d1f063aec22ff8062d466f5e47",
+      "current_sha256": "30c0ceb8821ba7bfded7d5440d8f0516b9072dc9ac2e4ba0e530048b15373f2e"
+    },
+    {
+      "path": "requirements-runtime.lock",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "bd21cea791e12309340ef76ba6454717afb823f358de309b93bf3244b93553e6"
+    },
+    {
+      "path": "requirements.lock",
+      "change": "MODIFIED",
+      "original_sha256": "28954008bfa3b4e1d420fffddca0a10f9be50b6acbd289388e78a9e69d8f200b",
+      "current_sha256": "a414c9fbfb59a2be667a9e8b6bab34b06ae729a68ae116fc5a8d0a14e5fc11f6"
+    },
+    {
+      "path": "scripts/run_pglite_checks.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "12155ae15394f0a8eabc8675d7b9327e1c2ee98d238ee5298fe473f2158ed2db"
+    },
+    {
+      "path": "scripts/verify_public_provider.py",
+      "change": "ADDED",
+      "original_sha256": null,
+      "current_sha256": "e8736cbbe18d773a83c02242cda9f25accc5f5a29913c1b8e082e25434a6baea"
+    }
+  ]
+}

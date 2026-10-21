@@ -1,0 +1,136 @@
+{
+  "mode": "synthetic financial news with REAL FinBERT",
+  "collection_at": "2026-10-14T17:22:19.732349+00:00",
+  "provider": "synthetic_news",
+  "articles": 1000,
+  "publication_start": "2024-01-02",
+  "publication_end": "2024-03-11",
+  "model": {
+    "model_id": "ProsusAI/finbert",
+    "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+    "tokenizer_revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+    "transformers": "4.57.6",
+    "torch": "2.14.1",
+    "preprocessing": "nfkc-whitespace-v1",
+    "max_tokens": 512,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "deterministic": true,
+    "probabilities_calibrated": false,
+    "license": "CC-BY-NC-SA-4.0; research only; review model card before commercial deployment"
+  },
+  "model_key": "ac5ff59881b399903e365aaf424d19628e75109fcaec2521ee5174145b95390b",
+  "model_init_seconds": 1.2821528330096044,
+  "news_ingestion_seconds": 0.5942011250299402,
+  "news_run_id": "c2470054-2f01-40bb-ac87-ea3b0524ab5a",
+  "inference_seconds": 2.986544875020627,
+  "unique_text_throughput_per_second": 334.8350826280798,
+  "inference_runs": [
+    {
+      "id": "0f9b3296-992f-411a-b9b4-f4f495c00a5e",
+      "inserted": 1000,
+      "cache_reused": 0,
+      "status": "completed",
+      "diagnostics": {
+        "elapsed_seconds": 2.5648407909902744,
+        "selected_targets": 1000,
+        "processed_targets": 1000,
+        "inference_failures": 0,
+        "model_probabilities_calibrated": false,
+        "memory_policy": "bounded targets and inference batches; no all-corpus model outputs"
+      }
+    },
+    {
+      "id": "857129e4-6509-4a16-b800-eb5edbd058e2",
+      "inserted": 1000,
+      "cache_reused": 1000,
+      "status": "completed",
+      "diagnostics": {
+        "elapsed_seconds": 0.4159669170039706,
+        "selected_targets": 1000,
+        "processed_targets": 1000,
+        "inference_failures": 0,
+        "model_probabilities_calibrated": false,
+        "memory_policy": "bounded targets and inference batches; no all-corpus model outputs"
+      }
+    },
+    {
+      "id": "5db7b239-23f5-45c4-b58d-4d922d96a538",
+      "inserted": 0,
+      "cache_reused": 0,
+      "status": "completed",
+      "diagnostics": {
+        "elapsed_seconds": 0.0030767080024816096,
+        "selected_targets": 0,
+        "processed_targets": 0,
+        "inference_failures": 0,
+        "model_probabilities_calibrated": false,
+        "memory_policy": "bounded targets and inference batches; no all-corpus model outputs"
+      }
+    }
+  ],
+  "generation_seconds": 0.9553351670037955,
+  "repeat_seconds": 0.04640995804220438,
+  "repeat_reused": true,
+  "output_rows": 1000,
+  "columns": 28,
+  "nonnull_assumed_cells": 25760,
+  "nonnull_observed_cells": 25760,
+  "nonnull_observed_prior_session_cells": 25760,
+  "research_availability": "explicit assumed publication/update plus 300-second delay; not verified historical delivery",
+  "coverage": "synthetic complete fixture",
+  "dataset_ids": {
+    "assumed": "7493b345-bc6f-44fc-9970-848cc5ef40b4",
+    "observed": "4191627c-8680-4d83-8782-efa8dfb247bf"
+  },
+  "process_peak_rss_mib": 942.15625,
+  "rss_scope": "isolated full process including model load, inference, SQL persistence and feature generation",
+  "samples": [
+    {
+      "version_id": "0022d551-62a5-4672-a93c-735eb65ff8f3",
+      "positive": 0.0070550343953073025,
+      "negative": 0.9698435068130493,
+      "neutral": 0.023101460188627243,
+      "score": -0.962788472417742,
+      "status": "success",
+      "inferred_at": "2026-10-14T17:22:16.324316+00:00"
+    },
+    {
+      "version_id": "0051a801-6b04-4470-b4ee-627cf8a28ec9",
+      "positive": 0.960351288318634,
+      "negative": 0.01709381304681301,
+      "neutral": 0.022554941475391388,
+      "score": 0.943257475271821,
+      "status": "success",
+      "inferred_at": "2026-10-14T17:22:16.845918+00:00"
+    },
+    {
+      "version_id": "00522300-c57c-414a-8031-ef6be560bc9c",
+      "positive": 0.007310092449188232,
+      "negative": 0.9728074073791504,
+      "neutral": 0.019882408902049065,
+      "score": -0.9654973149299622,
+      "status": "success",
+      "inferred_at": "2026-10-14T17:22:16.204591+00:00"
+    },
+    {
+      "version_id": "00d9dc93-a20f-4a32-b4c4-157a49775b7e",
+      "positive": 0.9601435661315918,
+      "negative": 0.016810722649097443,
+      "neutral": 0.0230457354336977,
+      "score": 0.9433328434824944,
+      "status": "success",
+      "inferred_at": "2026-10-14T17:22:16.324319+00:00"
+    },
+    {
+      "version_id": "01061a9e-91c5-4dc3-881a-d59e4b5b49da",
+      "positive": 0.007250246591866016,
+      "negative": 0.9716254472732544,
+      "neutral": 0.021124307066202164,
+      "score": -0.9643752006813884,
+      "status": "success",
+      "inferred_at": "2026-10-14T17:22:14.912942+00:00"
+    }
+  ],
+  "limits": "descriptive model outputs; no calibration, predictive alpha or 2018\u20132026 coverage claim"
+}

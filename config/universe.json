@@ -1,0 +1,29 @@
+{
+  "name": "US liquid sample — current symbols, not historical index membership",
+  "assets": [
+    {"ticker":"AAPL","name":"Apple","sector":"Technology"},
+    {"ticker":"MSFT","name":"Microsoft","sector":"Technology"},
+    {"ticker":"NVDA","name":"NVIDIA","sector":"Technology"},
+    {"ticker":"GOOGL","name":"Alphabet","sector":"Communication Services"},
+    {"ticker":"META","name":"Meta Platforms","sector":"Communication Services"},
+    {"ticker":"AMZN","name":"Amazon","sector":"Consumer Discretionary"},
+    {"ticker":"HD","name":"Home Depot","sector":"Consumer Discretionary"},
+    {"ticker":"JPM","name":"JPMorgan Chase","sector":"Financials"},
+    {"ticker":"BAC","name":"Bank of America","sector":"Financials"},
+    {"ticker":"GS","name":"Goldman Sachs","sector":"Financials"},
+    {"ticker":"JNJ","name":"Johnson & Johnson","sector":"Healthcare"},
+    {"ticker":"UNH","name":"UnitedHealth Group","sector":"Healthcare"},
+    {"ticker":"MRK","name":"Merck","sector":"Healthcare"},
+    {"ticker":"CAT","name":"Caterpillar","sector":"Industrials"},
+    {"ticker":"HON","name":"Honeywell","sector":"Industrials"},
+    {"ticker":"UPS","name":"United Parcel Service","sector":"Industrials"},
+    {"ticker":"XOM","name":"Exxon Mobil","sector":"Energy"},
+    {"ticker":"CVX","name":"Chevron","sector":"Energy"},
+    {"ticker":"PG","name":"Procter & Gamble","sector":"Consumer Staples"},
+    {"ticker":"KO","name":"Coca-Cola","sector":"Consumer Staples"},
+    {"ticker":"WMT","name":"Walmart","sector":"Consumer Staples"},
+    {"ticker":"SPY","name":"S&P 500 ETF","sector":"Broad Market ETF"},
+    {"ticker":"QQQ","name":"Nasdaq 100 ETF","sector":"Broad Market ETF"},
+    {"ticker":"IWM","name":"Russell 2000 ETF","sector":"Broad Market ETF"}
+  ]
+}

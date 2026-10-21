@@ -1,0 +1,112 @@
+{
+  "scope": "Actual M4 IOC partial-fill constraints and authoritative ledger through API/proxy",
+  "session_id": "b13e4490-05f2-4665-9a71-3be578e9a400",
+  "partial_orders": [
+    {
+      "id": "12bd565dd8e0dd2f15673245df71e1153298a6a70defb32de84c433d4c484f4d",
+      "session_id": "b13e4490-05f2-4665-9a71-3be578e9a400",
+      "committee_id": "97719ab7-2dd2-4dce-864e-6fe646d98e74",
+      "decision_id": "d3b15fd6-9443-498e-bdf3-e6c3f185b510",
+      "ticker": "AAPL",
+      "side": "buy",
+      "requested_quantity": "271",
+      "approved_quantity": "271",
+      "filled_quantity": "6",
+      "remaining_quantity": "265",
+      "submitted_at": "2024-04-03T00:00:02+00:00",
+      "processed_at": "2026-10-21T02:34:59.737557+00:00",
+      "earliest_execution_at": "2024-04-03T00:00:02.000001+00:00",
+      "risk_decision_id": "648c7877f4bc0baa47efb6b1382ae5f67103cffa364a9be2b680d625b4bbaf63",
+      "status": "CANCELLED",
+      "reason": "constrained_remainder_canceled",
+      "transitions": [
+        "CREATED",
+        "PENDING_RISK",
+        "APPROVED",
+        "QUEUED",
+        "PARTIALLY_FILLED",
+        "CANCELLED"
+      ],
+      "fill_risk_id": "3ffa9e786671a4e098d35d44c35f06149513906f8a42c5cdffb9161e261feb45",
+      "execution_at": "2024-04-04T00:00:02+00:00",
+      "execution_price": "144.568320536250",
+      "commission": "1.000000000000",
+      "slippage": "0.433488217500",
+      "cancellation_reason": "ioc_unfilled_remainder"
+    }
+  ],
+  "fills": [
+    {
+      "id": "12bd565dd8e0dd2f15673245df71e1153298a6a70defb32de84c433d4c484f4d-fill",
+      "order_id": "12bd565dd8e0dd2f15673245df71e1153298a6a70defb32de84c433d4c484f4d",
+      "ticker": "AAPL",
+      "side": "buy",
+      "quantity": "6",
+      "price": "144.568320536250",
+      "raw_open": "144.49607250",
+      "commission": "1.000000000000",
+      "slippage": "0.433488217500",
+      "at": "2024-04-04T00:00:02+00:00",
+      "realized_pnl": "0",
+      "price_convention": "next_observed_close_ioc",
+      "source_id": "dfb03a1c-8914-4df9-9ff9-075e511c84f8"
+    },
+    {
+      "id": "688e1a760b7e1910f82bc6db2bacf5f38544c293b8dabae870ad56b15f589ce6-fill",
+      "order_id": "688e1a760b7e1910f82bc6db2bacf5f38544c293b8dabae870ad56b15f589ce6",
+      "ticker": "AAPL",
+      "side": "sell",
+      "quantity": "6",
+      "price": "140.188565662495",
+      "raw_open": "140.25869501",
+      "commission": "1.000000000000",
+      "slippage": "0.420776085030",
+      "at": "2024-04-05T00:00:02+00:00",
+      "realized_pnl": "-28.278529242530",
+      "price_convention": "next_observed_close_ioc",
+      "source_id": "9700968c-b482-4ab1-8022-0ea015a3cde0"
+    }
+  ],
+  "portfolio": {
+    "cash": "99971.721470757470",
+    "market_value": "0",
+    "equity": "99971.721470757470",
+    "realized_pnl": "-28.278529242530",
+    "unrealized_pnl": "0",
+    "dividends": "0",
+    "fees": "2.000000000000",
+    "slippage": "0.854264302530",
+    "gross_exposure": 0.0,
+    "net_exposure": 0.0,
+    "reconciliation_residual": "0E-12",
+    "positions": {
+      "AAPL": {
+        "quantity": "0",
+        "cost_basis": "0",
+        "weight": 0.0
+      }
+    },
+    "day": "2024-04-05",
+    "at": "2024-04-06T00:00:02+00:00",
+    "processed_at": "2026-10-21T02:34:59.987037+00:00",
+    "marks": {
+      "AAPL": "144.21039561"
+    },
+    "mode": "synthetic_demo",
+    "source_ids": {
+      "AAPL": "75650f72-3c5f-45f5-b50f-908fbbe378f7"
+    },
+    "stale": false,
+    "market_observed_at": "2024-04-05T23:59:59+00:00"
+  },
+  "replay": {
+    "data": {
+      "session_id": "b13e4490-05f2-4665-9a71-3be578e9a400",
+      "equivalent": true,
+      "fills": 2,
+      "events": 10,
+      "mode": "synthetic_demo",
+      "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+    }
+  }
+}

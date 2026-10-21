@@ -1,0 +1,236 @@
+{
+  "milestone": 12,
+  "version": "0.12.0",
+  "schema": "0012_paper_operations",
+  "date": "2026-10-21 America/Chicago",
+  "status": "LOCAL_CORE_RESEARCH_SIMULATION_RELEASE_WITH_EXPLICIT_OPEN_RESTRICTIONS",
+  "classification": {
+    "local_research_ready": true,
+    "local_simulation_ready": true,
+    "reproducible_demo_ready": true,
+    "deployment_verified": false,
+    "production_ready": false,
+    "scope": "Single-user loopback SQLite/core environment; optional NLP security restricted"
+  },
+  "backend": {
+    "python312": {
+      "passed": 605,
+      "skipped": 1,
+      "subtests": 11,
+      "seconds": 86.5
+    },
+    "python314": {
+      "passed": 605,
+      "skipped": 1,
+      "subtests": 11,
+      "seconds": 89.34
+    },
+    "new_m12_cases": 7,
+    "finbert_optional312": {
+      "passed": 1,
+      "seconds": 2.46
+    },
+    "mypy_modules": 126,
+    "ruff_formatted_files": 231,
+    "previous_tests_and_migrations_byte_identical": 53
+  },
+  "frontend": {
+    "passed": 59,
+    "files": 8,
+    "typecheck": "PASS",
+    "eslint": "PASS",
+    "format": "PASS",
+    "production_build": "PASS",
+    "standalone_build": "PASS",
+    "clean_install_build": "PASS",
+    "current_visual": "BLOCKED",
+    "current_axe_manual_a11y": "BLOCKED",
+    "screenshots_created": false
+  },
+  "integration": {
+    "actual_http_checks": 38,
+    "html_routes_http_200": 11,
+    "synthetic_demo_fills": 5,
+    "risk_veto_fills": 0,
+    "replays_equivalent": true,
+    "real_subprocess_exit_pre_post_commit": "PASS",
+    "backup_restore_new_api_portfolio_equal": "PASS",
+    "backend_outage_actual503": "PASS",
+    "owned_services_stopped": true
+  },
+  "security": {
+    "runtime_python_known_advisories": 0,
+    "developer_python_known_advisories": 0,
+    "npm_known_advisories": 0,
+    "optional_nlp_advisory_records": 9,
+    "optional_nlp_unique_ids": 6,
+    "optional_nlp_affected_package": "transformers==4.57.6",
+    "certifi_updated": "2026.10.19",
+    "public_auth": "NOT IMPLEMENTED",
+    "public_exposure": "PROHIBITED",
+    "source_signature_scan": "PASS 497 text files at final pre-package scan"
+  },
+  "infrastructure": {
+    "native_postgresql": "BLOCKED shmget Operation not permitted",
+    "compose_config": "PASS",
+    "docker_runtime": "BLOCKED no daemon socket",
+    "ci_yaml": "PARSED",
+    "remote_ci": "NOT EXECUTED no authorized remote"
+  },
+  "benchmarks": [
+    {
+      "assets": 1,
+      "observations": 5,
+      "seconds": {
+        "market_update": 0.02096650004386902,
+        "session_creation": 0.010867749922908843,
+        "batch_advance_including_features_and_commits": 0.3459825830068439,
+        "recovery_and_full_replay": 0.08597004099283367,
+        "new_process_recovery_and_replay": 0.7038098749471828,
+        "measured_audit_transaction_commit": 0.00026054203044623137,
+        "api_retrieval": 0.01299466600175947,
+        "end_to_end": 1.4781585420714691
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0010854600695893168,
+        "committee_m5": 0.007871957961469889,
+        "order_generation": 0.001984582981094718,
+        "risk_evaluation_and_persistence": 0.16192245855927467,
+        "fill_execution": 0.0007402079645544291,
+        "ledger_valuation": 0.032159584923647344
+      },
+      "sql_statements_before_restart": 300,
+      "peak_process_rss_mib": 241.5,
+      "fills": 2
+    },
+    {
+      "assets": 5,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.04953645903151482,
+        "session_creation": 0.009644833044148982,
+        "batch_advance_including_features_and_commits": 0.43887808290310204,
+        "recovery_and_full_replay": 0.0970480419928208,
+        "new_process_recovery_and_replay": 0.6935578749980778,
+        "measured_audit_transaction_commit": 0.00032124994322657585,
+        "api_retrieval": 0.012553000007756054,
+        "end_to_end": 1.6086399579653516
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0007564988918602467,
+        "committee_m5": 0.006378458929248154,
+        "order_generation": 0.003591959015466273,
+        "risk_evaluation_and_persistence": 0.1990938321687281,
+        "fill_execution": 0.0016983749810606241,
+        "ledger_valuation": 0.018729374976828694
+      },
+      "sql_statements_before_restart": 313,
+      "peak_process_rss_mib": 251.921875,
+      "fills": 5
+    },
+    {
+      "assets": 20,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.18158162489999086,
+        "session_creation": 0.010882625007070601,
+        "batch_advance_including_features_and_commits": 1.7884352089604363,
+        "recovery_and_full_replay": 0.6539627499878407,
+        "new_process_recovery_and_replay": 1.1873447500402108,
+        "measured_audit_transaction_commit": 0.00034191692247986794,
+        "api_retrieval": 0.015443624928593636,
+        "end_to_end": 5.155887458939105
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.001992539968341589,
+        "committee_m5": 0.014537875074893236,
+        "order_generation": 0.010863667004741728,
+        "risk_evaluation_and_persistence": 0.6515359630575404,
+        "fill_execution": 0.004475458292290568,
+        "ledger_valuation": 0.019091083901003003
+      },
+      "sql_statements_before_restart": 737,
+      "peak_process_rss_mib": 373.90625,
+      "fills": 12
+    },
+    {
+      "assets": 50,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.40213466703426093,
+        "session_creation": 0.009454124956391752,
+        "batch_advance_including_features_and_commits": 6.021321916021407,
+        "recovery_and_full_replay": 2.7411845000460744,
+        "new_process_recovery_and_replay": 3.299210541998036,
+        "measured_audit_transaction_commit": 0.0007350840605795383,
+        "api_retrieval": 0.01834499998949468,
+        "end_to_end": 18.2496507500764
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0022210830356925726,
+        "committee_m5": 0.03870762407314032,
+        "order_generation": 0.020277750911191106,
+        "risk_evaluation_and_persistence": 1.9241140437079594,
+        "fill_execution": 0.008788164937868714,
+        "ledger_valuation": 0.019856000901199877
+      },
+      "sql_statements_before_restart": 1405,
+      "peak_process_rss_mib": 873.140625,
+      "fills": 21
+    }
+  ],
+  "research": {
+    "genuine_ibm_committee_return_percent": -8.7,
+    "genuine_ibm_buy_hold_return_percent": -4.69,
+    "genuine_predictive_alpha_established": false,
+    "long_term_forward_performance_established": false,
+    "genuine_all_agent_coverage_complete": false
+  },
+  "evidence": {
+    "backend-unavailable.json": "ffe7d1436d74abdda95d0943fc6d58377af7ecd3f9ed595108ab589b4abcf4aa",
+    "backend312-final.txt": "45127ba39667037f1d73efa52dcd060ba404b2dbe81b9590beea600dcae792e5",
+    "backend314-final.txt": "5a7402ae093e34aea0edd74b91e47cc5cf9152f58dee7c8a92b25174fad723da",
+    "backup-evidence.json": "a15a20d697657b9e79f1ee0b61c8557b817401c4f9e030f035316fd0227a83e7",
+    "benchmark-1.json": "182307b6acb860297fc617af88a6b8213e6c43055a788763757cd23ff8251ac6",
+    "benchmark-20.json": "24e14de19224661ad968ad2498c2d811017686b5f8180276611b4f652c1779ae",
+    "benchmark-5.json": "b2486f69a6a4e03ba0cb4e4bf467fa83bf3ab0112d6d71ffefbd35ed1444753d",
+    "benchmark-50.json": "ebe26882439b5ed998f3c69b3c2601ba2c7316d446ee37ba4e137fcbb668b064",
+    "browser-policy.txt": "891803fb1ad50fd9b1a3788a652ca83236a7216afdab9cc303543dbc841edead",
+    "clean-demo.json": "b567c0fcb7df5c52c05de1f8a4fd4f8580fc6dbdd75bb83a3fcb8ff0c0a0bf11",
+    "clean-frontend-build.txt": "94ab51286434acd1fee96ea9a776f8232e91586c909b7197f9e19eef3be8941d",
+    "clean-frontend-types.txt": "668c5a756c5eff2bb69b3a06f95e46f3da2a4fd73dd6b9da907f47bc8f5d6a1a",
+    "clean-pip-check.txt": "54e025cf43f1c3c8dc48a8bf9f9a3a27081514acada8136c81571780ac12edc8",
+    "compose-config.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compose-version.txt": "4729daa1edc167dedd8b1caa225a9207ef414c8c387e3ff50b45d1730ce9c302",
+    "docker-runtime.txt": "b26544c7942a085ec5c8ebaa149e6015100b0906d5b395903b5b035f6d231d35",
+    "document-check.json": "3435466c3ab3a701254a969d79e50d061e36b2b290c6d011c6d5f1bec5ed4572",
+    "eslint-final.txt": "4881f837f9893ccacb74581a6720f79616c55af0f0d2fa960b0ade3fdef7e028",
+    "finbert-final.txt": "ebe7616af2106c5a70f8921beb67cd42a995ff8b95248ec550c72100dbbc6554",
+    "format-final.txt": "ffe4addd568dc877bc3178838726532ea7aa4e8eeb3ba31fe9282127d79e09a3",
+    "frontend-build-final.txt": "50921e2fb50b35f67da37cd2a2066341941a31b5362e4bd5e338bddd51f3de90",
+    "frontend-format-final.txt": "a84c2922aca8e7bd8f3bd159b181da6a8caa9bef976dca8654c3cc2de37f0a31",
+    "frontend-tests-final.txt": "650d07f5a59bd1e674d9febeb14f77088f13c0b7f02d5b2563cd72c231666922",
+    "http-verification.json": "5cb0f1fbeee64b48bb74cb5ac8c2250448279b314e7f4ea554c4493ce7544ebb",
+    "mypy.txt": "43531f8d6acf1c3f31eebf181d52d94c82589f603ee70847038f931a74a14a09",
+    "npm-audit.json": "a605ad3c479a04157dacba694e8e9dd533a0864fc01f69d5504f1d37c313dc33",
+    "pip-audit-all-final.json": "f7bb34f3ce02dd38c24ffaf8359e22f1d5654718e403f32ae8a6d255824afffe",
+    "pip-audit-dev-final.json": "aeff925ab04ddb96c7b2b9af32ae453924b1779043ae770560909c2ed2c01cfe",
+    "pip-audit.json": "9cb66990a73ab73f0270d525d7a4a6389ec24f538573e8f27dbf13e61a2fdc2d",
+    "pip-check312.txt": "54e025cf43f1c3c8dc48a8bf9f9a3a27081514acada8136c81571780ac12edc8",
+    "pip-check314.txt": "54e025cf43f1c3c8dc48a8bf9f9a3a27081514acada8136c81571780ac12edc8",
+    "postgres-init.txt": "7888f91badbd84b654f01bcd3070d73c87ef1078d13cc3963a73922c8754646d",
+    "reproduce-checks.md": "02bac9f62c7db788b71d77e99aabfcc8df18b42405e91ef4f6a0585cccf31232",
+    "ruff-final.txt": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "secret-scan-final.txt": "b064ec77d5db937423b4399b4a2caf080773338b7ea2fc098e81ff64e4bfaa56",
+    "standalone-build.txt": "52cf8ee164013a2c185690851846de9d064565f3c3e47ea316ed1ca896e3cbf0",
+    "standalone-syntax.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "static-infrastructure.json": "51407126532caf440784604a12dbe9abc54dd59434c584e3dc7b9c1ae1dc7cd2",
+    "teardown.json": "e8308ed8bac2485e0c37970988d592601f70f79713165937f5042d1e646cd226",
+    "typecheck-final.txt": "668c5a756c5eff2bb69b3a06f95e46f3da2a4fd73dd6b9da907f47bc8f5d6a1a"
+  },
+  "release_documents": {
+    "relative_links": "PASS",
+    "numbered_report_sections": 30
+  },
+  "path_redaction_note": "Post-release machine/user path redaction; original M12 archive preserves original evidence. See PATH_REDACTIONS.json."
+}

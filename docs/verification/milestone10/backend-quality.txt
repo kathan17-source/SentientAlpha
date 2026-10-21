@@ -1,0 +1,1 @@
+Final local verification: compileall backend/scripts PASS; Python3.12/3.14 pip check: No broken requirements found; Ruff: All checks passed,211 files already formatted; mypy: Success no issues found in119 source files.

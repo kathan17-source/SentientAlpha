@@ -1,0 +1,89 @@
+{
+  "scope": "Actual synthetic operational safety through production proxy/API",
+  "session_id": "570be9b6-b52a-4c14-8275-a237fecda0be",
+  "advance": {
+    "data": {
+      "session_id": "570be9b6-b52a-4c14-8275-a237fecda0be",
+      "processed": [
+        {
+          "day": "2024-04-01",
+          "kind": "market",
+          "event_id": "150ce046-d932-463b-a148-0fe3f8972c2b",
+          "fills": 0
+        }
+      ],
+      "status": "PAUSED",
+      "no_new_observations": false
+    }
+  },
+  "status": "PAUSED",
+  "warning": "insufficient_pre_trade_risk_data; no unapproved order can fill",
+  "orders": [
+    {
+      "id": "babca448c22544db25ba42b6b4d6290f68d6aa7705283b067344df6531b5bbd9",
+      "session_id": "570be9b6-b52a-4c14-8275-a237fecda0be",
+      "committee_id": "b09d62f4-9821-47a5-9fc7-84c62c31fa04",
+      "decision_id": "ca59dda8-d4f5-4edb-a944-4d57e1083dfd",
+      "ticker": "AAPL",
+      "side": "buy",
+      "requested_quantity": "273",
+      "approved_quantity": "0",
+      "filled_quantity": "0",
+      "remaining_quantity": "273",
+      "submitted_at": "2024-04-02T00:00:02+00:00",
+      "processed_at": "2026-10-21T02:27:49.805495+00:00",
+      "earliest_execution_at": "2024-04-02T00:00:02.000001+00:00",
+      "risk_decision_id": "7e6596ae385f8e0ef584adf1883197dab3e31be936fb6529e074b0b38e2531f6",
+      "status": "REJECTED",
+      "reason": "independent_pre_trade_risk_veto",
+      "transitions": [
+        "CREATED",
+        "PENDING_RISK",
+        "REJECTED"
+      ]
+    }
+  ],
+  "fills": [],
+  "risk_statuses": [
+    "INSUFFICIENT_RISK_DATA",
+    "APPROVED"
+  ],
+  "replay": {
+    "data": {
+      "session_id": "570be9b6-b52a-4c14-8275-a237fecda0be",
+      "equivalent": true,
+      "fills": 0,
+      "events": 6,
+      "mode": "synthetic_demo",
+      "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+    }
+  },
+  "other_session_actual_fill_veto_examples": [
+    {
+      "id": "c10e894424bb2470dcf75d68ddb93cc18c9664a9c493c5129116d041de32dde0",
+      "session_id": "7a990b47-fe74-4f7d-b528-1fa80d6a33f3",
+      "committee_id": "f7a89942-1cf0-4d5c-8b55-4f5243a78384",
+      "decision_id": "4a59b2f2-5b1d-4e0c-b6dd-a672fab3807d",
+      "ticker": "AAPL",
+      "side": "buy",
+      "requested_quantity": "273",
+      "approved_quantity": "273",
+      "filled_quantity": "0",
+      "remaining_quantity": "273",
+      "submitted_at": "2024-04-02T00:00:02+00:00",
+      "processed_at": "2026-10-21T02:23:33.420418+00:00",
+      "earliest_execution_at": "2024-04-02T00:00:02.000001+00:00",
+      "risk_decision_id": "7c9970abba54c57a3584b43e4b3dcda086df2ca8c40fb22ae061f501601f5309",
+      "status": "REJECTED",
+      "reason": "independent_fill_risk_veto",
+      "transitions": [
+        "CREATED",
+        "PENDING_RISK",
+        "APPROVED",
+        "QUEUED",
+        "REJECTED"
+      ],
+      "fill_risk_id": "8970f0249cb4a2051fcc22645bcb52b57bdea13b3e3bd71c24a187d10b2126fe"
+    }
+  ]
+}

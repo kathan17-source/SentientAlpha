@@ -1,0 +1,62 @@
+{
+  "status": "PARTIALLY_VERIFIED_FOUNDATION_MILESTONE_8_INCOMPLETE",
+  "project_version": "0.7.0",
+  "schema_revision": "0009_strategy_discovery",
+  "verification_date_user_timezone": "2026-10-19 America/Chicago",
+  "python312": {
+    "passed": 499,
+    "skipped": 1,
+    "subtests_passed": 11,
+    "warnings": 1,
+    "seconds": 44.29
+  },
+  "python314": {
+    "passed": 499,
+    "skipped": 1,
+    "subtests_passed": 11,
+    "warnings": 1,
+    "seconds": 46.66
+  },
+  "new_tests": 36,
+  "warning": "Upstream Starlette TestClient/httpx deprecation",
+  "skipped": "Opt-in FinBERT inference; not rerun for additive foundation",
+  "ruff_check": "passed",
+  "ruff_format": "124 files unchanged",
+  "mypy": "101 application files passed",
+  "compileall": "passed",
+  "pip_check": "passed",
+  "previous_test_files_byte_identical": true,
+  "previous_migrations_byte_identical": true,
+  "previous_application_files_byte_identical": true,
+  "changed_previous_files": [
+    "README.md",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md"
+  ],
+  "not_implemented": [
+    "M6/M7 source adapters",
+    "committee persistence/migration/API",
+    "holdings-aware final actions",
+    "M4 committee execution/replay",
+    "genuine data committee demonstration",
+    "matched ablations",
+    "1/5/20/50 workload benchmarks",
+    "full adversarial acceptance matrix"
+  ],
+  "not_executed": [
+    "new PostgreSQL verification",
+    "new Docker verification",
+    "remote CI"
+  ],
+  "genuine_new_fundamental_or_macro_coverage": false,
+  "new_alpha_claim": false,
+  "milestone9_started": false,
+  "commands": [
+    "pytest -q (Python 3.12 and 3.14)",
+    "ruff check backend",
+    "ruff format --check backend",
+    "mypy",
+    "python -m compileall -q backend/sentientalpha",
+    "python -m pip check"
+  ]
+}

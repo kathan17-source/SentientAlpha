@@ -1,0 +1,10 @@
+usage: verify_infrastructure.py [-h] {postgres,docker}
+
+Host-only infrastructure verification. Does not install software or delete
+volumes.
+
+positional arguments:
+  {postgres,docker}
+
+options:
+  -h, --help         show this help message and exit

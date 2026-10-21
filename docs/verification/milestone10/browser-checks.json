@@ -1,0 +1,139 @@
+{
+  "transport": "Actual Codex in-app browser using DOM/Playwright locators; native Playwright Chromium launch blocked separately",
+  "checks": [
+    {
+      "flow": "committee recommendations, abstentions and source clocks",
+      "passed": true
+    },
+    {
+      "flow": "risk veto, null approved allocation, actual-state tail warning",
+      "passed": true
+    },
+    {
+      "flow": "reviewed hypothetical stress through Next proxy, FastAPI and SQLite",
+      "passed": true
+    },
+    {
+      "flow": "actual portfolio holdings and derived cost basis",
+      "passed": true
+    },
+    {
+      "flow": "historical holdings slider selects true cash-only opening snapshot",
+      "passed": true
+    },
+    {
+      "flow": "saved backtest, matched benchmark, order/fill switching",
+      "passed": true
+    },
+    {
+      "flow": "strategy definition, failed candidates and separated train/validation/test",
+      "passed": true
+    },
+    {
+      "flow": "saved ML results, split windows and baseline comparison",
+      "passed": true
+    },
+    {
+      "flow": "missing genuine news is unavailable, not neutral sentiment",
+      "passed": true
+    },
+    {
+      "flow": "ticker context and historical date inputs retrieve provider observations",
+      "passed": true
+    },
+    {
+      "flow": "earlier as-of cutoff excludes later market observations",
+      "passed": true
+    },
+    {
+      "flow": "security selector switches to separately labeled synthetic observations",
+      "passed": true
+    },
+    {
+      "flow": "experiment type switching, saved manifest and reproducibility controls",
+      "passed": true
+    },
+    {
+      "flow": "responsive layout 1440",
+      "passed": true,
+      "documentWidth": 1440,
+      "width": 1440
+    },
+    {
+      "flow": "responsive layout 1280",
+      "passed": true,
+      "documentWidth": 1280,
+      "width": 1280
+    },
+    {
+      "flow": "responsive layout 820",
+      "passed": true,
+      "documentWidth": 820,
+      "width": 820
+    },
+    {
+      "flow": "responsive layout 390",
+      "passed": true,
+      "documentWidth": 390,
+      "width": 390
+    },
+    {
+      "flow": "phone navigation opens and routes without hidden-navigation focus targets",
+      "passed": true
+    },
+    {
+      "flow": "keyboard traversal exposes a visible focus outline",
+      "passed": true,
+      "outline": "solid",
+      "tag": "BUTTON",
+      "text": "Original proposed state"
+    },
+    {
+      "flow": "genuine retained M3 article versions, actual FinBERT probabilities and model provenance in separate DB",
+      "passed": true
+    },
+    {
+      "flow": "fresh empty database renders useful empty state without invented metrics",
+      "passed": true
+    },
+    {
+      "flow": "actually stopped backend produces sanitized retryable error state",
+      "passed": true
+    },
+    {
+      "flow": "fresh self-contained synthetic demo renders actual generated research, visibly labeled",
+      "passed": true
+    },
+    {
+      "flow": "actual saved numerical frontier and portfolio optimization results",
+      "passed": true
+    },
+    {
+      "flow": "frontier point selection reveals its actual proposed weights and estimated risk",
+      "passed": true
+    },
+    {
+      "flow": "reviewed new baseline form creates a real persisted M4 simulation through the proxy",
+      "passed": true
+    },
+    {
+      "flow": "actual rendered text contrast sample and production route visibility",
+      "passed": true
+    },
+    {
+      "flow": "reviewed optimization form persists a new numerical allocation and opens actual saved result",
+      "passed": true,
+      "id": "64f6210e-0cbc-4d01-87a3-4578720cd759"
+    },
+    {
+      "flow": "reviewed committee form creates durable analysis-only audit",
+      "passed": true,
+      "id": "d8e71028-6892-40cb-be7e-92a45e1faf65"
+    },
+    {
+      "flow": "reviewed bounded discovery creates actual saved training/validation search without automatic holdout evaluation",
+      "passed": true,
+      "id": "9566f55c-62c1-46cf-9578-c994cbc142cd"
+    }
+  ]
+}

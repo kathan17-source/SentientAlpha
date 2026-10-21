@@ -1,0 +1,1002 @@
+{
+  "scope": "Single-machine short synthetic sessions; regression work also running; parent RSS, not aggregate services; not p95 or availability SLA",
+  "runs": [
+    {
+      "provenance": "SYNTHETIC_DEMONSTRATION_NOT_FORWARD_TRADING",
+      "session_id": "7a990b47-fe74-4f7d-b528-1fa80d6a33f3",
+      "assets": 1,
+      "observations": 5,
+      "seconds": {
+        "market_update": 0.01681749999988824,
+        "session_creation": 0.00890691700624302,
+        "batch_advance_including_features_and_commits": 0.2933444579830393,
+        "recovery_and_full_replay": 0.0737328749964945,
+        "new_process_recovery_and_replay": 0.6106955000432208,
+        "measured_audit_transaction_commit": 0.00020587496692314744,
+        "api_retrieval": 0.011201541987247765,
+        "end_to_end": 1.267498290981166
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0008710399852134287,
+        "committee_m5": 0.007224166940432042,
+        "order_generation": 0.0016116670449264348,
+        "risk_evaluation_and_persistence": 0.1379517080495134,
+        "fill_execution": 0.0005949580227024853,
+        "ledger_valuation": 0.026945416058879346
+      },
+      "sql_statements_before_restart": 300,
+      "event_throughput_per_second": 17.044808122092054,
+      "peak_process_rss_mib": 239.34375,
+      "orders": 4,
+      "fills": 2,
+      "order_states": {
+        "FILLED": 2,
+        "QUEUED": 1,
+        "REJECTED": 1
+      },
+      "duplicate_request_economic_effects": 0,
+      "restart_portfolio_equal": true,
+      "separate_process_portfolio_equal": true,
+      "replay": {
+        "session_id": "7a990b47-fe74-4f7d-b528-1fa80d6a33f3",
+        "equivalent": true,
+        "fills": 2,
+        "events": 11,
+        "mode": "synthetic_demo",
+        "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+      },
+      "portfolio": {
+        "cash": "98811.086429212395",
+        "market_value": "0",
+        "equity": "98811.086429212395",
+        "realized_pnl": "-1188.913570787605",
+        "unrealized_pnl": "0",
+        "dividends": "0",
+        "fees": "2.000000000000",
+        "slippage": "38.584270997605",
+        "gross_exposure": 0.0,
+        "net_exposure": 0.0,
+        "reconciliation_residual": "0E-12",
+        "positions": {
+          "AAPL": {
+            "quantity": "0",
+            "cost_basis": "0",
+            "weight": 0.0
+          }
+        },
+        "day": "2024-04-05",
+        "at": "2024-04-06T00:00:02+00:00",
+        "processed_at": "2026-10-21T02:23:33.657190+00:00",
+        "marks": {
+          "AAPL": "144.21039561"
+        },
+        "mode": "synthetic_demo",
+        "source_ids": {
+          "AAPL": "75650f72-3c5f-45f5-b50f-908fbbe378f7"
+        },
+        "stale": false,
+        "market_observed_at": "2024-04-05T23:59:59+00:00"
+      },
+      "metrics": {
+        "status": "computed",
+        "total_return": -0.011889135707876086,
+        "cumulative_return": -0.011889135707876086,
+        "annualized_return": null,
+        "cagr": null,
+        "annualized_volatility": 0.08260745143481474,
+        "downside_deviation": 0.08297344689681058,
+        "maximum_drawdown": 0.011889135707876086,
+        "drawdown_duration_sessions": 3,
+        "historical_var_95": null,
+        "historical_cvar_95": null,
+        "sharpe": null,
+        "sortino": null,
+        "calmar": null,
+        "alpha": null,
+        "beta": null,
+        "tracking_error": null,
+        "information_ratio": null,
+        "excess_return": null,
+        "trade_count": 2,
+        "closed_lot_count": 1,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "average_trade_pnl": -1188.913570787605,
+        "turnover": 0.3877053306605578,
+        "commissions": 2.0,
+        "slippage": 38.584270997605,
+        "average_exposure": 0.07833299161197169,
+        "daily_returns": [
+          {
+            "day": "2024-04-01",
+            "return": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "return": 0.0
+          },
+          {
+            "day": "2024-04-03",
+            "return": -0.00020579217823746276
+          },
+          {
+            "day": "2024-04-04",
+            "return": -0.011685748365249049
+          },
+          {
+            "day": "2024-04-05",
+            "return": 0.0
+          }
+        ],
+        "monthly_returns": [
+          {
+            "month": "2024-04",
+            "return": -0.011889135707876086
+          }
+        ],
+        "drawdown": [
+          {
+            "day": "2024-04-01",
+            "drawdown": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "drawdown": 0.0
+          },
+          {
+            "day": "2024-04-03",
+            "drawdown": -0.00020579217823746276
+          },
+          {
+            "day": "2024-04-04",
+            "drawdown": -0.011889135707876086
+          },
+          {
+            "day": "2024-04-05",
+            "drawdown": -0.011889135707876086
+          }
+        ],
+        "rolling": [
+          {
+            "day": "2024-04-01",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-02",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-03",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-04",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-05",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          }
+        ],
+        "statistical_status": "insufficient_history_under_60_observations"
+      },
+      "simulation_only": true,
+      "no_alpha_claim": true,
+      "continuous_availability_tested": false
+    },
+    {
+      "provenance": "SYNTHETIC_DEMONSTRATION_NOT_FORWARD_TRADING",
+      "session_id": "6875c05b-5b45-4b4e-bc68-ff5c674945bb",
+      "assets": 5,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.04684429202461615,
+        "session_creation": 0.008860833011567593,
+        "batch_advance_including_features_and_commits": 0.4097090410068631,
+        "recovery_and_full_replay": 0.09166416601510718,
+        "new_process_recovery_and_replay": 0.654684291977901,
+        "measured_audit_transaction_commit": 0.0003902919706888497,
+        "api_retrieval": 0.011823750042822212,
+        "end_to_end": 1.5285562089993618
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0006684999680146575,
+        "committee_m5": 0.0061485429760068655,
+        "order_generation": 0.0031620420631952584,
+        "risk_evaluation_and_persistence": 0.15293079183902591,
+        "fill_execution": 0.0014617929700762033,
+        "ledger_valuation": 0.016623082978185266
+      },
+      "sql_statements_before_restart": 313,
+      "event_throughput_per_second": 7.322269463782095,
+      "peak_process_rss_mib": 252.53125,
+      "orders": 10,
+      "fills": 5,
+      "order_states": {
+        "FILLED": 5,
+        "QUEUED": 4,
+        "REJECTED": 1
+      },
+      "duplicate_request_economic_effects": 0,
+      "restart_portfolio_equal": true,
+      "separate_process_portfolio_equal": true,
+      "replay": {
+        "session_id": "6875c05b-5b45-4b4e-bc68-ff5c674945bb",
+        "equivalent": true,
+        "fills": 5,
+        "events": 9,
+        "mode": "synthetic_demo",
+        "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+      },
+      "portfolio": {
+        "cash": "21068.097810280020",
+        "market_value": "78751.89469486",
+        "equity": "99819.992505140020",
+        "realized_pnl": "395.680737768650",
+        "unrealized_pnl": "-575.688232628630",
+        "dividends": "0",
+        "fees": "5.000000000000",
+        "slippage": "72.976745859980",
+        "gross_exposure": 0.7889390964520944,
+        "net_exposure": 0.7889390964520944,
+        "reconciliation_residual": "0E-12",
+        "positions": {
+          "DEMO00": {
+            "quantity": "271",
+            "cost_basis": "39453.786788556715",
+            "weight": 0.39504180739544215
+          },
+          "DEMO01": {
+            "quantity": "0",
+            "cost_basis": "0",
+            "weight": 0.0
+          },
+          "DEMO03": {
+            "quantity": "279",
+            "cost_basis": "39873.796138931915",
+            "weight": 0.3938972890566523
+          }
+        },
+        "day": "2024-04-03",
+        "at": "2024-04-04T00:00:02+00:00",
+        "processed_at": "2026-10-21T02:24:13.654718+00:00",
+        "marks": {
+          "DEMO00": "145.50948433",
+          "DEMO01": "142.76503463",
+          "DEMO02": "147.54141454",
+          "DEMO03": "140.92768617",
+          "DEMO04": "141.16950302"
+        },
+        "mode": "synthetic_demo",
+        "source_ids": {
+          "DEMO00": "9dc00553-9e41-471f-8e19-8e00c9f0d7b3",
+          "DEMO01": "fe40e689-7c4d-46e7-9fcd-826430ea4f8c",
+          "DEMO02": "c0d484ef-1074-425e-8bbc-388b1b3fcba7",
+          "DEMO03": "6425cbf6-1afa-4aa9-921a-492ae5202ba9",
+          "DEMO04": "62b2df72-a50b-44a1-8682-21a8e5bca685"
+        },
+        "stale": false,
+        "market_observed_at": "2024-04-03T23:59:59+00:00"
+      },
+      "metrics": {
+        "status": "computed",
+        "total_return": -0.0018000749485997947,
+        "cumulative_return": -0.0018000749485997947,
+        "annualized_return": null,
+        "cagr": null,
+        "annualized_volatility": 0.011972131440008414,
+        "downside_deviation": 0.01365041345533052,
+        "maximum_drawdown": 0.0018000749485997947,
+        "drawdown_duration_sessions": 2,
+        "historical_var_95": null,
+        "historical_cvar_95": null,
+        "sharpe": null,
+        "sortino": null,
+        "calmar": null,
+        "alpha": null,
+        "beta": null,
+        "tracking_error": null,
+        "information_ratio": null,
+        "excess_return": null,
+        "trade_count": 5,
+        "closed_lot_count": 1,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "average_trade_pnl": 395.68073776865,
+        "turnover": 0.7304890660691249,
+        "commissions": 5.0,
+        "slippage": 72.97674585998,
+        "average_exposure": 0.4856245486205732,
+        "daily_returns": [
+          {
+            "day": "2024-04-01",
+            "return": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "return": -0.00035384910068503306
+          },
+          {
+            "day": "2024-04-03",
+            "return": -0.0014467377747753307
+          }
+        ],
+        "monthly_returns": [
+          {
+            "month": "2024-04",
+            "return": -0.0018000749485997947
+          }
+        ],
+        "drawdown": [
+          {
+            "day": "2024-04-01",
+            "drawdown": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "drawdown": -0.00035384910068503306
+          },
+          {
+            "day": "2024-04-03",
+            "drawdown": -0.0018000749485997947
+          }
+        ],
+        "rolling": [
+          {
+            "day": "2024-04-01",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-02",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-03",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          }
+        ],
+        "statistical_status": "insufficient_history_under_60_observations"
+      },
+      "simulation_only": true,
+      "no_alpha_claim": true,
+      "continuous_availability_tested": false
+    },
+    {
+      "provenance": "SYNTHETIC_DEMONSTRATION_NOT_FORWARD_TRADING",
+      "session_id": "dbd278fb-c0ed-4bfe-9c5f-c107f8e48fda",
+      "assets": 20,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.15613700001267716,
+        "session_creation": 0.0094486249727197,
+        "batch_advance_including_features_and_commits": 1.7481756249908358,
+        "recovery_and_full_replay": 0.6163004579721019,
+        "new_process_recovery_and_replay": 1.1987589999916963,
+        "measured_audit_transaction_commit": 0.0006678749923594296,
+        "api_retrieval": 0.014244707999750972,
+        "end_to_end": 5.056695082981605
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.0014300839393399656,
+        "committee_m5": 0.014777624979615211,
+        "order_generation": 0.010914834041614085,
+        "risk_evaluation_and_persistence": 0.5943318330682814,
+        "fill_execution": 0.003723375906702131,
+        "ledger_valuation": 0.018261582998093218
+      },
+      "sql_statements_before_restart": 737,
+      "event_throughput_per_second": 1.7160747221925867,
+      "peak_process_rss_mib": 371.71875,
+      "orders": 44,
+      "fills": 12,
+      "order_states": {
+        "FILLED": 12,
+        "QUEUED": 17,
+        "REJECTED": 15
+      },
+      "duplicate_request_economic_effects": 0,
+      "restart_portfolio_equal": true,
+      "separate_process_portfolio_equal": true,
+      "replay": {
+        "session_id": "dbd278fb-c0ed-4bfe-9c5f-c107f8e48fda",
+        "equivalent": true,
+        "fills": 12,
+        "events": 9,
+        "mode": "synthetic_demo",
+        "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+      },
+      "portfolio": {
+        "cash": "1903.889110608640",
+        "market_value": "97789.50301203",
+        "equity": "99693.392122638640",
+        "realized_pnl": "0",
+        "unrealized_pnl": "-306.607877361360",
+        "dividends": "0",
+        "fees": "12.000000000000",
+        "slippage": "49.017546671360",
+        "gross_exposure": 0.9809025546220099,
+        "net_exposure": 0.9809025546220099,
+        "reconciliation_residual": "0E-12",
+        "positions": {
+          "DEMO00": {
+            "quantity": "57",
+            "cost_basis": "8399.688233534020",
+            "weight": 0.08319548999403108
+          },
+          "DEMO01": {
+            "quantity": "58",
+            "cost_basis": "8179.080831937510",
+            "weight": 0.08305838363242604
+          },
+          "DEMO03": {
+            "quantity": "58",
+            "cost_basis": "8310.518711594290",
+            "weight": 0.08198944407273179
+          },
+          "DEMO06": {
+            "quantity": "57",
+            "cost_basis": "8322.981034501720",
+            "weight": 0.08207023628391556
+          },
+          "DEMO09": {
+            "quantity": "57",
+            "cost_basis": "8183.455662429595",
+            "weight": 0.08345222758340425
+          },
+          "DEMO10": {
+            "quantity": "56",
+            "cost_basis": "7862.661217455640",
+            "weight": 0.08225994102950929
+          },
+          "DEMO12": {
+            "quantity": "56",
+            "cost_basis": "7978.264924422640",
+            "weight": 0.07918660246978719
+          },
+          "DEMO13": {
+            "quantity": "57",
+            "cost_basis": "8083.731851472610",
+            "weight": 0.08074122893268598
+          },
+          "DEMO14": {
+            "quantity": "57",
+            "cost_basis": "8302.511099819305",
+            "weight": 0.08086860434362976
+          },
+          "DEMO15": {
+            "quantity": "56",
+            "cost_basis": "8039.348654144200",
+            "weight": 0.0800789382913085
+          },
+          "DEMO16": {
+            "quantity": "58",
+            "cost_basis": "8417.569124091310",
+            "weight": 0.08483279159220725
+          },
+          "DEMO19": {
+            "quantity": "56",
+            "cost_basis": "8016.299543988520",
+            "weight": 0.07916866639637321
+          }
+        },
+        "day": "2024-04-03",
+        "at": "2024-04-04T00:00:02+00:00",
+        "processed_at": "2026-10-21T02:24:17.277794+00:00",
+        "marks": {
+          "DEMO00": "145.50948433",
+          "DEMO01": "142.76503463",
+          "DEMO02": "147.54141454",
+          "DEMO03": "140.92768617",
+          "DEMO04": "141.16950302",
+          "DEMO05": "141.34121717",
+          "DEMO06": "143.54140785",
+          "DEMO07": "141.68956030",
+          "DEMO08": "145.93039057",
+          "DEMO09": "145.95852014",
+          "DEMO10": "146.44236709",
+          "DEMO11": "140.25264897",
+          "DEMO12": "140.97108948",
+          "DEMO13": "141.21696485",
+          "DEMO14": "141.43974532",
+          "DEMO15": "142.55966064",
+          "DEMO16": "145.81497857",
+          "DEMO17": "144.69611396",
+          "DEMO18": "146.51121474",
+          "DEMO19": "140.93915898"
+        },
+        "mode": "synthetic_demo",
+        "source_ids": {
+          "DEMO00": "a6b680db-ddd8-4580-b6da-b45ee5deaf6c",
+          "DEMO01": "003236f0-6738-4f5a-8f7c-14f02da67102",
+          "DEMO02": "e82cf9d1-84ab-4a11-a390-4d156075b7b7",
+          "DEMO03": "aa883afa-30a6-45a7-9b7e-7587391e1db9",
+          "DEMO04": "37e67514-6473-4e75-b4bb-0997f36f467f",
+          "DEMO05": "ed58ebe1-1808-4994-a4e4-a959a079576a",
+          "DEMO06": "df1a8a9d-6b97-4361-80e0-b8dc68cfe242",
+          "DEMO07": "f65330b9-9331-4a92-9386-99612d19768d",
+          "DEMO08": "b390c529-e1cf-4770-8273-993a8ecefae6",
+          "DEMO09": "e60d7ea3-9e7c-4794-8a97-95f7117506d9",
+          "DEMO10": "415cc116-fa4e-44b9-9be2-1f03da805609",
+          "DEMO11": "9e95dcc0-23cd-456a-9379-6457d815cb19",
+          "DEMO12": "12166b21-11ea-461a-ac3a-9938f53abe7b",
+          "DEMO13": "71da3f78-4071-4c37-bbb6-2b5223f878d7",
+          "DEMO14": "5271ce39-55e6-4d34-81a0-f25e1c4aecee",
+          "DEMO15": "fdf43b69-5549-4b5f-ab6e-1fcb5afa4642",
+          "DEMO16": "8f8b7374-3ecb-45f8-8ba2-b67b5f15f2b3",
+          "DEMO17": "5c220e9b-87d7-49cb-8f7b-ad596f1e1690",
+          "DEMO18": "460e27d4-c4af-4d5f-ac3e-29968c6b2a11",
+          "DEMO19": "c8415262-ea6d-4eb9-a8a3-5375fe343a39"
+        },
+        "stale": false,
+        "market_observed_at": "2024-04-03T23:59:59+00:00"
+      },
+      "metrics": {
+        "status": "computed",
+        "total_return": -0.003066078773613534,
+        "cumulative_return": -0.003066078773613534,
+        "annualized_return": null,
+        "cagr": null,
+        "annualized_volatility": 0.020312125045601516,
+        "downside_deviation": 0.02320637759607894,
+        "maximum_drawdown": 0.003066078773613534,
+        "drawdown_duration_sessions": 2,
+        "historical_var_95": null,
+        "historical_cvar_95": null,
+        "sharpe": null,
+        "sortino": null,
+        "calmar": null,
+        "alpha": null,
+        "beta": null,
+        "tracking_error": null,
+        "information_ratio": null,
+        "excess_return": null,
+        "trade_count": 12,
+        "closed_lot_count": 0,
+        "win_rate": null,
+        "profit_factor": null,
+        "average_trade_pnl": null,
+        "turnover": 0.4910222620045532,
+        "commissions": 12.0,
+        "slippage": 49.017546671359995,
+        "average_exposure": 0.653950679786294,
+        "daily_returns": [
+          {
+            "day": "2024-04-01",
+            "return": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "return": -0.0006101754667136028
+          },
+          {
+            "day": "2024-04-03",
+            "return": -0.0024574027537721532
+          }
+        ],
+        "monthly_returns": [
+          {
+            "month": "2024-04",
+            "return": -0.003066078773613534
+          }
+        ],
+        "drawdown": [
+          {
+            "day": "2024-04-01",
+            "drawdown": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "drawdown": -0.0006101754667136028
+          },
+          {
+            "day": "2024-04-03",
+            "drawdown": -0.003066078773613534
+          }
+        ],
+        "rolling": [
+          {
+            "day": "2024-04-01",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-02",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-03",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          }
+        ],
+        "statistical_status": "insufficient_history_under_60_observations"
+      },
+      "simulation_only": true,
+      "no_alpha_claim": true,
+      "continuous_availability_tested": false
+    },
+    {
+      "provenance": "SYNTHETIC_DEMONSTRATION_NOT_FORWARD_TRADING",
+      "session_id": "4e9f04d1-4771-4b42-9ab3-69db5e2192e2",
+      "assets": 50,
+      "observations": 3,
+      "seconds": {
+        "market_update": 0.46312395797576755,
+        "session_creation": 0.010126083041541278,
+        "batch_advance_including_features_and_commits": 6.372599666996393,
+        "recovery_and_full_replay": 2.8343921250198036,
+        "new_process_recovery_and_replay": 4.049250125011895,
+        "measured_audit_transaction_commit": 0.0002766670077107847,
+        "api_retrieval": 0.023958041972946376,
+        "end_to_end": 19.89826595899649
+      },
+      "stage_seconds": {
+        "ledger_restore": 0.00247012497857213,
+        "committee_m5": 0.041520833037793636,
+        "order_generation": 0.021973500086460263,
+        "risk_evaluation_and_persistence": 1.9708477100357413,
+        "fill_execution": 0.009758625063113868,
+        "ledger_valuation": 0.026902875921223313
+      },
+      "sql_statements_before_restart": 1405,
+      "event_throughput_per_second": 0.47076548924561495,
+      "peak_process_rss_mib": 872.53125,
+      "orders": 89,
+      "fills": 21,
+      "order_states": {
+        "FILLED": 21,
+        "QUEUED": 37,
+        "REJECTED": 31
+      },
+      "duplicate_request_economic_effects": 0,
+      "restart_portfolio_equal": true,
+      "separate_process_portfolio_equal": true,
+      "replay": {
+        "session_id": "4e9f04d1-4771-4b42-9ab3-69db5e2192e2",
+        "equivalent": true,
+        "fills": 21,
+        "events": 9,
+        "mode": "synthetic_demo",
+        "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+      },
+      "portfolio": {
+        "cash": "2458.378315139005",
+        "market_value": "97543.38918449",
+        "equity": "100001.767499629005",
+        "realized_pnl": "0",
+        "unrealized_pnl": "1.767499629005",
+        "dividends": "0",
+        "fees": "21.000000000000",
+        "slippage": "48.735942870995",
+        "gross_exposure": 0.975416651359206,
+        "net_exposure": 0.975416651359206,
+        "reconciliation_residual": "0E-12",
+        "positions": {
+          "DEMO00": {
+            "quantity": "32",
+            "cost_basis": "4716.053043387520",
+            "weight": 0.04656221199867567
+          },
+          "DEMO01": {
+            "quantity": "33",
+            "cost_basis": "4654.045990585135",
+            "weight": 0.04711162873003698
+          },
+          "DEMO03": {
+            "quantity": "33",
+            "cost_basis": "4728.829611769165",
+            "weight": 0.04650531445483954
+          },
+          "DEMO06": {
+            "quantity": "32",
+            "cost_basis": "4672.989352702720",
+            "weight": 0.04593243865631716
+          },
+          "DEMO09": {
+            "quantity": "32",
+            "cost_basis": "4594.659319258720",
+            "weight": 0.046705900918174545
+          },
+          "DEMO10": {
+            "quantity": "32",
+            "cost_basis": "4493.377838546080",
+            "weight": 0.04686072920558514
+          },
+          "DEMO12": {
+            "quantity": "32",
+            "cost_basis": "4559.437099670080",
+            "weight": 0.04510995131537786
+          },
+          "DEMO13": {
+            "quantity": "32",
+            "cost_basis": "4538.674021879360",
+            "weight": 0.04518863004313164
+          },
+          "DEMO14": {
+            "quantity": "32",
+            "cost_basis": "4661.497459547680",
+            "weight": 0.04525991853350783
+          },
+          "DEMO15": {
+            "quantity": "32",
+            "cost_basis": "4594.342088082400",
+            "weight": 0.045618285101780065
+          },
+          "DEMO16": {
+            "quantity": "33",
+            "cost_basis": "4789.737605086435",
+            "weight": 0.048118092440994624
+          },
+          "DEMO19": {
+            "quantity": "32",
+            "cost_basis": "4581.171167993440",
+            "weight": 0.045099733735973535
+          },
+          "DEMO21": {
+            "quantity": "32",
+            "cost_basis": "4566.768934315360",
+            "weight": 0.04724736581818445
+          },
+          "DEMO22": {
+            "quantity": "33",
+            "cost_basis": "4661.222411462365",
+            "weight": 0.04824777048653565
+          },
+          "DEMO24": {
+            "quantity": "32",
+            "cost_basis": "4625.152289004160",
+            "weight": 0.044603356723835384
+          },
+          "DEMO35": {
+            "quantity": "33",
+            "cost_basis": "4795.621220994220",
+            "weight": 0.04760643095710945
+          },
+          "DEMO40": {
+            "quantity": "32",
+            "cost_basis": "4636.601970984160",
+            "weight": 0.04651291775315127
+          },
+          "DEMO42": {
+            "quantity": "32",
+            "cost_basis": "4637.337882436000",
+            "weight": 0.0466332434119957
+          },
+          "DEMO43": {
+            "quantity": "33",
+            "cost_basis": "4787.929354773115",
+            "weight": 0.04724290664670029
+          },
+          "DEMO45": {
+            "quantity": "32",
+            "cost_basis": "4674.026782838560",
+            "weight": 0.046282857016273944
+          },
+          "DEMO49": {
+            "quantity": "32",
+            "cost_basis": "4572.146239544320",
+            "weight": 0.046966967411025254
+          }
+        },
+        "day": "2024-04-03",
+        "at": "2024-04-04T00:00:02+00:00",
+        "processed_at": "2026-10-21T02:24:26.204348+00:00",
+        "marks": {
+          "DEMO00": "145.50948433",
+          "DEMO01": "142.76503463",
+          "DEMO02": "147.54141454",
+          "DEMO03": "140.92768617",
+          "DEMO04": "141.16950302",
+          "DEMO05": "141.34121717",
+          "DEMO06": "143.54140785",
+          "DEMO07": "141.68956030",
+          "DEMO08": "145.93039057",
+          "DEMO09": "145.95852014",
+          "DEMO10": "146.44236709",
+          "DEMO11": "140.25264897",
+          "DEMO12": "140.97108948",
+          "DEMO13": "141.21696485",
+          "DEMO14": "141.43974532",
+          "DEMO15": "142.55966064",
+          "DEMO16": "145.81497857",
+          "DEMO17": "144.69611396",
+          "DEMO18": "146.51121474",
+          "DEMO19": "140.93915898",
+          "DEMO20": "145.83672683",
+          "DEMO21": "147.65062786",
+          "DEMO22": "146.20794929",
+          "DEMO23": "143.64118875",
+          "DEMO24": "139.38795340",
+          "DEMO25": "140.18844442",
+          "DEMO26": "146.09466438",
+          "DEMO27": "143.31270736",
+          "DEMO28": "142.09262993",
+          "DEMO29": "145.72303996",
+          "DEMO30": "141.85867810",
+          "DEMO31": "145.91023997",
+          "DEMO32": "146.95081962",
+          "DEMO33": "145.61153532",
+          "DEMO34": "140.17599129",
+          "DEMO35": "144.26446182",
+          "DEMO36": "144.86886967",
+          "DEMO37": "144.27862347",
+          "DEMO38": "142.60947598",
+          "DEMO39": "143.00717976",
+          "DEMO40": "145.35543709",
+          "DEMO41": "141.55884149",
+          "DEMO42": "145.73146142",
+          "DEMO43": "143.16285353",
+          "DEMO44": "141.86944787",
+          "DEMO45": "144.63648458",
+          "DEMO46": "140.15995660",
+          "DEMO47": "145.05449800",
+          "DEMO48": "141.32672957",
+          "DEMO49": "146.77436735"
+        },
+        "mode": "synthetic_demo",
+        "source_ids": {
+          "DEMO00": "4e6b1666-46fb-4458-adae-cbf7ada0efb8",
+          "DEMO01": "d2fb0db2-7dc7-4739-9ead-caf7a5e47ea6",
+          "DEMO02": "b77d2deb-7f67-45a5-9e4a-092d59b95bf9",
+          "DEMO03": "65aa8b19-ec5b-4680-af7b-b4fe68c35449",
+          "DEMO04": "3ac3e9cd-8d51-4002-9c6f-a316c5bef17d",
+          "DEMO05": "edad1244-5106-4c99-a2d4-1bf310a930e7",
+          "DEMO06": "50c070d5-4e65-4dda-9e20-b4f42be375fa",
+          "DEMO07": "3bf25343-ca68-4be2-857a-37f33b58b549",
+          "DEMO08": "3231e139-097d-4ff6-bd4c-126999a5bb96",
+          "DEMO09": "59c21269-8590-4fc6-9c29-5dbd18472c72",
+          "DEMO10": "9be7c253-73ed-48ba-9ea6-6f64b1e3a5f5",
+          "DEMO11": "590edc4b-00c7-4815-9bbc-29b7b1e56aa2",
+          "DEMO12": "915da7f1-9e26-48db-a534-9c38f151b6a7",
+          "DEMO13": "e59006f7-12e9-4055-81f7-20fdabb02126",
+          "DEMO14": "00fe8317-98d2-4f0c-8461-1d26e0fb22cf",
+          "DEMO15": "1cd04541-8884-496d-93f5-5fecb3770ed7",
+          "DEMO16": "7b098c47-eedd-41de-9971-2d73287db5ce",
+          "DEMO17": "eb91475b-955d-47f9-961c-5eb44cd48910",
+          "DEMO18": "458495ce-bd13-404f-af89-048b71548df9",
+          "DEMO19": "b8aea120-adbe-40c7-99d7-eb6e35e789c1",
+          "DEMO20": "e408b6e2-96c7-4f27-a913-f30e6a34ef48",
+          "DEMO21": "5b260221-9ecc-415d-86ed-817ec0779c2a",
+          "DEMO22": "0babcb42-2d8d-475f-b4d4-1ecee1101879",
+          "DEMO23": "dc870766-24bd-402b-af74-921ae2026edc",
+          "DEMO24": "4ea3554d-82a6-4514-8860-fc4ea2469ea6",
+          "DEMO25": "6b7e6881-a9df-45f9-a564-b4d290d15517",
+          "DEMO26": "0dc9b3de-59ed-4938-8419-54b9ba41de2a",
+          "DEMO27": "bad36386-624d-49e4-850f-025b3e28c593",
+          "DEMO28": "50e3e69d-67ae-47d2-81fd-006e678f9763",
+          "DEMO29": "cab63ca9-5ca4-4463-aabc-a0813a052262",
+          "DEMO30": "c4b38a01-ffb0-4328-9bae-b91bac669ebd",
+          "DEMO31": "d49f0d0f-4b51-41b6-8b1c-5a79c5967580",
+          "DEMO32": "ebf858ce-f401-4964-9ed7-23f0e8183a23",
+          "DEMO33": "4fd24efd-ef96-47a8-804a-94ebad2dcc40",
+          "DEMO34": "2eda6e73-f1a4-4970-ac23-d6542a60cb8e",
+          "DEMO35": "1fe2f8d9-f5d8-4ede-a498-65f29abf1328",
+          "DEMO36": "9cdd9ab0-f8a0-426b-a61f-00ec8dff69a0",
+          "DEMO37": "b07959ae-09c9-44a0-985c-820621b34ae6",
+          "DEMO38": "a1a4d2ad-d7e1-4aac-a73a-1f897fa863a9",
+          "DEMO39": "7eee2cbf-06af-4864-8190-4b0780274d3f",
+          "DEMO40": "037bf7e5-6a81-4e03-96b3-883a0e446f90",
+          "DEMO41": "027007b5-ec76-4137-bf48-e44c1e4dc51d",
+          "DEMO42": "df5d5e33-ed3e-43a3-8036-40f3f1ced05e",
+          "DEMO43": "31624595-c156-46ab-b734-62993d10b5ae",
+          "DEMO44": "7f5b4ffe-1734-45e5-84ff-7ad99efe1995",
+          "DEMO45": "a157f0ab-264c-4e75-b899-1df104a15d06",
+          "DEMO46": "c985a385-ba7a-463a-8736-6c14d7213ddd",
+          "DEMO47": "eeb8eede-5a57-4dba-8a93-330e67ebce45",
+          "DEMO48": "0f1118e9-a344-47aa-878c-e80af3956308",
+          "DEMO49": "caa6d659-b535-4bcd-bda7-30d2ce9da930"
+        },
+        "stale": false,
+        "market_observed_at": "2024-04-03T23:59:59+00:00"
+      },
+      "metrics": {
+        "status": "computed",
+        "total_return": 1.7674996289906986e-05,
+        "cumulative_return": 1.7674996289906986e-05,
+        "annualized_return": null,
+        "cagr": null,
+        "annualized_volatility": 0.011214798478925737,
+        "downside_deviation": 0.006391404737308133,
+        "maximum_drawdown": 0.0006973594287098539,
+        "drawdown_duration_sessions": 1,
+        "historical_var_95": null,
+        "historical_cvar_95": null,
+        "sharpe": null,
+        "sortino": null,
+        "calmar": null,
+        "alpha": null,
+        "beta": null,
+        "tracking_error": null,
+        "information_ratio": null,
+        "excess_return": null,
+        "trade_count": 21,
+        "closed_lot_count": 0,
+        "win_rate": null,
+        "profit_factor": null,
+        "average_trade_pnl": null,
+        "turnover": 0.48771360553935983,
+        "commissions": 21.0,
+        "slippage": 48.735942870995004,
+        "average_exposure": 0.650271904170385,
+        "daily_returns": [
+          {
+            "day": "2024-04-01",
+            "return": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "return": -0.0006973594287098539
+          },
+          {
+            "day": "2024-04-03",
+            "return": 0.0007155334089692378
+          }
+        ],
+        "monthly_returns": [
+          {
+            "month": "2024-04",
+            "return": 1.767499629012903e-05
+          }
+        ],
+        "drawdown": [
+          {
+            "day": "2024-04-01",
+            "drawdown": 0.0
+          },
+          {
+            "day": "2024-04-02",
+            "drawdown": -0.0006973594287098539
+          },
+          {
+            "day": "2024-04-03",
+            "drawdown": 0.0
+          }
+        ],
+        "rolling": [
+          {
+            "day": "2024-04-01",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-02",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          },
+          {
+            "day": "2024-04-03",
+            "volatility": null,
+            "sharpe": null,
+            "beta": null
+          }
+        ],
+        "statistical_status": "insufficient_history_under_60_observations"
+      },
+      "simulation_only": true,
+      "no_alpha_claim": true,
+      "continuous_availability_tested": false
+    }
+  ]
+}

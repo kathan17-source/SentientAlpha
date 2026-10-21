@@ -1,0 +1,42 @@
+{
+  "package_version": "0.3.0",
+  "sentiment_version": "3.0.2",
+  "date": "2026-10-14 America/Chicago",
+  "python312": {
+    "passed": 242,
+    "skipped": 1,
+    "subtests_passed": 11,
+    "seconds": 22.32
+  },
+  "python314": {
+    "passed": 242,
+    "skipped": 1,
+    "subtests_passed": 11,
+    "seconds": 22.85
+  },
+  "original_m1_m2_tests_preserved": 174,
+  "new_deterministic_tests": 68,
+  "separate_real_cpu_model_test": {
+    "passed": 1,
+    "skipped": 0,
+    "seconds": 1.59
+  },
+  "ruff": "passed",
+  "formatting": "passed",
+  "mypy_modules": 51,
+  "pip_check_both": "passed",
+  "sqlite_revision": "0005_sentiment",
+  "preserved_price_rows": 3220,
+  "preserved_m2_feature_rows": 230,
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "native_postgresql": "blocked; no native success claimed",
+  "docker_runtime": "blocked; no daemon",
+  "postgresql005_sql": "emitted only",
+  "compose_configuration": "passed",
+  "prior_pglite": "3 failed and 2 setup errors unresolved; not rerun",
+  "real_fed_articles": 20,
+  "real_public_aapl_articles": 50,
+  "calibration": "not empirically verified",
+  "milestone4": "not started"
+}

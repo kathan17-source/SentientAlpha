@@ -1,0 +1,134 @@
+{
+  "scope": "Actual production Next proxy, FastAPI and persisted SQLite; HTTP integration, not browser UI automation",
+  "session_id": "9b37cd9b-2bd4-4520-8085-4b6ca7680c9d",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/paper",
+      "status": 200,
+      "seconds": 0.0262874590116553
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions",
+      "status": 201,
+      "seconds": 0.026969250000547618
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions",
+      "status": 201,
+      "seconds": 0.0053927499684505165
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/ready",
+      "status": 200,
+      "seconds": 0.0056255829986184835
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/start",
+      "status": 200,
+      "seconds": 0.006051875010598451
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/advance",
+      "status": 200,
+      "seconds": 0.3013405419769697
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/advance",
+      "status": 200,
+      "seconds": 0.0035047910059802234
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/portfolio",
+      "status": 200,
+      "seconds": 0.004174625035375357
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/orders",
+      "status": 200,
+      "seconds": 0.0033297910122200847
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/fills",
+      "status": 200,
+      "seconds": 0.003004333993885666
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/decisions",
+      "status": 200,
+      "seconds": 0.00301499996567145
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/risk",
+      "status": 200,
+      "seconds": 0.006218958005774766
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/performance",
+      "status": 200,
+      "seconds": 0.003902832977473736
+    },
+    {
+      "method": "GET",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/events",
+      "status": 200,
+      "seconds": 0.005853709008079022
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/reconcile",
+      "status": 200,
+      "seconds": 0.08133791596628726
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/pause",
+      "status": 200,
+      "seconds": 0.005520124977920204
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/resume",
+      "status": 200,
+      "seconds": 0.0829018329968676
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/stop",
+      "status": 200,
+      "seconds": 0.005231916962657124
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/resume",
+      "status": 409,
+      "seconds": 0.0026456669438630342
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/orders",
+      "status": 403,
+      "seconds": 0.0009532500407658517
+    },
+    {
+      "method": "POST",
+      "path": "/api/backend/api/paper/sessions/9b37cd9b-2bd4-4520-8085-4b6ca7680c9d/advance",
+      "status": 403,
+      "seconds": 0.0006516250432468951
+    }
+  ],
+  "all_passed": true,
+  "paper_route_served": true
+}

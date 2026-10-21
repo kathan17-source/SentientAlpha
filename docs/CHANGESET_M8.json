@@ -1,0 +1,39 @@
+{
+  "baseline": "Preserved Milestone 8 Foundation source archive",
+  "added": [
+    "backend/sentientalpha/api/committee.py",
+    "backend/sentientalpha/committee/adapters.py",
+    "backend/sentientalpha/committee/engine.py",
+    "backend/sentientalpha/committee/requests.py",
+    "backend/sentientalpha/committee/sources.py",
+    "backend/sentientalpha/committee/storage.py",
+    "backend/sentientalpha/database/committee_models.py",
+    "backend/tests/test_committee_integration.py",
+    "docs/CHANGESET_M8.json",
+    "docs/M8_POSTGRESQL_MIGRATION.sql",
+    "docs/SOURCE_SHA256_M8.json",
+    "docs/VERIFICATION_M8.json",
+    "migrations/versions/0010_investment_committee.py",
+    "scripts/replay_committee.py",
+    "scripts/verify_committee.py"
+  ],
+  "modified": [
+    ".github/workflows/test.yml",
+    "README.md",
+    "backend/sentientalpha/__init__.py",
+    "backend/sentientalpha/api/app.py",
+    "backend/sentientalpha/backtesting/storage.py",
+    "backend/sentientalpha/committee/aggregation.py",
+    "backend/sentientalpha/committee/contracts.py",
+    "backend/sentientalpha/committee/risk.py",
+    "backend/sentientalpha/database/models.py",
+    "docs/ARCHITECTURE.md",
+    "docs/MILESTONE8_REPORT.md",
+    "docs/MULTI_AGENT_SYSTEM.md",
+    "docs/ROADMAP.md",
+    "docs/openapi.json",
+    "pyproject.toml"
+  ],
+  "removed": [],
+  "all_previous_test_and_migration_files_byte_identical": true
+}
