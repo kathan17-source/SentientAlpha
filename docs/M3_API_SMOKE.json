@@ -1,0 +1,38 @@
+{
+  "transport": "actual loopback HTTP; real local FinBERT; SYNTHETIC news/prices explicitly marked",
+  "checks": {
+    "/health": "passed",
+    "/ready": "passed",
+    "/api/features/definitions": 38,
+    "/api/sentiment/definitions": 28,
+    "/api/features/all-definitions": 66,
+    "/openapi.json": "passed"
+  },
+  "model_key": "ac5ff59881b399903e365aaf424d19628e75109fcaec2521ee5174145b95390b",
+  "inference_repeat_inserted": 0,
+  "sentiment_reused": true,
+  "price_dataset_id": "c58178f5-e26f-4213-9fac-aec31ad902f0",
+  "sentiment_dataset_id": "687d70b7-d4a8-4319-ad1e-47cae7acfc9c",
+  "columns": [
+    "return",
+    "sent_mean__min_articles_3__window_5",
+    "sent_news_volume__min_articles_3__window_5",
+    "sma__window_5"
+  ],
+  "matrix_rows": 20,
+  "contributor_count": 5,
+  "first_joined_row": {
+    "ticker": "SYN00",
+    "session_date": "2024-02-01",
+    "observation_at": "2024-02-01T23:59:59Z",
+    "decision_ready_at": "2026-10-14T17:25:37.962007Z",
+    "calculated_at": "2026-10-14T17:25:37.962007Z",
+    "features": [
+      -0.005963706508720801,
+      -0.011474969517439603,
+      5.0,
+      150.262403742
+    ],
+    "missing_reasons": {}
+  }
+}

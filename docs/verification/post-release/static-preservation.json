@@ -1,0 +1,10 @@
+{
+  "prior_test_migration_files_byte_identical": 55,
+  "all_backend_production_source_byte_identical": true,
+  "ci_yaml_parsed": true,
+  "ci_remote_executed": false,
+  "owned_ports_closed": {
+    "3000": true,
+    "8100": true
+  }
+}

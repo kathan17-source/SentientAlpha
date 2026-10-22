@@ -1,0 +1,97 @@
+name: test
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.14']
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: sentientalpha_test
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: ephemeral_ci_only
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U test -d sentientalpha_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: python -m pip check
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: python -m mypy
+      - run: pytest -q
+      - run: pytest -q backend/tests/test_integration.py backend/tests/test_hardening_integration.py backend/tests/test_feature_integration.py backend/tests/test_sentiment_integration.py backend/tests/test_backtesting_integration.py backend/tests/test_optimization_integration.py backend/tests/test_ml_integration.py backend/tests/test_strategy_integration.py backend/tests/test_committee_integration.py backend/tests/test_committee_features.py backend/tests/test_risk_integration.py backend/tests/test_risk_math.py backend/tests/test_research_catalog.py backend/tests/test_paper_operations.py backend/tests/test_release_hardening.py
+        env:
+          TEST_DATABASE_URL: postgresql+psycopg://test:ephemeral_ci_only@localhost:5432/sentientalpha_test
+      - run: docker compose config --quiet
+        env:
+          POSTGRES_PASSWORD: disposable_configuration_check
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: npm ci
+        working-directory: frontend
+      - run: npm run generate:api && git diff --exit-code -- types/openapi.ts
+        working-directory: frontend
+      - run: npm run typecheck && npm run lint && npm run format:check && npm test && npm run build
+        working-directory: frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: PYTHONPATH=backend python scripts/release_demo.py --database /tmp/dashboard.db --report /tmp/dashboard.json
+      - run: |
+          DATABASE_URL=sqlite:////tmp/dashboard.db uvicorn sentientalpha.api.app:create_app --factory --host 127.0.0.1 --port 8000 > /tmp/api.log 2>&1 &
+          research_api_pid=$!
+          npm --prefix frontend run start > /tmp/frontend.log 2>&1 &
+          research_frontend_pid=$!
+          trap 'kill "$research_api_pid" "$research_frontend_pid" 2>/dev/null || true' EXIT
+          for n in $(seq 1 60); do curl -sf http://127.0.0.1:3000/api/backend/ready && break || sleep 1; done
+          npm --prefix frontend run test:e2e -- offline.spec.ts release.spec.ts
+
+      - run: PYTHONPATH=backend python scripts/paper_demo.py --database /tmp/paper.db --report /tmp/paper.json
+      - run: |
+          DATABASE_URL=sqlite:////tmp/paper.db uvicorn sentientalpha.api.app:create_app --factory --host 127.0.0.1 --port 8001 > /tmp/paper-api.log 2>&1 &
+          paper_api_pid=$!
+          API_BASE_URL=http://127.0.0.1:8001 DASHBOARD_ORIGINS=http://127.0.0.1:3001 npm --prefix frontend run start -- --port 3001 > /tmp/paper-frontend.log 2>&1 &
+          paper_frontend_pid=$!
+          trap 'kill "$paper_api_pid" "$paper_frontend_pid" 2>/dev/null || true' EXIT
+          for n in $(seq 1 60); do curl -sf http://127.0.0.1:3001/api/backend/ready && break || sleep 1; done
+          DASHBOARD_URL=http://127.0.0.1:3001 npm --prefix frontend run test:e2e -- paper.spec.ts
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python -m pip install pip-audit
+      - run: pip-audit -r requirements.lock
+      - run: pip-audit --no-deps --disable-pip -r requirements-nlp.lock
+      - run: npm ci && npm audit --audit-level=moderate
+        working-directory: frontend
+      - run: python scripts/release_scan.py

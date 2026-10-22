@@ -1,0 +1,10 @@
+.next
+node_modules
+package-lock.json
+types/openapi.ts
+playwright-report
+test-results
+
+playwright-results.json
+
+next-env.d.ts

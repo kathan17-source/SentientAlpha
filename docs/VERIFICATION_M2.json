@@ -1,0 +1,33 @@
+{
+  "python312": {
+    "tests_passed": 174,
+    "subtests_passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 14.5
+  },
+  "python314": {
+    "tests_passed": 174,
+    "subtests_passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 11.16
+  },
+  "baseline_tests_preserved": 82,
+  "feature_tests_added": 92,
+  "ruff_lint": "passed",
+  "ruff_format": "passed",
+  "mypy_modules": 38,
+  "pip_check_both": "passed",
+  "sqlite_schema": "0004_feature_engine",
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "postgresql_004_offline_sql": "emitted; not runtime proof",
+  "native_postgresql": "not verified; inherited shared-memory sandbox blocker",
+  "docker_runtime": "not verified; no daemon",
+  "compose_configuration": "passed",
+  "pglite_prior_failures": "unresolved; not rerun for M2",
+  "starlette_httpx_warning": "one deprecation warning per suite",
+  "real_provider_scope": "saved M1 public response replay only",
+  "milestone3": "not started"
+}

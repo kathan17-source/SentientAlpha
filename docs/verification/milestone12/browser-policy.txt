@@ -1,0 +1,3 @@
+M12 actual permitted tool attempt: cua.getState() returned enabled surfaces. cua.getTab('1', {browser:'iab'}) was rejected:
+Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Browser use cannot visit the requested page. The requested URL protocol is not allowed. Allowed protocols: "http:", "https:".
+The tool expressly prohibited workaround, indirect execution, raw CDP/browser commands or alternate browser surfaces. No such workaround was attempted. No M12 rendered screenshots or axe result exists. Independent HTTP transport checks do not measure rendering.

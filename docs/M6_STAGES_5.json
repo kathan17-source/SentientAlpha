@@ -1,0 +1,108 @@
+{
+  "database": "../../work/milestone6/benchmark5-final.db",
+  "scope": "first fold, warm sequential local timings; not unbiased algorithm comparison",
+  "results": [
+    {
+      "family": "logistic",
+      "selection_workload_seconds": 0.021933125040959567,
+      "train_rows": 1195,
+      "validation_rows": 320,
+      "candidates": [
+        {
+          "configuration": {
+            "model": "logistic",
+            "strength": 0.1,
+            "trees": 20,
+            "depth": 2,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.017619833000935614,
+          "validation_inference_scoring_seconds": 0.001335583976469934,
+          "validation_loss": 0.6992530457078463
+        },
+        {
+          "configuration": {
+            "model": "logistic",
+            "strength": 1.0,
+            "trees": 20,
+            "depth": 3,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.0018975000130012631,
+          "validation_inference_scoring_seconds": 0.0010708750342018902,
+          "validation_loss": 0.6995926218197802
+        }
+      ]
+    },
+    {
+      "family": "forest_classifier",
+      "selection_workload_seconds": 0.04703441698802635,
+      "train_rows": 1195,
+      "validation_rows": 320,
+      "candidates": [
+        {
+          "configuration": {
+            "model": "forest_classifier",
+            "strength": 0.1,
+            "trees": 20,
+            "depth": 2,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.01848770899232477,
+          "validation_inference_scoring_seconds": 0.0032503329566679895,
+          "validation_loss": 0.7009463874228414
+        },
+        {
+          "configuration": {
+            "model": "forest_classifier",
+            "strength": 1.0,
+            "trees": 20,
+            "depth": 3,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.021376749966293573,
+          "validation_inference_scoring_seconds": 0.003912125015631318,
+          "validation_loss": 0.7116981425128299
+        }
+      ]
+    },
+    {
+      "family": "boost_classifier",
+      "selection_workload_seconds": 0.051795875013340265,
+      "train_rows": 1195,
+      "validation_rows": 320,
+      "candidates": [
+        {
+          "configuration": {
+            "model": "boost_classifier",
+            "strength": 0.1,
+            "trees": 20,
+            "depth": 2,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.018481167033314705,
+          "validation_inference_scoring_seconds": 0.0033154169796034694,
+          "validation_loss": 0.7029867187770418
+        },
+        {
+          "configuration": {
+            "model": "boost_classifier",
+            "strength": 1.0,
+            "trees": 20,
+            "depth": 3,
+            "leaf": 10,
+            "learning_rate": 0.05
+          },
+          "preprocess_and_training_seconds": 0.025780208001378924,
+          "validation_inference_scoring_seconds": 0.004203999997116625,
+          "validation_loss": 0.702633641977199
+        }
+      ]
+    }
+  ]
+}

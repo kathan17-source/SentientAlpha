@@ -1,0 +1,26 @@
+{
+  "provenance": "ENTIRELY_SYNTHETIC_DEMONSTRATION",
+  "no_alpha_claim": true,
+  "dataset_id": "15581d79-faef-4cc0-bf9b-04736e6d5bbf",
+  "ml_id": "0ad2c30e-50c4-4006-94eb-48057f37145c",
+  "discovery_id": "51f3a2a1-35a0-4dc1-8f46-73e09208a429",
+  "optimization_id": "99a7d3da-5b3b-4440-b0e5-1e71ea1dbb6e",
+  "frontier_id": "5b1f7e2e-54d6-418a-99b6-b99eaa1ca97f",
+  "backtest_id": "5cb6b142-7960-49ce-bfa9-2cff9bec6a58",
+  "committee_id": "64da9eb6-7d9b-46a5-8ed8-5193a3081209",
+  "sentiment": "No news or FinBERT inference generated; no fabricated sentiment",
+  "database": "/WORKSPACE/work/post-release/demo.db",
+  "paper": {
+    "session_id": "17640145-63b8-4111-a8f3-0f453d40cdf9",
+    "status": "RUNNING",
+    "fills": 5,
+    "replay_equivalent": true
+  },
+  "risk_veto": {
+    "session_id": "2aec8bd2-826b-4d8d-afd1-18d5e0f8f96b",
+    "status": "PAUSED",
+    "fills": 0,
+    "replay_equivalent": true
+  },
+  "scope": "Offline synthetic integration, not genuine alpha or forward performance"
+}

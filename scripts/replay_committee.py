@@ -1,0 +1,24 @@
+"""Replay an existing immutable committee audit without data acquisition or fitting."""
+
+import argparse
+import json
+
+from sentientalpha.committee.storage import replay
+from sentientalpha.database.session import make_engine, session_factory
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--database-url", required=True)
+    parser.add_argument("--run-id", required=True)
+    args = parser.parse_args()
+    engine = make_engine(args.database_url)
+    try:
+        with session_factory(engine)() as session:
+            print(json.dumps(replay(session, args.run_id), indent=2))
+    finally:
+        engine.dispose()
+
+
+if __name__ == "__main__":
+    main()

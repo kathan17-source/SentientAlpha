@@ -29,7 +29,7 @@ test-results/
 *.db
 *.sqlite
 *.sqlite3
-data/
+/data/
 cache/
 models/cache/
 *.parquet
@@ -45,3 +45,10 @@ models/cache/
 *.tar.gz
 *.log
 .DS_Store
+
+*.db-shm
+*.db-wal
+*.tsbuildinfo
+playwright-report/
+/work/
+/outputs/

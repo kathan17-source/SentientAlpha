@@ -1,0 +1,184 @@
+{
+  "provenance": "SYNTHETIC_DEMONSTRATION_NOT_FORWARD_TRADING",
+  "session_id": "d71922b1-2b17-457b-b6b8-7aac1c6eb120",
+  "assets": 5,
+  "observations": 3,
+  "database": "/WORKSPACE/work/milestone12/benchmark-5.db",
+  "seconds": {
+    "market_update": 0.04953645903151482,
+    "session_creation": 0.009644833044148982,
+    "batch_advance_including_features_and_commits": 0.43887808290310204,
+    "recovery_and_full_replay": 0.0970480419928208,
+    "new_process_recovery_and_replay": 0.6935578749980778,
+    "measured_audit_transaction_commit": 0.00032124994322657585,
+    "api_retrieval": 0.012553000007756054,
+    "end_to_end": 1.6086399579653516
+  },
+  "stage_seconds": {
+    "ledger_restore": 0.0007564988918602467,
+    "committee_m5": 0.006378458929248154,
+    "order_generation": 0.003591959015466273,
+    "risk_evaluation_and_persistence": 0.1990938321687281,
+    "fill_execution": 0.0016983749810606241,
+    "ledger_valuation": 0.018729374976828694
+  },
+  "sql_statements_before_restart": 313,
+  "event_throughput_per_second": 6.835611339157159,
+  "peak_process_rss_mib": 251.921875,
+  "orders": 10,
+  "fills": 5,
+  "order_states": {
+    "FILLED": 5,
+    "QUEUED": 4,
+    "REJECTED": 1
+  },
+  "duplicate_request_economic_effects": 0,
+  "restart_portfolio_equal": true,
+  "separate_process_portfolio_equal": true,
+  "replay": {
+    "session_id": "d71922b1-2b17-457b-b6b8-7aac1c6eb120",
+    "equivalent": true,
+    "fills": 5,
+    "events": 9,
+    "mode": "synthetic_demo",
+    "scope": "Frozen event chain; M4 execution/accounting, M8 decisions and M9 assessments re-executed. No external reacquisition."
+  },
+  "portfolio": {
+    "cash": "21068.097810280020",
+    "market_value": "78751.89469486",
+    "equity": "99819.992505140020",
+    "realized_pnl": "395.680737768650",
+    "unrealized_pnl": "-575.688232628630",
+    "dividends": "0",
+    "fees": "5.000000000000",
+    "slippage": "72.976745859980",
+    "gross_exposure": 0.7889390964520944,
+    "net_exposure": 0.7889390964520944,
+    "reconciliation_residual": "0E-12",
+    "positions": {
+      "DEMO00": {
+        "quantity": "271",
+        "cost_basis": "39453.786788556715",
+        "weight": 0.39504180739544215
+      },
+      "DEMO01": {
+        "quantity": "0",
+        "cost_basis": "0",
+        "weight": 0.0
+      },
+      "DEMO03": {
+        "quantity": "279",
+        "cost_basis": "39873.796138931915",
+        "weight": 0.3938972890566523
+      }
+    },
+    "day": "2024-04-03",
+    "at": "2024-04-04T00:00:02+00:00",
+    "processed_at": "2026-10-21T05:49:03.640010+00:00",
+    "marks": {
+      "DEMO00": "145.50948433",
+      "DEMO01": "142.76503463",
+      "DEMO02": "147.54141454",
+      "DEMO03": "140.92768617",
+      "DEMO04": "141.16950302"
+    },
+    "mode": "synthetic_demo",
+    "source_ids": {
+      "DEMO00": "1be03650-82a5-4ce5-9d62-293134236210",
+      "DEMO01": "47bd4ad1-07da-4af9-8d7e-213272c105b1",
+      "DEMO02": "431f9285-1d20-48df-8a9d-0ef6e2f9ef39",
+      "DEMO03": "ae37ba59-3ef7-47e9-b1ea-e5d1ade285fe",
+      "DEMO04": "aa017466-95c6-45f1-9975-707e40a532b6"
+    },
+    "stale": false,
+    "market_observed_at": "2024-04-03T23:59:59+00:00"
+  },
+  "metrics": {
+    "status": "computed",
+    "total_return": -0.0018000749485997947,
+    "cumulative_return": -0.0018000749485997947,
+    "annualized_return": null,
+    "cagr": null,
+    "annualized_volatility": 0.011972131440008414,
+    "downside_deviation": 0.01365041345533052,
+    "maximum_drawdown": 0.0018000749485997947,
+    "drawdown_duration_sessions": 2,
+    "historical_var_95": null,
+    "historical_cvar_95": null,
+    "sharpe": null,
+    "sortino": null,
+    "calmar": null,
+    "alpha": null,
+    "beta": null,
+    "tracking_error": null,
+    "information_ratio": null,
+    "excess_return": null,
+    "trade_count": 5,
+    "closed_lot_count": 1,
+    "win_rate": 1.0,
+    "profit_factor": null,
+    "average_trade_pnl": 395.68073776865,
+    "turnover": 0.7304890660691249,
+    "commissions": 5.0,
+    "slippage": 72.97674585998,
+    "average_exposure": 0.4856245486205732,
+    "daily_returns": [
+      {
+        "day": "2024-04-01",
+        "return": 0.0
+      },
+      {
+        "day": "2024-04-02",
+        "return": -0.00035384910068503306
+      },
+      {
+        "day": "2024-04-03",
+        "return": -0.0014467377747753307
+      }
+    ],
+    "monthly_returns": [
+      {
+        "month": "2024-04",
+        "return": -0.0018000749485997947
+      }
+    ],
+    "drawdown": [
+      {
+        "day": "2024-04-01",
+        "drawdown": 0.0
+      },
+      {
+        "day": "2024-04-02",
+        "drawdown": -0.00035384910068503306
+      },
+      {
+        "day": "2024-04-03",
+        "drawdown": -0.0018000749485997947
+      }
+    ],
+    "rolling": [
+      {
+        "day": "2024-04-01",
+        "volatility": null,
+        "sharpe": null,
+        "beta": null
+      },
+      {
+        "day": "2024-04-02",
+        "volatility": null,
+        "sharpe": null,
+        "beta": null
+      },
+      {
+        "day": "2024-04-03",
+        "volatility": null,
+        "sharpe": null,
+        "beta": null
+      }
+    ],
+    "statistical_status": "insufficient_history_under_60_observations"
+  },
+  "simulation_only": true,
+  "no_alpha_claim": true,
+  "continuous_availability_tested": false
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Actual production in-app browser; gesture-to-visible timing includes automation transport. Browser Performance/memory APIs unavailable in read-only browser bridge.",
+  "route_to_ml_visible_ms": 165,
+  "contrast": {
+    "below_4_5": [],
+    "minimum": 6.78,
+    "sampled": 178
+  }
+}

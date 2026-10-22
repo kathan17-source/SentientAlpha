@@ -1,0 +1,20 @@
+{
+  "private_env_files_in_deliverable": [],
+  "private_key_and_AWS_key_patterns_found": false,
+  "original_revision_0001_unchanged": true,
+  "broker_adapter_or_order_endpoint_present": false,
+  "compose_config_command": "passed",
+  "docker_daemon": "unavailable",
+  "native_postgres_initdb": "sandbox shared-memory denial",
+  "wasm_postgres_version": "18.6 / PGlite 0.5.9",
+  "wasm_full_suite": {
+    "passed": 23,
+    "failed": 3,
+    "errors": 2,
+    "skipped": 0
+  },
+  "wasm_isolated_precision_tests": {
+    "passed": 2,
+    "failed": 0
+  }
+}

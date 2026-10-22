@@ -1,0 +1,21 @@
+{
+  "scope": "Synthetic jsdom component rendering and Node transformations; not browser frame timing",
+  "samples": [
+    {
+      "records": 20,
+      "jsdom_render_ms": 22.123417000000018
+    },
+    {
+      "records": 50,
+      "jsdom_render_ms": 2.8808749999999463
+    },
+    {
+      "records": 500,
+      "jsdom_render_ms": 4.281540999999947
+    },
+    {
+      "observations": 2000,
+      "transformation_ms": 2.318499999999972
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "added": [
+    "backend/sentientalpha/api/strategies.py",
+    "backend/sentientalpha/database/strategy_models.py",
+    "backend/sentientalpha/strategies/__init__.py",
+    "backend/sentientalpha/strategies/allocation.py",
+    "backend/sentientalpha/strategies/contracts.py",
+    "backend/sentientalpha/strategies/evaluation.py",
+    "backend/sentientalpha/strategies/grammar.py",
+    "backend/sentientalpha/strategies/inputs.py",
+    "backend/sentientalpha/strategies/research.py",
+    "backend/sentientalpha/strategies/search.py",
+    "backend/sentientalpha/strategies/storage.py",
+    "backend/tests/test_strategy_integration.py",
+    "backend/tests/test_strategy_research.py",
+    "docs/CHANGESET_M7.json",
+    "docs/M7_POSTGRESQL_MIGRATION.sql",
+    "docs/MILESTONE7_REPORT.md",
+    "docs/SOURCE_SHA256_M7.json",
+    "docs/STRATEGY_DISCOVERY.md",
+    "docs/VERIFICATION_M7.json",
+    "migrations/versions/0009_strategy_discovery.py",
+    "scripts/analyze_discovery.py",
+    "scripts/replay_discovery.py",
+    "scripts/verify_discovery.py",
+    "scripts/verify_discovery_signals.py"
+  ],
+  "modified": [
+    ".github/workflows/test.yml",
+    "README.md",
+    "backend/sentientalpha/__init__.py",
+    "backend/sentientalpha/api/app.py",
+    "backend/sentientalpha/backtesting/storage.py",
+    "backend/sentientalpha/database/models.py",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    "docs/openapi.json",
+    "pyproject.toml"
+  ],
+  "prior_tests_and_migrations_byte_identical": true
+}

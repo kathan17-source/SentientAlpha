@@ -1,0 +1,7 @@
+{
+  "protected_test_migration_files_unchanged": 53,
+  "ci_yaml_parsed": true,
+  "compose_yaml_parsed": true,
+  "remote_run": false,
+  "docker_runtime": false
+}

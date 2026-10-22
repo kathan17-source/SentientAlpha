@@ -1,0 +1,1 @@
+{"status": 503, "body": {"detail": {"code": "backend_unavailable", "message": "The local research backend is unavailable. Start FastAPI and retry."}}}

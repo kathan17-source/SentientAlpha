@@ -1,0 +1,23 @@
+{
+  "scope": "single process with real resident CPU model plus full five-year 50-asset SYNTHETIC price calculation; excludes feature persistence",
+  "assets": 50,
+  "rows": 65250,
+  "columns": 44,
+  "pure_calculation_seconds": 4.325878792034928,
+  "process_peak_rss_mib": 1717.0,
+  "model_key": "ac5ff59881b399903e365aaf424d19628e75109fcaec2521ee5174145b95390b",
+  "model": {
+    "model_id": "ProsusAI/finbert",
+    "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+    "tokenizer_revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+    "transformers": "4.57.6",
+    "torch": "2.14.1",
+    "preprocessing": "nfkc-whitespace-v1",
+    "max_tokens": 512,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "deterministic": true,
+    "probabilities_calibrated": false,
+    "license": "CC-BY-NC-SA-4.0; research only; review model card before commercial deployment"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "status": "VERIFIED",
+  "transport": "Actual loopback HTTP to current uvicorn process; not TestClient",
+  "base_url": "http://127.0.0.1:8014",
+  "version": "0.4.0",
+  "run_id": "74d620b5-c0ee-4e10-9469-c8ad948a847c",
+  "walk_forward_run_id": "bd1c63d6-8dd0-4e41-b0a9-6383237fb267",
+  "replay": {
+    "run_id": "74d620b5-c0ee-4e10-9469-c8ad948a847c",
+    "equivalent_metrics": true,
+    "equivalent_artifacts": true
+  },
+  "checks": [
+    {
+      "path": "/health",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ready",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/c56737b7-4ef6-40be-acad-1f7376037891",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/metrics",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/equity",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/trades",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/drawdown",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/report",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/replay",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/equity?benchmark=buy_hold&limit=2",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/equity?benchmark=equal_weight&limit=2",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/74d620b5-c0ee-4e10-9469-c8ad948a847c/equity?benchmark=moving_average&limit=2",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/backtest/walk-forward",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/openapi.json",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "simulation_only": true
+}

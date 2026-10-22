@@ -1,0 +1,72 @@
+{
+  "/health": {
+    "status": 200,
+    "items": null
+  },
+  "/ready": {
+    "status": 200,
+    "items": null
+  },
+  "/api/features/definitions": {
+    "status": 200,
+    "items": 38
+  },
+  "/api/assets": {
+    "status": 200,
+    "items": 25
+  },
+  "/openapi.json": {
+    "status": 200,
+    "items": null
+  },
+  "dataset_id": "1438dc48-ad91-4f54-930c-8619cee65565",
+  "output_rows": 130,
+  "generation_reused": true,
+  "computed_last_features": [
+    {
+      "name": "cross_sectional_momentum_rank__window_5",
+      "value": 0.0,
+      "missing_reason": null,
+      "observation_at": "2024-03-29T23:59:59Z",
+      "calculated_at": "2026-10-14T02:04:57.576317Z",
+      "inputs_available_at": "2024-03-30T00:00:00Z",
+      "inputs_ingested_at": "2026-10-14T01:08:42.613052Z",
+      "decision_ready_at": "2024-03-30T00:00:00Z",
+      "online_ready_at": "2026-10-14T02:04:57.576317Z",
+      "earliest_execution_at": "2026-10-14T14:30:00Z",
+      "dependency_start_position": 59,
+      "dependency_end_position": 64
+    },
+    {
+      "name": "return",
+      "value": -0.005502072705733885,
+      "missing_reason": null,
+      "observation_at": "2024-03-29T23:59:59Z",
+      "calculated_at": "2026-10-14T02:04:57.576317Z",
+      "inputs_available_at": "2024-03-30T00:00:00Z",
+      "inputs_ingested_at": "2026-10-14T01:08:42.604968Z",
+      "decision_ready_at": "2024-03-30T00:00:00Z",
+      "online_ready_at": "2026-10-14T02:04:57.576317Z",
+      "earliest_execution_at": "2026-10-14T14:30:00Z",
+      "dependency_start_position": 63,
+      "dependency_end_position": 64
+    },
+    {
+      "name": "sma__window_5",
+      "value": 144.53139904199998,
+      "missing_reason": null,
+      "observation_at": "2024-03-29T23:59:59Z",
+      "calculated_at": "2026-10-14T02:04:57.576317Z",
+      "inputs_available_at": "2024-03-30T00:00:00Z",
+      "inputs_ingested_at": "2026-10-14T01:08:42.604968Z",
+      "decision_ready_at": "2024-03-30T00:00:00Z",
+      "online_ready_at": "2026-10-14T02:04:57.576317Z",
+      "earliest_execution_at": "2026-10-14T14:30:00Z",
+      "dependency_start_position": 60,
+      "dependency_end_position": 64
+    }
+  ],
+  "matrix_rows": 20,
+  "lineage_rows": 3,
+  "transport": "actual loopback HTTP against migrated SQLite, not TestClient"
+}
