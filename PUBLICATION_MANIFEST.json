@@ -18,9 +18,9 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 578,
-      "sha256": "0d42ce215611942addf868ceaded07a16d894293b3c7fdd94ea5d95a0f59b0e9",
-      "git_blob": "7a880a29f31fa1247b18ae9c1f6ac51f5602cd68",
+      "bytes": 944,
+      "sha256": "970266ebc0bc3a66244c9d73b4c862b3d4b7b4d76b1d0489d7cc1aa275c7ba97",
+      "git_blob": "004da474fec229ded8761010a4dc23adb49b6113",
       "mode": "100644"
     },
     {
@@ -144,9 +144,9 @@
     },
     {
       "path": "SECURITY.md",
-      "bytes": 4636,
-      "sha256": "dbead48f39c23b4317ba7445494ff6148002bee729892cf0c9e8dd12e37d83e5",
-      "git_blob": "0a42a45a8c17e26d2c856ee02659fef7ecdd4dd3",
+      "bytes": 5542,
+      "sha256": "b7eb40e44d39f2cb314f3de5cc7defcc8800a646c5940912797651406eb13085",
+      "git_blob": "30cd9355a0579ae45994e0a52be8c544c558c5dd",
       "mode": "100644"
     },
     {
@@ -3567,9 +3567,9 @@
     },
     {
       "path": "scripts/release_scan.py",
-      "bytes": 1511,
-      "sha256": "023165bb457f276a3075fb95ba844dd374592980a90ae6f65342dfe3795916f1",
-      "git_blob": "d1edd9e8667212c21c851138346d33fe834db01f",
+      "bytes": 2872,
+      "sha256": "808ccbf3af4cd284f87f28d7188cff21b7734ce2e87b811c0637d5367b687b4a",
+      "git_blob": "df63c0a28046151f3dd3f7e02ba65dcd8211f434",
       "mode": "100644"
     },
     {
