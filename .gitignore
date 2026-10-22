@@ -52,3 +52,34 @@ models/cache/
 playwright-report/
 /work/
 /outputs/
+
+# Private configuration and certificate containers
+.envrc
+.netrc
+.npmrc
+.pypirc
+*.p12
+*.pfx
+
+# Additional local database and model formats
+*.db-journal
+*.sqlite-*
+*.sqlite3-*
+*.duckdb
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.joblib
+*.npz
+.cache/
+.ipynb_checkpoints/
+/artifacts/
+
+# Local packaging and browser output
+*.tgz
+*.tar
+*.7z
+*.rar
+frontend/playwright-results.json

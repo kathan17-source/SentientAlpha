@@ -25,3 +25,10 @@ Source credential checks are signature-based, not exhaustive. Twenty-seven histo
 Bind host servers to loopback. Do not share the local port through tunnels, reverse proxies, public host bindings or cloud hosting. Keep raw keys in private environment variables and licensed raw research content outside the release. Optional provider failure never silently falls back to synthetic observations. Prompt-like news text cannot override independent risk gates. Do not blindly retry non-idempotent historical research submissions after connection loss; inspect saved runs first. Paper commands use stable idempotency keys.
 
 Report a suspected defect privately to the project owner; no public issue tracker, remote reporting address or security response SLA is configured. Never paste credentials into reports. Review/rotate any exposed key independently if one is discovered later.
+
+
+## Repository hygiene guard
+
+The source guard scans Git-tracked and visible untracked paths when run in a checkout, including tracked files that ignore rules would hide. It rejects environment examples as well as private environment files, common private configuration/certificates, database sidecars, model/data/archive artifacts, generated dependency/build folders and configured token signatures. Separately downloaded dependencies and caches stay ignored and untracked. Extracted non-Git source uses a filesystem fallback. The guard reports paths rather than matched credential values; it is a preventive signature check, not exhaustive secret detection or a substitute for rights review.
+
+The merged v0.12.0 browser failures remain open. Repository hygiene does not establish browser/accessibility readiness, resolve the publication gate, or authorize public visibility, deployment or live trading.
