@@ -24,6 +24,7 @@ for (const width of [1440, 1280, 820, 390]) {
       page.on('pageerror', (error) => errors.push(error.message));
       await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
       await page.goto(route);
+      await expect(page.locator('h1')).toHaveCount(1);
       await expect(page.locator('h1')).toBeVisible();
       await expect(page.getByText('Backend connected', { exact: true })).toBeVisible();
       await expect(page.getByText('Simulation only', { exact: true }).first()).toBeVisible();
@@ -73,4 +74,17 @@ test('release paper view presents actual cash and the persisted veto warning', a
     await request.get(`/api/backend/api/paper/sessions/${veto.id}/fills`)
   ).json();
   expect(fills.items).toEqual([]);
+});
+
+test('connection indicator never claims success for an unavailable backend', async ({ page }) => {
+  await page.route('**/api/backend/ready', (route) =>
+    route.fulfill({
+      status: 503,
+      contentType: 'application/json',
+      body: '{"detail":"Controlled unavailable fixture"}',
+    }),
+  );
+  await page.goto('/');
+  await expect(page.getByText('Backend unavailable', { exact: true })).toBeVisible();
+  await expect(page.getByText('Backend connected', { exact: true })).toHaveCount(0);
 });

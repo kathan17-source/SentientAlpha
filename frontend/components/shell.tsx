@@ -167,14 +167,20 @@ function Shell({ children }: { children: ReactNode }) {
               <strong>{title}</strong>
             </div>
             <div className="top-status">
-              <span className={`status-dot ${health.isError ? 'offline' : ''}`} />
-              {health.isSuccess
-                ? 'Backend connected'
-                : health.isError
-                  ? 'Backend unavailable'
-                  : 'Connecting'}
+              <span
+                aria-hidden="true"
+                className={`status-dot ${health.isError ? 'offline' : health.isSuccess ? '' : 'pending'}`}
+              />
+              <span role="status" aria-live="polite">
+                {health.isSuccess
+                  ? 'Backend connected'
+                  : health.isError
+                    ? 'Backend unavailable'
+                    : 'Connecting'}
+              </span>
               <span className="top-separator" />
-              <Badge>Simulation</Badge>
+              <Badge>Simulation only</Badge>
+              <span className="simulation-locked">LOCKED</span>
             </div>
           </header>
           <div className="contextbar">

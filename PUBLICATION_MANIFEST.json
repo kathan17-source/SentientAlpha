@@ -11,9 +11,9 @@
     },
     {
       "path": ".github/workflows/test.yml",
-      "bytes": 4715,
-      "sha256": "a469a6f44fef6b6fd104ba1afe8cec7415d98dc2b8d960af21fc14180e1a664d",
-      "git_blob": "f6628b609d3a4222e68f3b301d1b010dc3ef4aad",
+      "bytes": 6164,
+      "sha256": "37a2f7d8891ea21b5ddac7ccd634665924d7bedda3843e537879e9cbaba0c31f",
+      "git_blob": "5fd398497db769d7faf5ff871d62f220475b67ef",
       "mode": "100644"
     },
     {
@@ -2993,9 +2993,9 @@
     },
     {
       "path": "frontend/app/globals.css",
-      "bytes": 20730,
-      "sha256": "2bdfc99bd449073668d63dc43ace827467b171b15eebfdbdd41ba44521a179a6",
-      "git_blob": "f81c0504509b6c729b84477d5f7f56e81097a8d5",
+      "bytes": 21139,
+      "sha256": "029ff20102ed12664ecb25544a0e521c63e4823f826b39dbd551c8d4c2274dfc",
+      "git_blob": "336be30a66690deb2dafa749981d410e652a78eb",
       "mode": "100644"
     },
     {
@@ -3084,16 +3084,16 @@
     },
     {
       "path": "frontend/components/shared/ui.tsx",
-      "bytes": 6863,
-      "sha256": "9092a100f713bf8e9d2c6b2ffebdecb95563329ea12ecdbda979750530111377",
-      "git_blob": "b5e3c4aa4fc507a30b8d1f9d9255071301cb3a91",
+      "bytes": 6968,
+      "sha256": "f7f4014b9a0e16bf42f12e7ce8d8532d77e47a7608eec34b4d11a6a32d340424",
+      "git_blob": "7a6142165d1643cb9bea6fb3fd4ddc6d50ae24db",
       "mode": "100644"
     },
     {
       "path": "frontend/components/shell.tsx",
-      "bytes": 10076,
-      "sha256": "5d854d9ff4c8d47990e43ef45cce849013288bf0aed0008b53bd3cd86ac744b6",
-      "git_blob": "2c50cae1513d497d29425b5a096cc42e44325359",
+      "bytes": 10327,
+      "sha256": "f3b359aba3e63513a802812041c0d05e4b99320bd88380408c98e9c3fe5d75d1",
+      "git_blob": "ede67813d4ce5cf466ed785cb496dd243c93e5af",
       "mode": "100644"
     },
     {
@@ -3140,9 +3140,9 @@
     },
     {
       "path": "frontend/components/views/portfolio.tsx",
-      "bytes": 14153,
-      "sha256": "4c5619fecca2b30e417395b6abe3d16548c307245c51caf972644ae2a247ac06",
-      "git_blob": "03e02dfb2f6429646f51d584882e8d9ee2d79f3d",
+      "bytes": 14180,
+      "sha256": "7117613caa97145f4e3270d720148359d9cc6ed596476e134ba9e2f3b6992de6",
+      "git_blob": "8f240745c5b9e38e08a9c58cef77a2c89ab84f77",
       "mode": "100644"
     },
     {
@@ -3189,9 +3189,9 @@
     },
     {
       "path": "frontend/e2e/release.spec.ts",
-      "bytes": 2928,
-      "sha256": "ed0fd1fdcab496aa3e3569d0f17bae32ba7d8a8559cf719e8cfba26b5aedcb4a",
-      "git_blob": "4f9089c1fc6ca9cb7261089e2220d5d581cbc5ae",
+      "bytes": 3486,
+      "sha256": "e14c19b0416fdf9f632198ef675c1f4725f554acd8acd6e5f8729e78f4d55480",
+      "git_blob": "dc43e69ad2a9aa84e65e9d1db7d188e777db04e6",
       "mode": "100644"
     },
     {
@@ -3294,9 +3294,9 @@
     },
     {
       "path": "frontend/tests/components.test.tsx",
-      "bytes": 3655,
-      "sha256": "991e91f37276a9127499c2154ab85a690e25b54487ff0e123bc83c5e14dcd855",
-      "git_blob": "03afbd15e129af06f1bec696d3b8c2b0010d1c95",
+      "bytes": 4219,
+      "sha256": "28194aa3833ea1a62ae4450cc48d82cc97c659cddf7c9173520d08c83f59a153",
+      "git_blob": "d12697e6c856f22faea739cf9ff4f57aa117d2a3",
       "mode": "100644"
     },
     {
