@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
-import { version } from '../package.json' with { type: 'json' };
+import packageInfo from '../package.json' with { type: 'json' };
 
 // Real rendered views of release_demo.py. No mocked responses or injected page content.
 test('capture four synthetic portfolio views', async ({ page, request }, info) => {
@@ -32,10 +32,12 @@ test('capture four synthetic portfolio views', async ({ page, request }, info) =
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.getByText('Backend connected', { exact: true })).toBeVisible();
     await expect(page.getByText('Simulation only', { exact: true }).first()).toBeVisible();
-    await expect(page.getByText(`Single-user · v${version}`, { exact: true })).toBeVisible();
+    await expect(
+      page.getByText(`Single-user · v${packageInfo.version}`, { exact: true }),
+    ).toBeVisible();
     await expect(page.getByText(/Synthetic dataset context/)).toBeVisible();
     await page.waitForLoadState('networkidle');
-    await expect(page.getByText('Loading retained research…', { exact: true })).toHaveCount(0);
+    await expect(page.locator('.loading')).toHaveCount(0);
     await page.evaluate(() => document.fonts.ready);
     if (name === 'committee') {
       await expect(page.locator('.agent-card')).toHaveCount(12);
