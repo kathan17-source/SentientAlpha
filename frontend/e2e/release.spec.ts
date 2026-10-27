@@ -24,11 +24,20 @@ for (const width of [1440, 1280, 820, 390]) {
       page.on('pageerror', (error) => errors.push(error.message));
       await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
       await page.goto(route);
+      await expect(page.locator('h1')).toHaveCount(1);
       await expect(page.locator('h1')).toBeVisible();
       await expect(page.getByText('Backend connected', { exact: true })).toBeVisible();
       await expect(page.getByText('Simulation only', { exact: true }).first()).toBeVisible();
       await page.keyboard.press('Tab');
       expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('BODY');
+      const focused = page.locator(':focus');
+      await expect(focused).toBeVisible();
+      expect(
+        await focused.evaluate((element) => {
+          const style = getComputedStyle(element);
+          return style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) >= 2;
+        }),
+      ).toBe(true);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       );
@@ -73,4 +82,39 @@ test('release paper view presents actual cash and the persisted veto warning', a
     await request.get(`/api/backend/api/paper/sessions/${veto.id}/fills`)
   ).json();
   expect(fills.items).toEqual([]);
+});
+
+test('connection indicator never claims success for an unavailable backend', async ({ page }) => {
+  await page.route('**/api/backend/ready', (route) =>
+    route.fulfill({
+      status: 503,
+      contentType: 'application/json',
+      body: '{"detail":"Controlled unavailable fixture"}',
+    }),
+  );
+  await page.goto('/');
+  await expect(page.getByText('Backend unavailable', { exact: true })).toBeVisible();
+  await expect(page.getByText('Backend connected', { exact: true })).toHaveCount(0);
+});
+
+test('fast real coverage keeps sentiment hydration consistent', async ({ page, request }) => {
+  const response = await request.get('/api/backend/api/research/coverage?limit=200');
+  expect(response.ok()).toBe(true);
+  const coverage = await response.json();
+  expect(coverage.items.length).toBeGreaterThan(0);
+  await page.route('**/api/backend/api/research/coverage?*', (route) =>
+    route.fulfill({ json: coverage }),
+  );
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  for (let i = 0; i < 5; i++) {
+    await page.goto('/sentiment');
+    await expect(
+      page.getByRole('heading', { name: 'Sentiment intelligence', exact: true }),
+    ).toBeVisible();
+    await expect(page.getByText('Backend connected', { exact: true })).toBeVisible();
+    await expect(page.getByText(/Synthetic dataset context/)).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'No eligible news observed' })).toBeVisible();
+  }
+  expect(errors).toEqual([]);
 });

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import { useObject, usePage, useSelection } from '@/lib/hooks';
 import { record, text, finite, money, percent, decimal, timestamp } from '@/lib/format';
@@ -242,14 +242,14 @@ export default function Backtesting() {
                   'win_rate',
                   'profit_factor',
                 ].map((k) => (
-                  <span style={{ display: 'contents' }} key={k}>
+                  <Fragment key={k}>
                     <dt>{k.replaceAll('_', ' ')}</dt>
                     <dd>
                       {['cagr', 'alpha', 'tracking_error', 'win_rate'].includes(k)
                         ? percent(finite(m[k]))
                         : decimal(finite(m[k]), 3)}
                     </dd>
-                  </span>
+                  </Fragment>
                 ))}
               </dl>
             </Panel>

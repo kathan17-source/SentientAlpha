@@ -3,6 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
@@ -39,6 +40,7 @@ jobs:
 
   frontend:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -60,27 +62,47 @@ jobs:
       - run: npx playwright install --with-deps chromium
         working-directory: frontend
       - run: PYTHONPATH=backend python scripts/release_demo.py --database /tmp/dashboard.db --report /tmp/dashboard.json
-      - run: |
+      - name: Combined offline and release browser checks
+        id: release_browser
+        run: |
           DATABASE_URL=sqlite:////tmp/dashboard.db uvicorn sentientalpha.api.app:create_app --factory --host 127.0.0.1 --port 8000 > /tmp/api.log 2>&1 &
           research_api_pid=$!
           npm --prefix frontend run start > /tmp/frontend.log 2>&1 &
           research_frontend_pid=$!
-          trap 'kill "$research_api_pid" "$research_frontend_pid" 2>/dev/null || true' EXIT
           for n in $(seq 1 60); do curl -sf http://127.0.0.1:3000/api/backend/ready && break || sleep 1; done
+          trap 'mkdir -p /tmp/release-browser-results; cp -R frontend/test-results/. /tmp/release-browser-results/ 2>/dev/null || true; cp frontend/playwright-results.json /tmp/release-browser-results/report.json 2>/dev/null || true; kill "$research_api_pid" "$research_frontend_pid" 2>/dev/null || true' EXIT
           npm --prefix frontend run test:e2e -- offline.spec.ts release.spec.ts
 
-      - run: PYTHONPATH=backend python scripts/paper_demo.py --database /tmp/paper.db --report /tmp/paper.json
-      - run: |
+      - name: Independent synthetic paper fixture
+        if: ${{ !cancelled() && steps.release_browser.outcome != 'skipped' }}
+        run: PYTHONPATH=backend python scripts/paper_demo.py --database /tmp/paper.db --report /tmp/paper.json
+      - name: Standalone paper browser checks
+        id: paper_browser
+        if: ${{ !cancelled() && steps.release_browser.outcome != 'skipped' }}
+        run: |
           DATABASE_URL=sqlite:////tmp/paper.db uvicorn sentientalpha.api.app:create_app --factory --host 127.0.0.1 --port 8001 > /tmp/paper-api.log 2>&1 &
           paper_api_pid=$!
           API_BASE_URL=http://127.0.0.1:8001 DASHBOARD_ORIGINS=http://127.0.0.1:3001 npm --prefix frontend run start -- --port 3001 > /tmp/paper-frontend.log 2>&1 &
           paper_frontend_pid=$!
-          trap 'kill "$paper_api_pid" "$paper_frontend_pid" 2>/dev/null || true' EXIT
           for n in $(seq 1 60); do curl -sf http://127.0.0.1:3001/api/backend/ready && break || sleep 1; done
+          trap 'mkdir -p /tmp/paper-browser-results; cp -R frontend/test-results/. /tmp/paper-browser-results/ 2>/dev/null || true; cp frontend/playwright-results.json /tmp/paper-browser-results/report.json 2>/dev/null || true; kill "$paper_api_pid" "$paper_frontend_pid" 2>/dev/null || true' EXIT
           DASHBOARD_URL=http://127.0.0.1:3001 npm --prefix frontend run test:e2e -- paper.spec.ts
+      # Both databases and all browser traffic are generated synthetic fixtures.
+      # Upload only test output, never databases, environments, server logs or caches.
+      - name: Private short-lived browser failure diagnostics
+        if: ${{ failure() && github.event.repository.private }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failure-diagnostics-${{ github.run_attempt }}
+          retention-days: 3
+          if-no-files-found: ignore
+          path: |
+            /tmp/release-browser-results/
+            /tmp/paper-browser-results/
 
   security:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

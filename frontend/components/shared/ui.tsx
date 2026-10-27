@@ -46,12 +46,15 @@ export function PageHeader({
   description,
   tag = 'Historical research',
   action,
+  headingLevel = 1,
 }: {
   title: string;
   description: string;
+  headingLevel?: 1 | 2 | 3;
   tag?: string;
   action?: ReactNode;
 }) {
+  const Heading = `h${headingLevel}` as const;
   return (
     <div className="page-head">
       <div>
@@ -59,7 +62,7 @@ export function PageHeader({
           <span className="tiny-line" />
           {tag}
         </div>
-        <h1>{title}</h1>
+        <Heading>{title}</Heading>
         <p>{description}</p>
       </div>
       {action}
