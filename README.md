@@ -1,20 +1,42 @@
-# SentientAlpha — A Multi-Agent Quantitative Research and Portfolio Simulation Platform
+# SentientAlpha — Auditable Multi-Agent Quant Research
 
-**v0.12.0 · research and simulation only · no brokerage or real-money execution.**
+**v0.12.0 · Python / FastAPI / Next.js · research and simulation only**
 
-SentientAlpha connects versioned financial data, time-safe research, specialized agents, independent risk controls and a durable simulated portfolio. It explores a practical engineering question: can every decision be traced to eligible evidence, vetoed independently, and recovered consistently after a process failure?
+SentientAlpha is a local quantitative research workstation built to make portfolio decisions inspectable: which observations were eligible, why an agent acted or abstained, whether independent risk controls approved the proposal, and whether simulated holdings survive a restart.
 
-The strongest contributions are temporal correctness, auditable decisions and recovery—not demonstrated trading profitability. **Robust alpha has not been established by the limited real-market evaluations.** The historical genuine IBM committee result was **−8.70% versus buy-and-hold −4.69%**. The offline demonstration is synthetic and executes the actual research and accounting services.
+I built it to study the engineering between a research signal and a recoverable portfolio. Six deterministic research adapters—technical, sentiment, quant, strategy, fundamental and macro—produce structured evidence or explicit abstentions. They do not role-play an investment committee. Their recommendations feed dependency-aware aggregation, portfolio optimization, independent risk review and simulated execution.
 
-## What is implemented
+**The engineering is verified more strongly than the economics. Robust predictive alpha has not been established.** The genuine historical IBM committee evaluation lost **8.70% versus buy-and-hold's 4.69% loss**. Missing evidence stays missing; synthetic demonstrations establish software behavior, not market skill.
 
-- Revision-preserving ingestion, as-of technical/quantitative features, fundamental research interfaces and provenance checks.
-- Training-only preprocessing, matured labels, purged walk-forward validation, calibration and reproducible model evaluation; optional pinned FinBERT sentiment integration.
-- Bounded strategy discovery, benchmark comparisons, explicit holdout handling and constrained portfolio optimization.
-- Fundamental, technical, sentiment, macro, quant and strategy agents with persisted evidence, independent evidence groups and honest abstentions. Genuine fundamental/macro/news coverage remains incomplete.
-- Independent exposure, concentration, stress and VaR/CVaR controls; target and fill-time vetoes with observation/reliability gates.
-- Historical backtesting with modeled execution costs and a Decimal ledger; persistent paper sessions with atomic fills, idempotent commands, replay and crash/restart recovery.
-- Eleven dashboard routes covering overview, security research, ML, strategies, committee, portfolio, risk, backtesting, sentiment, history and paper trading.
+## See the workstation
+
+Actual Chromium renders of the offline synthetic demonstration. Every displayed security, observation and simulated trade in these images is generated; returns are illustrative software output. This public repository is source for inspection, **not a hosted trading application**.
+
+![Research overview with synthetic provenance, simulated equity and decision evidence](docs/screenshots/overview.png)
+
+![Investment committee with technical evidence and explicit abstentions](docs/screenshots/committee.png)
+
+Also inspect the full [risk dashboard](docs/screenshots/risk.png) and [paper-trading dashboard](docs/screenshots/paper.png). [Capture provenance and reproduction](docs/PORTFOLIO_REVIEW.md#screenshot-provenance) explain the selected sessions and exact generator.
+
+## Engineering capabilities
+
+- **Time-safe research:** revision-preserving ingestion, as-of features, matured labels, training-only preprocessing and purged walk-forward evaluation; optional pinned FinBERT.
+- **Auditable decisions:** persisted agent evidence, clocks, dependency groups, disagreement and honest abstention; bounded strategy discovery and constrained portfolio proposals.
+- **Independent risk authority:** exposure, concentration, stress and VaR/CVaR gates at proposal and fill time; insufficient evidence can veto a trade.
+- **Durable simulated accounting:** modeled execution costs, a Decimal ledger, atomic fills, idempotent commands, replay and crash/restart recovery.
+- **Inspectable full stack:** eleven dashboard routes, backend-owned calculations, typed API contracts and automated browser/accessibility checks across desktop and mobile widths.
+
+## Verification and research findings
+
+| Evidence | What it establishes | Limit |
+|---|---|---|
+| [Merged release verification](docs/VERIFICATION.md) | 55 hosted browser checks; 44 route/viewport accessibility/layout cases; Python 3.12/3.14 and PostgreSQL integration | Automated checks do not certify deployment, complete accessibility or profitable trading |
+| [Reproducible offline demo](DEMO.md) | Actual research engines; five persisted paper fills; separate zero-fill risk veto; equivalent replay | Entirely synthetic; five of six agent types abstain per asset in this fixture |
+| [Genuine IBM committee](docs/RESEARCH_RESULTS.md) | −8.6995% vs buy-and-hold −4.6899% | Short retrospective sample; not a fresh holdout or live result |
+| [ML, discovery and risk](docs/RESEARCH_RESULTS.md) | No reliable predictive advantage established; selected strategy lost/lagged baselines; risk reduced exposure | Incomplete coverage, inspected holdouts, short tails and no long forward record |
+| [Earlier 40-stock study](docs/HISTORICAL_STUDY_REVIEW.md) | v0.6 source, protocol, summaries and original input hashes located | Performance not independently reproduced; no v0.12 performance claim |
+
+**[Follow the 5–10 minute demonstration →](DEMO.md)** Installation and execution require the owner's separate permission under [LICENSE](LICENSE); the instructions below do not grant it. No paid API key, brokerage account or model download is needed for the base synthetic demo.
 
 ## Architecture and data flow
 
@@ -95,7 +117,7 @@ npm --prefix frontend run build
 python scripts/release_scan.py
 ```
 
-The optional real-model test requires its pinned dependencies/cache and `RUN_FINBERT=1`; Python 3.14 core deliberately skips that test. CI includes disposable PostgreSQL and browser checks, but configuration alone does not establish a pass. See the current preparation report for actual execution status. Local Docker runtime, native PostgreSQL initialization and current browser/axe verification have documented host/tool restrictions.
+The optional real-model test requires its pinned dependencies/cache and `RUN_FINBERT=1`; Python 3.14 core deliberately skips that test. CI includes disposable PostgreSQL and browser checks, but configuration alone does not establish a pass. See the linked verification record for actual execution status. Local Docker runtime and native PostgreSQL initialization have documented host restrictions; hosted CI supplies browser/axe verification.
 
 ## Research and operational limitations
 
@@ -107,4 +129,9 @@ This is a single-user local workstation without production authentication, tenan
 
 Start with [architecture](ARCHITECTURE.md), [demo](DEMO.md), [paper-trading design](docs/PAPER_TRADING.md), backend services under `backend/sentientalpha`, tests under `backend/tests`, the migration chain through `0012_paper_operations`, and frontend component/browser tests. The [research findings](docs/RESEARCH_RESULTS.md) and retained research reports explain engineering tradeoffs and negative results.
 
-**Copyright © 2026 Kathan Patel. All Rights Reserved.** Original controlled source is available for inspection and evaluation under [LICENSE](LICENSE), without a general license to reuse, execute, modify, distribute or commercially exploit it. GitHub hosting-service and applicable-law rights remain as stated in LICENSE. Third-party software, icons, scaffolds, data and models retain their independent terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [THIRD_PARTY_MATERIALS.md](THIRD_PARTY_MATERIALS.md). Public visibility remains solely the owner's later decision.
+**Copyright © 2026 Kathan Patel. All Rights Reserved.** Original controlled source is available for inspection and evaluation under [LICENSE](LICENSE), without a general license to reuse, execute, modify, distribute or commercially exploit it. GitHub hosting-service and applicable-law rights remain as stated in LICENSE. Third-party software, icons, scaffolds, data and models retain their independent terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [THIRD_PARTY_MATERIALS.md](THIRD_PARTY_MATERIALS.md). The repository is public for inspection; public visibility does not grant general execution or reuse permission.
+
+
+## Development provenance
+
+The project was developed before this public repository snapshot. The GitHub history begins with a cleaned source snapshot; historical local milestone/release archives were preserved separately. Those archives are not an invented incremental GitHub development history. The earlier Mac v0.6 implementation is a separate code line whose results have not been ported to v0.12. See [evidence retention](docs/EVIDENCE.md) and the [historical-study review](docs/HISTORICAL_STUDY_REVIEW.md).

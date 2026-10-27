@@ -71,7 +71,7 @@ jobs:
           research_frontend_pid=$!
           for n in $(seq 1 60); do curl -sf http://127.0.0.1:3000/api/backend/ready && break || sleep 1; done
           trap 'mkdir -p /tmp/release-browser-results; cp -R frontend/test-results/. /tmp/release-browser-results/ 2>/dev/null || true; cp frontend/playwright-results.json /tmp/release-browser-results/report.json 2>/dev/null || true; kill "$research_api_pid" "$research_frontend_pid" 2>/dev/null || true' EXIT
-          npm --prefix frontend run test:e2e -- offline.spec.ts release.spec.ts
+          PORTFOLIO_SCREENSHOTS=/tmp/portfolio-screenshots npm --prefix frontend run test:e2e -- offline.spec.ts release.spec.ts portfolio.spec.ts
 
       - name: Independent synthetic paper fixture
         if: ${{ !cancelled() && steps.release_browser.outcome != 'skipped' }}
@@ -87,6 +87,18 @@ jobs:
           for n in $(seq 1 60); do curl -sf http://127.0.0.1:3001/api/backend/ready && break || sleep 1; done
           trap 'mkdir -p /tmp/paper-browser-results; cp -R frontend/test-results/. /tmp/paper-browser-results/ 2>/dev/null || true; cp frontend/playwright-results.json /tmp/paper-browser-results/report.json 2>/dev/null || true; kill "$paper_api_pid" "$paper_frontend_pid" 2>/dev/null || true' EXIT
           DASHBOARD_URL=http://127.0.0.1:3001 npm --prefix frontend run test:e2e -- paper.spec.ts
+      - name: Rendered synthetic portfolio screenshots
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-portfolio-screenshots
+          retention-days: 3
+          if-no-files-found: error
+          path: |
+            /tmp/portfolio-screenshots/overview.png
+            /tmp/portfolio-screenshots/committee.png
+            /tmp/portfolio-screenshots/risk.png
+            /tmp/portfolio-screenshots/paper.png
       # Both databases and all browser traffic are generated synthetic fixtures.
       # Upload only test output, never databases, environments, server logs or caches.
       - name: Private short-lived browser failure diagnostics

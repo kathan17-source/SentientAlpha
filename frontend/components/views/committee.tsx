@@ -5,6 +5,7 @@ import { ArrowRight, Network, ShieldCheck } from 'lucide-react';
 import { useSelection, useObject, usePage } from '@/lib/hooks';
 import { record, records, text, finite, percent, decimal, timestamp } from '@/lib/format';
 import { entries } from '@/lib/series';
+import { heuristicReasoning } from '@/lib/committee-format';
 import {
   Badge,
   Empty,
@@ -157,7 +158,7 @@ export default function Committee() {
                       <div className="agent-signal">
                         {finite(a.signal) === null ? 'Abstained' : decimal(finite(a.signal), 3)}
                       </div>
-                      <p>{text(a.reasoning)}</p>
+                      <p>{heuristicReasoning(a)}</p>
                       <dl>
                         <dt>Interpretation</dt>
                         <dd>{text(a.interpretation)}</dd>
@@ -171,6 +172,7 @@ export default function Committee() {
                       <JsonDetails
                         label="Evidence, clocks & dependencies"
                         value={{
+                          reasoning: a.reasoning,
                           evidence: a.evidence,
                           diagnostics: a.diagnostics,
                           limitations: a.limitations,
