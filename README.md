@@ -77,7 +77,7 @@ Python does not automatically load environment files. No `.env.example` is distr
 
 ## Verification
 
-**Publication gate: blocked.** Hosted browser CI completed with 4 passes and 45 failures involving label locators and portfolio heading structure; axe/layout checks were not reached. Backend, PostgreSQL and security jobs passed.
+**Browser verification:** the repair now merged into main passed 55 hosted Playwright checks, including 44 route/viewport axe, focus and layout cases. See the branch-specific verification record and remaining operational limits below.
 
 The cleaned GitHub candidate is tested independently of the original release. [Verification](docs/VERIFICATION.md) distinguishes baseline execution, cleanup reruns, the independent browser-repair branch and remaining gaps. Redundant historical machine reports are archived locally; useful research reports remain.
 

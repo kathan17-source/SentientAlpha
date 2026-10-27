@@ -1,23 +1,35 @@
 # Verification and remaining gates
 
-This cleanup branch is independently based on merged main `e36d976`; it does not include the separate browser repair in [PR #3](https://github.com/kathan17-source/SentientAlpha/pull/3). Do not treat results from that branch as passes of this checkout. After both owner-reviewed PRs are merged, run the combined tree again before changing its publication status.
+The cleanup was initially prepared independently on main `e36d976`. The owner subsequently merged [browser repair PR #3](https://github.com/kathan17-source/SentientAlpha/pull/3). This cleanup branch is now updated from reviewed main `527ef48`, so it includes those existing browser/dependency fixes while its diff remains documentation and evidence cleanup only. No PR was merged by the assistant. Current cleanup CI is visible in [PR #4 checks](https://github.com/kathan17-source/SentientAlpha/pull/4/checks); no pending run is presumed green.
 
-## Executed baseline, before cleanup
+## Executed verification
 
-The source-publication verification reproduced Python 3.12: 606 tests + 11 subtests with the optional pinned cached FinBERT, and Python 3.14 core: 605 + 11 with one optional-model skip. Frontend component baseline: 59 tests. The synthetic demo generated five fills, a separate paused zero-fill veto session, equivalent replay and exact portfolio persistence across an API restart; 38 HTTP checks passed. These are historical executed results, not presumed cleanup reruns.
+[Browser repair CI](https://github.com/kathan17-source/SentientAlpha/actions/runs/40447148226) passed on repair revision `b1b9fbb`, whose code was merged into main:
 
-Hosted CI at application revision `4a2bfeb` passed both Python core suites (605 + 11 subtests, one optional skip each), actual PostgreSQL 16 integration (198 passed, two SQLite-specific process-death cases skipped each), and security. Its combined browser suite completed with 4 passes and 45 failures involving label locators/duplicate h1; route axe/layout assertions were not reached. No browser/accessibility success is claimed for unmodified main. [Historical run](https://github.com/kathan17-source/SentientAlpha/actions/runs/39690184592).
+| Check | Executed result |
+|---|---|
+| Hosted combined offline/release browser suite | 51 passed, zero failed/skipped |
+| Hosted standalone paper suite | 4 passed, zero failed/skipped |
+| Route/viewport axe, layout, visible focus, headings and runtime errors | 44 passed: eleven routes × 1440/1280/820/390 px; zero axe violations |
+| Hosted component/static/build checks | 60 component tests; types, lint, format, API generation and production build passed |
+| Hosted Python 3.12/3.14 core, each | 605 passed + 11 subtests; one optional-model skip |
+| Hosted PostgreSQL 16 integration, each Python | 198 passed, two SQLite-only process-death tests skipped |
+| Hosted security | Core/developer/NLP and npm scans and strengthened source guard passed |
 
-## Reproduce authorized local checks
+The optional filelock/setuptools advisory findings were fixed with minimal pins in the browser repair. Model weights remain external and independently licensed. Local Python 3.12 with the patched optional stack and trusted pinned FinBERT passed 606 tests + 11 subtests. A separate local composition of browser fixes and cleanup passed 606 backend tests + 11 subtests, 60 component tests, static/build checks and the source guard; it was byte-identical to this branch before documentation status updates.
 
-Follow the owner/authorized-evaluator setup in the root README. Install requirements.lock for developer checks. Run `python -m pytest -q`, `python -m ruff check .`, `python -m ruff format --check .`, `python -m mypy`, and `python scripts/release_scan.py`. Run frontend `typecheck`, `lint`, `format:check`, `test`, `generate:api` and `build` scripts. The OpenAPI generator must not change `frontend/types/openapi.ts` unexpectedly.
+Cleanup-only checks on the initially independent tree passed Python 3.12 606 + 11 subtests and Python 3.14 605 + 11 with one optional skip, 59 component tests, static/build checks, full SQLite migrations and alembic check. A new combined synthetic demo generated five fills, an independent paused zero-fill veto and equivalent replay in both. Its production Next/API stack passed 38 actual HTTP checks. A fresh API process preserved exact portfolio values, five fills and equivalent replay. Removing historical evidence did not require changing source, fixtures or assertions. Initial cleanup CI correctly exposed inherited browser/advisory failures before the reviewed fixes were brought in; those historical failures remain recorded.
 
-The combined synthetic demo applies migrations through `0012_paper_operations`. Use a new database/report path, then check persisted paper fills, cash/holdings, risk-veto session and replay. Against the migrated demo, `python -m alembic check` should report no new upgrade operations. Run destructive integration fixtures only against an empty disposable test database.
+## Reproduce authorized checks
 
-On a permitted browser host, use the existing offline/release browser suites against the combined demo, and the paper suite against its independent fixture. Tests cover all eleven routes at 1440, 1280, 820 and 390 pixels, keyboard/overflow/axe and actual cash/veto behavior. Configuration or assertions alone do not prove they passed. Cleanup-specific results and full file classifications are recorded in the cleanup PR and owner's local evidence.
+Follow the owner/authorized-evaluator setup in README. Install requirements.lock for developer checks. Run `python -m pytest -q`, `python -m ruff check .`, `python -m ruff format --check .`, `python -m mypy`, and `python scripts/release_scan.py`. Run frontend `typecheck`, `lint`, `format:check`, `test`, `generate:api` and `build`. API generation must not change `frontend/types/openapi.ts` unexpectedly.
 
-## Remaining limitations
+The combined synthetic demo applies migrations through `0012_paper_operations`. Use a new database/report path; compare persisted cash/holdings, fills, veto session and replay. Against that migrated demo, `python -m alembic check` should report no new upgrade operations. Destructive integration fixtures require a fresh disposable test database.
 
-Docker application runtime/restart and intended deployment are unverified; native local PostgreSQL initialization was blocked by shared-memory policy even though hosted PostgreSQL integration subsequently passed. Local browser tooling was restricted; hosted results are reported separately. Full manual accessibility, sustained availability, disk-failure recovery, production identity/authorization/tenancy, complete CSP and operational security are not certified. Version locks are not artifact-hash or container-digest supply-chain certification. The retained httpx test-client warning is a compatibility limitation, not a failed financial assertion.
+On a permitted browser host, run the existing offline/release suites against the combined demo and paper suite against its independent synthetic fixture. Current CI retains failure diagnostics privately for three days; it does not upload databases, private environments, model caches or server logs. The standalone paper suite runs even after a combined-suite failure without masking the failed workflow.
 
-Public source visibility is a separate owner decision from publicly exposing a financial application. Neither is authorized by a test pass. Keep loopback-only operation, simulation-only modes and independent third-party/model/provider terms.
+## Remaining limits
+
+Docker application runtime/restart and intended deployment remain unverified; native local PostgreSQL initialization was blocked by shared-memory policy even though hosted PostgreSQL integration passed. Local browser tooling was restricted; hosted execution supplies the rendered evidence. Full manual accessibility, sustained availability, disk-failure recovery, production identity/authorization/tenancy, complete CSP and operational security are not certified. Version locks are not artifact-hash or container-digest supply-chain certification. The retained httpx test-client deprecation warning is not a failed financial assertion.
+
+Public source visibility remains an explicit owner decision, separate from publicly deploying a financial application. Neither is authorized by these test results. Keep loopback-only operation, simulation-only modes and independent third-party/model/provider terms.
