@@ -1,6 +1,6 @@
 # Verification and remaining gates
 
-The cleanup was initially prepared independently on main `e36d976`. The owner subsequently merged [browser repair PR #3](https://github.com/kathan17-source/SentientAlpha/pull/3). This cleanup branch is now updated from reviewed main `527ef48`, so it includes those existing browser/dependency fixes while its diff remains documentation and evidence cleanup only. No PR was merged by the assistant. Current cleanup CI is visible in [PR #4 checks](https://github.com/kathan17-source/SentientAlpha/pull/4/checks); no pending run is presumed green.
+Reviewed main `9e2810b` includes the owner's merges of [browser repair PR #3](https://github.com/kathan17-source/SentientAlpha/pull/3) and [repository cleanup PR #4](https://github.com/kathan17-source/SentientAlpha/pull/4). The source repository is public; the application remains a local simulation workstation. The presentation review adds genuine synthetic screenshots and display-only fixes. Baseline results and operational limits are recorded below; current presentation checks are recorded in [the portfolio review](PORTFOLIO_REVIEW.md).
 
 ## Executed verification
 
@@ -26,10 +26,10 @@ Follow the owner/authorized-evaluator setup in README. Install requirements.lock
 
 The combined synthetic demo applies migrations through `0012_paper_operations`. Use a new database/report path; compare persisted cash/holdings, fills, veto session and replay. Against that migrated demo, `python -m alembic check` should report no new upgrade operations. Destructive integration fixtures require a fresh disposable test database.
 
-On a permitted browser host, run the existing offline/release suites against the combined demo and paper suite against its independent synthetic fixture. Current CI retains failure diagnostics privately for three days; it does not upload databases, private environments, model caches or server logs. The standalone paper suite runs even after a combined-suite failure without masking the failed workflow.
+On a permitted browser host, run the existing offline/release suites against the combined demo and paper suite against its independent synthetic fixture. Failure diagnostics are retained for three days only when a repository is private; this repository is now public, so that upload is disabled. A separate allowlist uploads only the four synthetic portfolio PNGs after successful browser checks; it does not upload databases, private environments, model caches or server logs. The standalone paper suite runs even after a combined-suite failure without masking the failed workflow.
 
 ## Remaining limits
 
 Docker application runtime/restart and intended deployment remain unverified; native local PostgreSQL initialization was blocked by shared-memory policy even though hosted PostgreSQL integration passed. Local browser tooling was restricted; hosted execution supplies the rendered evidence. Full manual accessibility, sustained availability, disk-failure recovery, production identity/authorization/tenancy, complete CSP and operational security are not certified. Version locks are not artifact-hash or container-digest supply-chain certification. The retained httpx test-client deprecation warning is not a failed financial assertion.
 
-Public source visibility remains an explicit owner decision, separate from publicly deploying a financial application. Neither is authorized by these test results. Keep loopback-only operation, simulation-only modes and independent third-party/model/provider terms.
+The source repository is now public. It is not a publicly deployed financial application; test results do not authorize deployment or general code execution/reuse. Keep loopback-only operation, simulation-only modes and independent third-party/model/provider terms.
