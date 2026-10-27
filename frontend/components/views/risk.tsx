@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
@@ -200,10 +200,10 @@ export default function Risk() {
                 <Panel title="Exposure & concentration" eyebrow={`${snapshot} snapshot`}>
                   <dl className="detail-list panel-body">
                     {['gross', 'net', 'cash_weight', 'maximum_weight', 'top_five'].map((k) => (
-                      <span key={k} style={{ display: 'contents' }}>
+                      <Fragment key={k}>
                         <dt>{k.replaceAll('_', ' ')}</dt>
                         <dd>{percent(finite(exposure[k]))}</dd>
-                      </span>
+                      </Fragment>
                     ))}
                     <dt>HHI, equity weights</dt>
                     <dd>{decimal(finite(exposure.hhi_equity_weights), 4)}</dd>

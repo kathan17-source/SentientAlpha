@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
@@ -44,15 +44,24 @@ export type ResearchContext = {
   asOf: string;
   coverage: RecordData[];
 };
-const Research = createContext<ResearchContext>({
+const EMPTY_RESEARCH: ResearchContext = {
   ticker: '',
   provider: '',
   start: '',
   end: '',
   asOf: '',
   coverage: [],
-});
-export const useResearch = () => useContext(Research);
+};
+const Research = createContext<ResearchContext>(EMPTY_RESEARCH);
+const subscribeToHydration = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
+export function useResearch() {
+  const context = useContext(Research);
+  // A fast coverage response must not change a streaming child's first hydration render.
+  const hydrated = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
+  return hydrated ? context : EMPTY_RESEARCH;
+}
 function Shell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);

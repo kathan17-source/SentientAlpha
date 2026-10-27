@@ -88,3 +88,25 @@ test('connection indicator never claims success for an unavailable backend', asy
   await expect(page.getByText('Backend unavailable', { exact: true })).toBeVisible();
   await expect(page.getByText('Backend connected', { exact: true })).toHaveCount(0);
 });
+
+test('fast real coverage keeps sentiment hydration consistent', async ({ page, request }) => {
+  const response = await request.get('/api/backend/api/research/coverage?limit=200');
+  expect(response.ok()).toBe(true);
+  const coverage = await response.json();
+  expect(coverage.items.length).toBeGreaterThan(0);
+  await page.route('**/api/backend/api/research/coverage?*', (route) =>
+    route.fulfill({ json: coverage }),
+  );
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  for (let i = 0; i < 5; i++) {
+    await page.goto('/sentiment');
+    await expect(
+      page.getByRole('heading', { name: 'Sentiment intelligence', exact: true }),
+    ).toBeVisible();
+    await expect(page.getByText('Backend connected', { exact: true })).toBeVisible();
+    await expect(page.getByText(/Synthetic dataset context/)).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'No eligible news observed' })).toBeVisible();
+  }
+  expect(errors).toEqual([]);
+});
