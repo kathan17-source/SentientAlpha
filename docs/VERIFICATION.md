@@ -1,20 +1,20 @@
 # Verification and remaining gates
 
-Reviewed main `9e2810b` includes the owner's merges of [browser repair PR #3](https://github.com/kathan17-source/SentientAlpha/pull/3) and [repository cleanup PR #4](https://github.com/kathan17-source/SentientAlpha/pull/4). The source repository is public; the application remains a local simulation workstation. The presentation review adds genuine synthetic screenshots and display-only fixes. Baseline results and operational limits are recorded below; current presentation checks are recorded in [the portfolio review](PORTFOLIO_REVIEW.md).
+The public repository contains a local research/simulation workstation. [Merged PR #5 verification](https://github.com/kathan17-source/SentientAlpha/actions/runs/40454261882) passed 56 browser checks, 62 frontend tests, Python 3.12/3.14 core and PostgreSQL integration, static/build checks and dependency/source security audits. See [screenshot provenance](PORTFOLIO_REVIEW.md#screenshot-provenance) and the [demo](../DEMO.md) for reproducible synthetic evidence. Earlier executed results and operational limits follow; automated success does not certify deployment or predictive alpha.
 
 ## Executed verification
 
 [Browser repair CI](https://github.com/kathan17-source/SentientAlpha/actions/runs/40447148226) passed on repair revision `b1b9fbb`, whose code was merged into main:
 
-| Check | Executed result |
-|---|---|
-| Hosted combined offline/release browser suite | 51 passed, zero failed/skipped |
-| Hosted standalone paper suite | 4 passed, zero failed/skipped |
-| Route/viewport axe, layout, visible focus, headings and runtime errors | 44 passed: eleven routes × 1440/1280/820/390 px; zero axe violations |
-| Hosted component/static/build checks | 60 component tests; types, lint, format, API generation and production build passed |
-| Hosted Python 3.12/3.14 core, each | 605 passed + 11 subtests; one optional-model skip |
-| Hosted PostgreSQL 16 integration, each Python | 198 passed, two SQLite-only process-death tests skipped |
-| Hosted security | Core/developer/NLP and npm scans and strengthened source guard passed |
+| Check                                                                  | Executed result                                                                     |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Hosted combined offline/release browser suite                          | 51 passed, zero failed/skipped                                                      |
+| Hosted standalone paper suite                                          | 4 passed, zero failed/skipped                                                       |
+| Route/viewport axe, layout, visible focus, headings and runtime errors | 44 passed: eleven routes × 1440/1280/820/390 px; zero axe violations                |
+| Hosted component/static/build checks                                   | 60 component tests; types, lint, format, API generation and production build passed |
+| Hosted Python 3.12/3.14 core, each                                     | 605 passed + 11 subtests; one optional-model skip                                   |
+| Hosted PostgreSQL 16 integration, each Python                          | 198 passed, two SQLite-only process-death tests skipped                             |
+| Hosted security                                                        | Core/developer/NLP and npm scans and strengthened source guard passed               |
 
 The optional filelock/setuptools advisory findings were fixed with minimal pins in the browser repair. Model weights remain external and independently licensed. Local Python 3.12 with the patched optional stack and trusted pinned FinBERT passed 606 tests + 11 subtests. A separate local composition of browser fixes and cleanup passed 606 backend tests + 11 subtests, 60 component tests, static/build checks and the source guard; it was byte-identical to this branch before documentation status updates.
 
