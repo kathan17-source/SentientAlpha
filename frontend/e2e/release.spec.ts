@@ -30,6 +30,14 @@ for (const width of [1440, 1280, 820, 390]) {
       await expect(page.getByText('Simulation only', { exact: true }).first()).toBeVisible();
       await page.keyboard.press('Tab');
       expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('BODY');
+      const focused = page.locator(':focus');
+      await expect(focused).toBeVisible();
+      expect(
+        await focused.evaluate((element) => {
+          const style = getComputedStyle(element);
+          return style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) >= 2;
+        }),
+      ).toBe(true);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
         true,
       );
