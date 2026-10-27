@@ -1,0 +1,13 @@
+# Research findings and limits
+
+**Robust predictive alpha has not been established.** Synthetic software demonstrations, retrospective genuine-market evaluations and hypothetical stress calculations are separate evidence classes.
+
+The genuine historical IBM committee evaluation returned **−8.6995% versus buy-and-hold −4.6899%**. The source contained 100 raw daily bars acquired after the evaluated period, with 23 eligible committee callbacks in the short September–October 2026 window. This is retrospective reconstruction, not proof of contemporaneous point-in-time operation, a fresh holdout or profitable deployment. See the preserved [committee research report](MILESTONE8_REPORT.md).
+
+The ML evaluation did not establish a reliable improvement over the training-prevalence baseline. Genuine compatible sentiment history was insufficient, so no sentiment improvement is inferred from successful FinBERT inference. The strategy-discovery selection lost money and lagged cash/buy-and-hold in the limited genuine study. Retained [ML](MILESTONE6_REPORT.md) and [discovery](MILESTONE7_REPORT.md) reports preserve windows, model/selection conventions, negative outcomes and data limitations.
+
+Independent risk controls reduced exposure/losses in some fixed comparisons; that does not establish alpha. The late IBM held state had only 98 eligible returns, with 95% effective tail mass 4.9 below the five-observation reliability gate. Seven matured shadow forecasts produced zero qualified reliable forecasts: no tail-coverage certification or p-value is claimed. VaR/ES profiles moving to cash reflect insufficient reliable tails rather than a successful loss prediction. See the [risk research report](MILESTONE9_REPORT.md).
+
+Genuine fundamental, macro vintage and complete sentiment coverage remain incomplete; agents abstain rather than invent evidence. Short samples, dependent observations, survivorship/action limitations, multiple research trials, previously inspected holdouts, approximate daily execution, model/selection uncertainty and the absence of a long forward record restrict interpretation. Hypothetical scenarios are not executed outcomes. Estimated optimizer targets are not actual holdings. Engineering correctness is not economic usefulness or investment advice.
+
+The [sentiment](MILESTONE3_REPORT.md), [execution](MILESTONE4_REPORT.md) and [optimization](MILESTONE5_REPORT.md) reports retain additional evidence and limitations. Their historical JSON exports and diagnostic outputs are [archived locally](EVIDENCE.md); no financial values or failed findings were rewritten for repository cleanup. Fresh offline verification uses explicitly synthetic inputs through the real services.

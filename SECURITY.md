@@ -14,11 +14,11 @@
 
 ## Current dependency findings — post-release 2026-10-21
 
-**VERIFIED:** optional Transformers was updated from4.57.6 to5.20.2 after an isolated real FinBERT test, seven-text old/new probability comparison (maximum difference0.0), full regression run and clean final advisory scan. The associated hub/tokenizer and required dependencies are pinned. Current combined developer/NLP and npm scans report zero known advisories, with no suppressions. See [assessment](docs/TRANSFORMERS_SECURITY_ASSESSMENT.md) and [current verification](POST_RELEASE_VERIFICATION.md).
+**VERIFIED:** optional Transformers was updated from4.57.6 to5.20.2 after an isolated real FinBERT test, seven-text old/new probability comparison (maximum difference0.0), full regression run and clean final advisory scan. The associated hub/tokenizer and required dependencies are pinned. Current combined developer/NLP and npm scans report zero known advisories, with no suppressions. See [assessment](docs/TRANSFORMERS_SECURITY_ASSESSMENT.md) and current verification (historical evidence archived locally).
 
 The M12 report's nine records/six distinct IDs are preserved as a historical finding, resolved in this source revision's version scan. This does not certify arbitrary model loading: fixed repository/revision, trusted offline cache and no user checkpoints remain required. Optional inference was verified on Python3.12 CPU; Python3.14 core still skips the optional model test. The default runtime and container omit NLP.
 
-Source credential checks are signature-based, not exhaustive. Twenty-seven historical diagnostics had machine-specific usernames/paths redacted without changing financial or test outcomes; docs/PATH_REDACTIONS.json records before/after hashes. Original release archives remain separately preserved. No private environments, databases, model weights, node_modules or downloaded raw corpus is included. Dependency locks lack full wheel hashes and container tags lack digest pins; no bit-for-bit or supply-chain certification.
+Source credential checks are signature-based, not exhaustive. Twenty-seven historical diagnostics had machine-specific usernames/paths redacted without changing financial or test outcomes; the locally archived path-redaction inventory records before/after hashes. Original release archives remain separately preserved. No private environments, databases, model weights, node_modules or downloaded raw corpus is included. Dependency locks lack full wheel hashes and container tags lack digest pins; no bit-for-bit or supply-chain certification.
 
 ## Operational boundary
 

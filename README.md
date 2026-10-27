@@ -35,7 +35,7 @@ flowchart LR
 
 Python 3.12/3.14, FastAPI, SQLAlchemy/Alembic, NumPy, pandas, SciPy and scikit-learn power the backend. Next.js 16, React, TypeScript, Tailwind, Recharts and Lucide power the dashboard. SQLite supports the verified local workflow; PostgreSQL support has additional infrastructure checks described below.
 
-Financial calculations remain backend-owned. Equity reconciles cash plus marked positions; returns use successive equity ratios net of modeled costs. Historical Sharpe uses sample daily volatility and √252 annualization with a zero risk-free convention. Undefined statistics stay unavailable. See [architecture](ARCHITECTURE.md), [backtesting conventions](docs/BACKTESTING_ENGINE.md), [portfolio optimization](docs/PORTFOLIO_OPTIMIZATION.md) and the [milestone documentation](ROADMAP.md).
+Financial calculations remain backend-owned. Equity reconciles cash plus marked positions; returns use successive equity ratios net of modeled costs. Historical Sharpe uses sample daily volatility and √252 annualization with a zero risk-free convention. Undefined statistics stay unavailable. See [architecture](ARCHITECTURE.md), [backtesting conventions](docs/BACKTESTING_ENGINE.md), [portfolio optimization](docs/PORTFOLIO_OPTIMIZATION.md) and the milestone documentation (historical evidence archived locally).
 
 ## Installation and offline demonstration
 
@@ -79,7 +79,7 @@ Python does not automatically load environment files. No `.env.example` is distr
 
 **Publication gate: blocked.** Hosted browser CI completed with 4 passes and 45 failures involving label locators and portfolio heading structure; axe/layout checks were not reached. Backend, PostgreSQL and security jobs passed.
 
-The cleaned GitHub candidate is tested independently of the original release. Current results and a before/after comparison are recorded in [GITHUB_PORTFOLIO_PREPARATION.md](GITHUB_PORTFOLIO_PREPARATION.md); older reports remain dated historical evidence.
+The cleaned GitHub candidate is tested independently of the original release. [Verification](docs/VERIFICATION.md) distinguishes baseline execution, cleanup reruns, the independent browser-repair branch and remaining gaps. Redundant historical machine reports are archived locally; useful research reports remain.
 
 ```sh
 python -m pip install -r requirements.lock
@@ -101,10 +101,10 @@ The optional real-model test requires its pinned dependencies/cache and `RUN_FIN
 
 Real, synthetic, simulated and benchmark evidence are labeled separately. Genuine sentiment, fundamental and macro coverage is incomplete; short tails limit risk inference; execution is approximate; strategy selection can overfit; and no long forward operating record establishes predictive performance. Risk controls reduced reported exposure/losses without establishing alpha.
 
-This is a single-user local workstation without production authentication, tenant isolation or deployment certification. It is not production-ready trading software, financial advice or a promise of returns. Historical provider exports and five genuine-data screenshots held for rights review are excluded; original negative findings remain in the reports. Required generators and approved synthetic fixtures are retained. [Publication selection](PUBLICATION_SELECTION.md) identifies exactly what was omitted.
+This is a single-user local workstation without production authentication, tenant isolation or deployment certification. It is not production-ready trading software, financial advice or a promise of returns. Restricted provider exports and the five genuine-data screenshots remain excluded; permitted but unnecessary historical screenshots/diagnostics are now archived locally. Original negative findings remain in the reports. Required generators and approved synthetic fixtures are retained. [Evidence retention and publication selection](docs/EVIDENCE.md) identifies exactly what was omitted.
 
 ## Technical review and rights
 
-Start with [architecture](ARCHITECTURE.md), [demo](DEMO.md), [paper-trading design](docs/PAPER_TRADING.md), backend services under `backend/sentientalpha`, tests under `backend/tests`, the migration chain through `0012_paper_operations`, and frontend component/browser tests. The [portfolio presentation](PORTFOLIO_PRESENTATION.md) and milestone reports explain engineering tradeoffs and negative results.
+Start with [architecture](ARCHITECTURE.md), [demo](DEMO.md), [paper-trading design](docs/PAPER_TRADING.md), backend services under `backend/sentientalpha`, tests under `backend/tests`, the migration chain through `0012_paper_operations`, and frontend component/browser tests. The [research findings](docs/RESEARCH_RESULTS.md) and retained research reports explain engineering tradeoffs and negative results.
 
 **Copyright © 2026 Kathan Patel. All Rights Reserved.** Original controlled source is available for inspection and evaluation under [LICENSE](LICENSE), without a general license to reuse, execute, modify, distribute or commercially exploit it. GitHub hosting-service and applicable-law rights remain as stated in LICENSE. Third-party software, icons, scaffolds, data and models retain their independent terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [THIRD_PARTY_MATERIALS.md](THIRD_PARTY_MATERIALS.md). Public visibility remains solely the owner's later decision.

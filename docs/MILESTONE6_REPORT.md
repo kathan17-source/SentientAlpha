@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # SentientAlpha — Milestone 6 delivery and verification report
 
 Milestone 6 is implemented as version 0.6.0 / ML engine 6.0.0 / schema 0008_machine_learning.
@@ -36,7 +38,7 @@ See [exact contracts](ML_RESEARCH_ENGINE.md).
 Eight ML modules, one API router, three ORM tables and migration0008, two ML test modules,
 four executable verifiers/replay/profiling helpers, API wiring/version/dependency/schema updates,
 and M4 parent-replay routing. Existing tests and migrations0001–0007 are byte-identical.
-[Complete file list](CHANGESET_M6.json) gives the audited changes.
+Complete file list (historical evidence archived locally) gives the audited changes.
 
 ## 4. Forecasting targets
 
@@ -123,7 +125,7 @@ held-out seeded permutation loss changes with sample counts. No LLM explanation,
 or SHAP claim. IBM logistic standardized coefficients are +0.215799 for return and −0.173948
 for SMA5; corresponding permutation log-loss increases are0.003429 and0.004606 (N=24).
 Forest impurity importance is0.55/0.45 and boosting0.568573/0.431427; these are not causal effects. Genuine IBM has only24 OOS observations and two correlated features; no robust
-feature conclusion is warranted. [Fold stability](M6_STABILITY.json) records synthetic coefficient/
+feature conclusion is warranted. Fold stability (historical evidence archived locally) records synthetic coefficient/
 importance dispersion, signs, prediction means and changing class prevalence. Permutation
 breaks temporal dependence and is descriptive; it is not a feature-selection score.
 

@@ -21,7 +21,7 @@ Heavy libraries import only during explicit model initialization. Normal startup
 core tests require no transformer, weights, model download, GPU or live provider. No LLM, task
 queue, alternate database or remote classifier was introduced. The source archive excludes weights,
 provider raw responses, environments and local databases. Model artifact hashes are recorded in
-[M3_MODEL_ARTIFACTS.json](M3_MODEL_ARTIFACTS.json).
+M3_MODEL_ARTIFACTS.json (historical evidence archived locally).
 
 ## Sources, access, retained content and actual coverage
 
@@ -358,9 +358,9 @@ headlines with exact contributor evidence; restricted headlines remain internal.
 
 ## Executed tests, performance and remaining gates
 
-See [MILESTONE3_REPORT.md](MILESTONE3_REPORT.md), [real Board pipeline](M3_REAL_NEWS.json),
-real public AAPL pipeline (`M3_ALPHA_REAL_PIPELINE.json`, intentionally omitted; see PUBLICATION_SELECTION.md), [synthetic real-model benchmark](M3_SENTIMENT_BENCHMARK.json),
-[actual mixed HTTP matrix](M3_API_SMOKE.json) and [M2 allocation profile](M3_M2_MEMORY_PROFILE.json).
+See [MILESTONE3_REPORT.md](MILESTONE3_REPORT.md), real Board pipeline (historical evidence archived locally),
+real public AAPL pipeline (`M3_ALPHA_REAL_PIPELINE.json`, intentionally omitted; see PUBLICATION_SELECTION.md), synthetic real-model benchmark (historical evidence archived locally),
+actual mixed HTTP matrix (historical evidence archived locally) and M2 allocation profile (historical evidence archived locally).
 
 Core deterministic tests run offline on Python 3.12/3.14 with explicitly labeled controlled model outputs.
 A separate local-weight opt-in test actually runs FinBERT; skipped model tests are not passed tests:

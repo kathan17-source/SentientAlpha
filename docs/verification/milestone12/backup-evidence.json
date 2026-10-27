@@ -1,6 +1,0 @@
-{
-  "method": "sqlite3.Connection.backup, read-only source",
-  "integrity_check": "ok",
-  "restore_replay": true,
-  "portfolio_identical_after_new_API_process": true
-}

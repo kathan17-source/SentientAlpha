@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # Milestone 3 delivery and actual verification
 
 Verified October 14, 2026, America/Chicago. Package 0.3.0; sentiment calculation subsystem 3.0.2.
@@ -43,7 +45,7 @@ See [SENTIMENT_ENGINEERING.md](SENTIMENT_ENGINEERING.md) for all formulas, polic
 
 ## 3. Added and modified files
 
-[CHANGESET_M3.json](CHANGESET_M3.json) enumerates exact additions/modifications against the captured
+CHANGESET_M3.json (historical evidence archived locally) enumerates exact additions/modifications against the captured
 M2 source baseline and verifies original migration hashes. Principal additions: `sentiment/`
 contracts/providers/entities/ingestion/model/inference/registry/aggregation/datasets/matrices;
 `database/sentiment_models.py`; migration 0005; typed `api/sentiment.py`; synthetic news/model-test
@@ -62,7 +64,7 @@ Federal Reserve Board press-release RSS: fixed official feed, real HTTP transpor
 headline metadata, actual ingestion and inference on 20 headlines dated **September 10–October 13,
 2026**, collected October 14. Feed contents are a snapshot of one publisher's broad/regulatory coverage.
 They are not full-market company news, complete historical coverage or 2018–2026 archive evidence.
-[Real Board pipeline](M3_REAL_NEWS.json) records collection, probabilities, permitted headline examples
+Real Board pipeline (historical evidence archived locally) records collection, probabilities, permitted headline examples
 and aggregation. Board website content is generally public domain unless stated otherwise; no external
 full-page content, marks or third-party images were scraped.
 
@@ -75,7 +77,7 @@ probabilities and 28-output snapshots. Uncertain company relevance was not copie
 Real company pipeline (`M3_ALPHA_REAL_PIPELINE.json`, intentionally omitted; see PUBLICATION_SELECTION.md) records the outcome. Restricted summaries/full text
 are not retained or exposed; no private API key was used or stored. Authenticated paging (five pages,
 100/page), missing schemas, retries and rate limits use controlled transports and remain subscription-
-dependent. [Access probe](M3_ALPHA_NEWS_ACCESS.json) records successful public demo availability.
+dependent. Access probe (historical evidence archived locally) records successful public demo availability.
 
 No provider failure ever triggers fabricated news. API/direct-provider failures create sanitized audit
 records; post-insert failure testing proves rollback after an actual SQL insert. RSS malformed items have
@@ -87,7 +89,7 @@ Actual model: `ProsusAI/finbert`, exact model/tokenizer commit
 `0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031`; Torch 2.14.1, transformers 4.57.6, CPU, two threads,
 deterministic/evaluation/inference mode. Full positive/negative/neutral softmax probabilities persist;
 score is positive minus negative. Probability and SQL constraints reject malformed distributions.
-[Artifact hashes](M3_MODEL_ARTIFACTS.json) include the 437,965,908-byte safetensors weights; weights are
+Artifact hashes (historical evidence archived locally) include the 437,965,908-byte safetensors weights; weights are
 kept outside the source archive. No fallback labels are presented as real inference.
 
 The opt-in actual cached model test **passed**: valid distributions, batch/single consistency within
@@ -178,7 +180,7 @@ labels exclusion and reproducible two-snapshot identity remain explicit.
 Actual loopback HTTP smoke used **real CPU FinBERT and explicitly synthetic price/news inputs**: health,
 readiness, original/unified/sentiment definitions, OpenAPI, local model initialization, zero-repeat inference,
 feature generation/reuse, price generation, a 20-row mixed matrix, news metadata, article probabilities and
-exact contributors all passed. [M3_API_SMOKE.json](M3_API_SMOKE.json) contains computed results. This is
+exact contributors all passed. M3_API_SMOKE.json (historical evidence archived locally) contains computed results. This is
 separate from controlled-model TestClient coverage. Read APIs never calculate or download models. Sector,
 selected-universe and publisher-specific broad series are supported; no automatic broad-score broadcasting
 as company-specific sentiment is performed.
@@ -227,18 +229,18 @@ latency. RSS includes full process lifetime, native model/runtime, ingestion, so
 
 Synthetic throughput is approximately 335 unique article texts/second for this short-headline workload;
 2,000 article/context targets persist, with context outputs reused where inputs are unchanged. Longer
-512-token inputs are not benchmarked as equivalent throughput. [Raw benchmark](M3_SENTIMENT_BENCHMARK.json)
+512-token inputs are not benchmarked as equivalent throughput. Raw benchmark (historical evidence archived locally)
 records actual model/counter/configuration evidence; no hand-authored probabilities are used.
 
 M2 allocation profiling on the existing 20-asset/five-year source found **302.3 MiB tracked peak** during
 pure calculation, excluding already loaded source ORM and most native allocations. Leading live allocations
 were timing lists (~129 MB), timing integers (~67 MB), feature values (~66 MB) and dependency positions
 (~24 MB). Full snapshot materialization, not a speculative model cache, dominates that Python profile.
-[M3_M2_MEMORY_PROFILE.json](M3_M2_MEMORY_PROFILE.json) records line-level allocations. M2's original whole-
+M3_M2_MEMORY_PROFILE.json (historical evidence archived locally) records line-level allocations. M2's original whole-
 process 50-asset benchmark of ~1.37 GiB remains historical; this tracked figure is not directly comparable.
 
 A further **resident FinBERT + full five-year 50-asset price calculation** used **1,717 MiB peak RSS**, taking
-4.326 s for pure price calculation, with feature persistence excluded. [Combined memory](M3_COMBINED_MEMORY.json)
+4.326 s for pure price calculation, with feature persistence excluded. Combined memory (historical evidence archived locally)
 shows that loading the transformer does increase shared-process memory; it is not hidden or claimed free.
 M3 avoids duplicating full price matrices and uses bounded batches, immutable intermediate persistence,
 shared contributor sets and page-level joins. No major M2 rewrite was justified. Keep lightweight core work

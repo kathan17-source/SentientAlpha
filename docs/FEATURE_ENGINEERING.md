@@ -243,9 +243,9 @@ No synchronous timeout/cancellation or job scheduler is implemented; use narrowe
 
 ## Verification, performance and limits
 
-See [Milestone 2 report](MILESTONE2_REPORT.md), measured [20-asset](BENCHMARK_20.json) and
-[50-asset](BENCHMARK_50.json) runs, real IBM check (`REAL_IBM_FEATURE_CHECK.json`, intentionally omitted; see PUBLICATION_SELECTION.md) and
-[actual HTTP smoke evidence](API_SMOKE_M2.json). Reproduce the synthetic workload in an empty SQLite DB:
+See Milestone 2 report (historical evidence archived locally), measured 20-asset (historical evidence archived locally) and
+50-asset (historical evidence archived locally) runs, real IBM check (`REAL_IBM_FEATURE_CHECK.json`, intentionally omitted; see PUBLICATION_SELECTION.md) and
+actual HTTP smoke evidence (historical evidence archived locally). Reproduce the synthetic workload in an empty SQLite DB:
 
 ```sh
 python scripts/benchmark_features.py --assets 20 --database /tmp/empty-benchmark20.db --output /tmp/result20.json

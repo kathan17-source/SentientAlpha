@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # SentientAlpha — Milestone 8 completion report
 
 **COMPLETE for local simulation-only engineering integration**, version0.8.0, schema0010_investment_committee.
@@ -26,7 +28,7 @@ Continues the existing foundation. `sources` reuses M7's audited M2/M3/M6 resolv
 
 ## 3. Files added and modified
 
-New `committee/requests.py`, `sources.py`, `adapters.py`, `engine.py`, `storage.py`; `api/committee.py`; `database/committee_models.py`; migration0010; integration tests; verification/replay scripts. Existing foundation contracts/aggregation/risk are extended. M4 persist gains an optional shared transaction, with default behavior preserved, plus a parent replay guard. API/schema/version/CI and documentation are updated. [CHANGESET_M8.json](CHANGESET_M8.json) lists exact files. All previous test files (covering499 cases) and migrations0001–0009 remain byte-identical.
+New `committee/requests.py`, `sources.py`, `adapters.py`, `engine.py`, `storage.py`; `api/committee.py`; `database/committee_models.py`; migration0010; integration tests; verification/replay scripts. Existing foundation contracts/aggregation/risk are extended. M4 persist gains an optional shared transaction, with default behavior preserved, plus a parent replay guard. API/schema/version/CI and documentation are updated. CHANGESET_M8.json (historical evidence archived locally) lists exact files. All previous test files (covering499 cases) and migrations0001–0009 remain byte-identical.
 
 ## 4. Agents
 

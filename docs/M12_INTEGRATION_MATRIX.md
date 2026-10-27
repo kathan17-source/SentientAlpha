@@ -1,6 +1,6 @@
 # Integration and failure verification matrix
 
-Historical M12 snapshot; current post-release resolutions and remaining blockers are in [POST_RELEASE_VERIFICATION.md](../POST_RELEASE_VERIFICATION.md).
+Historical M12 snapshot; current post-release resolutions and remaining blockers are in POST_RELEASE_VERIFICATION.md (historical evidence archived locally).
 | Boundary / scenario | Actual evidence | Classification |
 |---|---|---|
 | Ingest → versioned SQLite → feature dataset | release_demo invokes existing M1/M2 services, saved dataset HTTP 200 | VERIFIED synthetic integration |
