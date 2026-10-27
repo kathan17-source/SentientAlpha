@@ -23,6 +23,7 @@ import {
 import { api, pageSchema, objectSchema } from '@/lib/api/client';
 import { text, timestamp, type RecordData } from '@/lib/format';
 import { Badge } from './shared/ui';
+import { version } from '../package.json';
 const nav = [
   ['/', 'Overview', LayoutDashboard],
   ['/portfolio', 'Portfolio', Wallet],
@@ -138,7 +139,7 @@ function Shell({ children }: { children: ReactNode }) {
             <div className="workspace-label">
               <span className="workspace-avatar">SA</span>
               <div>
-                Local research workspace<small>Single-user · v0.11.0</small>
+                Local research workspace<small>Single-user · v{version}</small>
               </div>
             </div>
             <div className="simulation-lock">
