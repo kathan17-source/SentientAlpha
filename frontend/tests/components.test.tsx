@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
   Badge,
+  PageHeader,
   Metric,
   Failure,
   Empty,
@@ -98,4 +99,21 @@ it('renders untrusted news as text, never active markup', () => {
   render(<Empty title={'<img src=x onerror=alert(1)>'}>Unknown provider</Empty>);
   expect(screen.getByRole('heading')).toHaveTextContent('<img');
   expect(document.querySelector('img')).toBeNull();
+});
+
+it('keeps a single primary heading when a research subsection uses PageHeader', () => {
+  render(
+    <>
+      <PageHeader title="Portfolio workstation" description="Actual simulated ledger" />
+      <PageHeader
+        title="Numerical allocation research"
+        description="Estimated targets, not holdings"
+        headingLevel={2}
+      />
+    </>,
+  );
+  expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+  expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(
+    'Numerical allocation research',
+  );
 });

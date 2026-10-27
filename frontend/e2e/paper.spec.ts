@@ -33,3 +33,33 @@ test('reconciles real frozen paper event history through the API', async ({ requ
   expect(response.ok()).toBe(true);
   expect((await response.json()).data.equivalent).toBe(true);
 });
+
+test('confirmed pause persists without changing actual holdings or fills', async ({
+  page,
+  request,
+}) => {
+  const sessions = await (await request.get('/api/backend/api/paper/sessions')).json();
+  const normal = sessions.items.find(
+    (row: { mode: string; status: string }) =>
+      row.mode === 'synthetic_demo' && row.status === 'RUNNING',
+  );
+  expect(normal).toBeTruthy();
+  const path = `/api/backend/api/paper/sessions/${normal.id}`;
+  const before = await (await request.get(path)).json();
+  const fills = await (await request.get(`${path}/fills`)).json();
+  expect(fills.items.length).toBeGreaterThan(0);
+  await page.goto('/paper');
+  await page.getByRole('combobox', { name: 'Saved paper session' }).selectOption(normal.id);
+  await page.getByRole('button', { name: 'Pause', exact: true }).click();
+  await page.getByRole('button', { name: 'Confirm reviewed paper command' }).click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole('button', { name: 'Run simulation research' }).click();
+  await expect.poll(async () => (await (await request.get(path)).json()).status).toBe('PAUSED');
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Resume', exact: true })).toBeVisible();
+  await expect(page.getByRole('table', { name: 'Paper ledger holdings' })).toBeVisible();
+  const after = await (await request.get(path)).json();
+  expect(after.portfolio).toEqual(before.portfolio);
+  expect((await (await request.get(`${path}/fills`)).json()).items).toEqual(fills.items);
+});

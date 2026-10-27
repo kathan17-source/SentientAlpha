@@ -265,6 +265,7 @@ export default function Portfolio() {
       <div style={{ marginTop: 28 }}>
         <PageHeader
           title="Numerical allocation research"
+          headingLevel={2}
           description="Existing M5 optimizer results. These are estimated target portfolios and do not alter any simulated ledger."
           tag="Portfolio optimization"
         />
