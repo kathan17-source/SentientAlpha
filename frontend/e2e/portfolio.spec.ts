@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
-import { version } from '../package.json';
+import { version } from '../package.json' with { type: 'json' };
 
 // Real rendered views of release_demo.py. No mocked responses or injected page content.
 test('capture four synthetic portfolio views', async ({ page, request }, info) => {
