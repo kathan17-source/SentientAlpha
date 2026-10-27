@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # SentientAlpha — Milestone 7 delivery report
 
 Version0.7.0; discovery engine7.0.0; migration0009_strategy_discovery. Implemented as bounded,
@@ -33,7 +35,7 @@ policies. No executable expressions or alternate accounting engine. Exact behavi
 
 New grammar/contracts/search/resolver/fitness/research/storage/allocation modules, API router,
 ORM models, migration0009, two test files and four discovery/replay/context verification scripts.
-Version/schema/API wiring and existing CI workflow updated. [Complete changes](CHANGESET_M7.json)
+Version/schema/API wiring and existing CI workflow updated. Complete changes (historical evidence archived locally)
 are audited; every prior test and migration0001–0008 is byte-identical.
 
 ## 4. Search algorithms

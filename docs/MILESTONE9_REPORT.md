@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # Milestone 9 — independent portfolio risk governance
 
 Release0.9.0 · schema0011_risk_management · methodology9.0.0 · verified2026-10-20. Build `c741bc3be50677368dfddf52e193770d83deef0f252d32314396e9dc91711454`.

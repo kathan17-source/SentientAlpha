@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # SentientAlpha — Milestone 5 completion report
 
 Verified 2026-10-14 America/Chicago (some UTC evidence timestamps are October 15).
@@ -44,7 +46,7 @@ verification/replay scripts, optimization guide/report and measured evidence. Up
 app routing/error handler, version metadata, SciPy runtime pin, existing PostgreSQL CI and architecture/
 roadmap/README/OpenAPI. M4 storage only adds a guard directing optimizer-ledger replay to its parent
 experiment. **All original 309 tests and migrations 0001–0006 are byte-identical to the M5 starting
-baseline.** [Changeset](CHANGESET_M5.json); [source hashes](SOURCE_SHA256_M5.json).
+baseline.** Changeset (historical evidence archived locally); source hashes (historical evidence archived locally).
 
 ## 4. Methods implemented
 
@@ -159,7 +161,7 @@ trade/exposure ratios are null; actual fold values remain available. Exact fold 
 ## 16. Ablation status
 
 Price-only, level, momentum and surprise variants are predeclared and all retained in
-[M5_SYNTHETIC_SENTIMENT.json](M5_SYNTHETIC_SENTIMENT.json), with saved fixture/config/hash and exact
+M5_SYNTHETIC_SENTIMENT.json (historical evidence archived locally), with saved fixture/config/hash and exact
 M4 replay. Tiny synthetic OOS forecast errors/direction diagnostics are explicitly nonempirical.
 No arbitrary feature combinations or multiple-testing-adjusted market significance is claimed.
 Genuine ablations remain unavailable because source coverage is incomplete. A valid missing-coverage
@@ -191,8 +193,8 @@ absent; no real historical alpha, long-term performance or licensed coverage is 
 - Actual loopback HTTP at `http://127.0.0.1:8015` creates optimization/frontier/comparison/walk runs,
   retrieves typed pages, reads existing M4 ledger routes and verifies numerical/execution replay.
 
-Captured verification (`VERIFICATION_M5.json`, intentionally omitted; see PUBLICATION_SELECTION.md); [migration](M5_MIGRATION_CHECK.json);
-[HTTP](M5_HTTP_SMOKE.json). Pure solver success tests are not substitutes for these integration checks.
+Captured verification (`VERIFICATION_M5.json`, intentionally omitted; see PUBLICATION_SELECTION.md); migration (historical evidence archived locally);
+HTTP (historical evidence archived locally). Pure solver success tests are not substitutes for these integration checks.
 
 ## 19. Performance and memory
 
@@ -213,7 +215,7 @@ Comparison persistence flush/JSON-encoding/commit time was separately measured a
 seconds for 5/20/50 assets; it excludes source loading, freeze construction/hash and pre-flush work.
 The archive also includes a complete standalone synthetic input/manifest export and an executed
 database-free replay helper. Full JSON reports static end-to-end/source/feature/frontier/API timings and scopes:
-[5](M5_BENCHMARK_5.json), [20](M5_BENCHMARK_20.json), [50](M5_BENCHMARK_50.json).
+5 (historical evidence archived locally), 20 (historical evidence archived locally), 50 (historical evidence archived locally).
 
 Peak RSS includes ingestion, one M2 return output, sources, five objectives, frontier, comparative
 ledgers, walk-forward, persistence, replay and API checks. It is not incremental kernel memory or a
@@ -262,7 +264,7 @@ migration SQL emits successfully; this is structural evidence, **not native exec
 PostgreSQL 16 CI service now includes M5 integration tests but was **not dispatched/executed**. Prior
 WASM negative-test failures remain unresolved; the old 0002 data-query migration remains unsuitable
 for full-chain offline SQL. Original migrations were not altered to hide this.
-[M5_DEPLOYMENT_CHECKS.json](M5_DEPLOYMENT_CHECKS.json).
+M5_DEPLOYMENT_CHECKS.json (historical evidence archived locally).
 
 ## 22. Readiness for M6 — stop here
 

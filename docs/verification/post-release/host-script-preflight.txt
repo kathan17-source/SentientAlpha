@@ -1,1 +1,0 @@
-BLOCKED: Docker CLI absent; enable Docker on the host first

@@ -3,7 +3,7 @@
 Status: full-platform design; **Milestones 1–12 implemented locally; verification limits are documented per milestone**.
 Local SQLite/API and live public IBM retrieval are verified. Native PostgreSQL initialization
 and Docker runtime are blocked; WebAssembly PostgreSQL fallback has failed negative tests.
-See [hardening report](HARDENING_REPORT.md) and [feature architecture](FEATURE_ENGINEERING.md) and [M2 report](MILESTONE2_REPORT.md).
+See hardening report (historical evidence archived locally) and [feature architecture](FEATURE_ENGINEERING.md) and M2 report (historical evidence archived locally).
 The initial repository was empty. No existing application or conventions were replaced.
 
 ## Scope and hard boundaries
@@ -238,7 +238,7 @@ columns and chronological rows, explicit missing policies and online/research av
 Generation is bounded by assets/inputs/output cells/columns/windows and one API generation per
 process. The measured 50-asset workload uses substantial memory; several workers can multiply this
 cost. A distributed worker was not justified or added. PostgreSQL execution is still an outstanding
-verification gate. See [formulas and contracts](FEATURE_ENGINEERING.md) and [executed evidence](MILESTONE2_REPORT.md).
+verification gate. See [formulas and contracts](FEATURE_ENGINEERING.md) and executed evidence (historical evidence archived locally).
 
 ## Implemented Milestone 3
 
@@ -327,12 +327,12 @@ Version0.9.0/schema0011 adds `risk/` contracts, analytics, governance, M4 event 
 
 ## Milestone 10 — implemented local frontend
 
-Next.js10-route workstation → same-origin bounded Next proxy → existing FastAPI/M1–M9 engines → SQLite. Generated OpenAPI types and runtime validation; shared real record catalogs, explicit provenance and no broker path. See [frontend architecture](FRONTEND_ARCHITECTURE.md) for route/component/API/numerical/security decisions and [verification](MILESTONE10_REPORT.md) for local checks and blocked deployment gates. Schema remains0011.
+Next.js10-route workstation → same-origin bounded Next proxy → existing FastAPI/M1–M9 engines → SQLite. Generated OpenAPI types and runtime validation; shared real record catalogs, explicit provenance and no broker path. See [frontend architecture](FRONTEND_ARCHITECTURE.md) for route/component/API/numerical/security decisions and verification (historical evidence archived locally) for local checks and blocked deployment gates. Schema remains0011.
 
 
 ## Milestone 11 — persistent simulated operations
 
-`paper/` adds immutable session configuration, explicit lifecycle, frozen command plans, atomic market events and a bounded optional local worker. Existing M2/M8/M5/M9/M4 modules retain feature/decision/risk/execution/accounting authority. Migration0012 stores operational identities/events and unique IOC fill receipts; existing M4 artifact records remain the financial store. The current daily convention is next-observed-close IOC, never an earlier daily open for a newly created order. Forward clocks are actual; synthetic virtual clocks and historical research stay separate. The Next Paper Trading page uses existing components and actual APIs. See [operating guide](PAPER_TRADING.md) for recovery/limits and [report](MILESTONE11_REPORT.md) for verification. This is single-writer local engineering, not distributed or production-certified execution.
+`paper/` adds immutable session configuration, explicit lifecycle, frozen command plans, atomic market events and a bounded optional local worker. Existing M2/M8/M5/M9/M4 modules retain feature/decision/risk/execution/accounting authority. Migration0012 stores operational identities/events and unique IOC fill receipts; existing M4 artifact records remain the financial store. The current daily convention is next-observed-close IOC, never an earlier daily open for a newly created order. Forward clocks are actual; synthetic virtual clocks and historical research stay separate. The Next Paper Trading page uses existing components and actual APIs. See [operating guide](PAPER_TRADING.md) for recovery/limits and report (historical evidence archived locally) for verification. This is single-writer local engineering, not distributed or production-certified execution.
 
 
-M12 release boundaries, local HTTP protections and deployment limitations are recorded in [final integration matrix](M12_INTEGRATION_MATRIX.md), [final report](MILESTONE12_REPORT.md) and [local operation guide](../DEPLOYMENT.md). Schema remains 0012; no financial-engine ownership changed.
+M12 release boundaries, local HTTP protections and deployment limitations are recorded in [final integration matrix](M12_INTEGRATION_MATRIX.md), final report (historical evidence archived locally) and [local operation guide](../DEPLOYMENT.md). Schema remains 0012; no financial-engine ownership changed.

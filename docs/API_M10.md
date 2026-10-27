@@ -12,4 +12,4 @@ Existing M1–M9 contracts remain authoritative in [OpenAPI](openapi.json). No s
 
 The browser uses `/api/backend/...`; the server forwards allowed requests to fixed `API_BASE_URL`. POST requires an explicit `DASHBOARD_ORIGINS` match. Research creation/replay/stress are allowed only on listed paths; broker/market writes are absent. Requests are bounded, cancelable and errors sanitized. This is loopback single-user integration, not authentication for public hosting.
 
-See [frontend architecture](FRONTEND_ARCHITECTURE.md) and [M10 report](MILESTONE10_REPORT.md) for financial units, timing, request review and validation scope.
+See [frontend architecture](FRONTEND_ARCHITECTURE.md) and M10 report (historical evidence archived locally) for financial units, timing, request review and validation scope.

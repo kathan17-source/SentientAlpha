@@ -1,3 +1,5 @@
+> Dated research record. Original findings and numerical values are preserved. For current test/CI status see [verification](VERIFICATION.md); supporting exports are [retained locally](EVIDENCE.md).
+
 # SentientAlpha — Milestone 4 completion report
 
 Delivered 2026-10-14: package 0.4.0, backtesting engine 4.0.0, migration 0006.
@@ -42,7 +44,7 @@ storage and version module. New API router, two ORM models, migration 0006, doma
 reproducible demo and allocation profiler, engine guide, report and measured JSON evidence.
 Modified app routing/exception handling, expected schema revision/model registration, package metadata,
 README/architecture/roadmap, PostgreSQL CI and one obsolete old endpoint-absence assertion.
-[Exact changeset](CHANGESET_M4.json) and [source hashes](SOURCE_SHA256_M4.json) enumerate delivery files.
+Exact changeset (historical evidence archived locally) and source hashes (historical evidence archived locally) enumerate delivery files.
 Original migrations 0001–0005 and all other original tests remain byte-identical to the pre-M4 baseline.
 
 ## 4. Execution models implemented
@@ -112,7 +114,7 @@ time limits. One job per app process; pages at most 2,000 rows. No OS memory cei
 worker recovery is claimed. The read-only-original migration-copy check preserved **3,220 raw price
 revisions and 230 old feature rows**, plus hashes/counts for every old table. Actual HTTP checks use
 the current loopback API at `http://127.0.0.1:8014` in addition to migrated SQLite TestClient tests.
-[Migration evidence](M4_MIGRATION_CHECK.json); [HTTP evidence](M4_HTTP_SMOKE.json).
+Migration evidence (historical evidence archived locally); HTTP evidence (historical evidence archived locally).
 
 ## 12. Exact automated verification
 
@@ -165,14 +167,14 @@ Events count scheduled open/close/decision events, not per-asset price visits; o
 counted. Peak RSS includes ingestion, SMA generation, loaded sources, retained strategy/comparison
 results, persistence, replay, API checks and walk-forward. It is not the simulator's incremental RAM
 or an apples-to-apples comparison to M2's 44-output workload. Full JSON includes source load, seed,
-SMA, replay timings and database size: [1](M4_BENCHMARK_1.json), [20](M4_BENCHMARK_20.json),
-[50 assets](M4_BENCHMARK_50.json). No claim that backtesting fixes M2's approximately 1.37 GiB peak.
+SMA, replay timings and database size: 1 (historical evidence archived locally), 20 (historical evidence archived locally),
+50 assets (historical evidence archived locally). No claim that backtesting fixes M2's approximately 1.37 GiB peak.
 
 Independent frozen-input allocation profile: source current **140.3 MiB**,
 tracked simulation peak **233.8 MiB**, incremental peak
 **93.6 MiB**. Major retained allocations are parsed frozen
 JSON and ledger/order outputs; this excludes interpreter/native memory and is **not RSS**.
-[Allocation profile](M4_MEMORY_PROFILE.json). Bounded outputs/pagination and one job per process are
+Allocation profile (historical evidence archived locally). Bounded outputs/pagination and one job per process are
 used; no GPU, queue, distributed compute or unmeasured performance claim is introduced.
 
 ## 16. Executed demonstration / real-market status
@@ -208,7 +210,7 @@ initdb was retried once and fails `shmget: Operation not permitted`. M4-only Pos
 passes structurally; full-chain offline emission fails the retained 0002 data-query precondition and
 is not repaired by altering historical migrations. Existing PostgreSQL 16 CI service now includes M4
 integration tests, **not dispatched or successfully run**. Prior WASM negative tests remain unresolved
-and are not native certification. [Exact checks](M4_DEPLOYMENT_CHECKS.json).
+and are not native certification. Exact checks (historical evidence archived locally).
 
 ## 19. Preparation for M5 — no M5 implementation
 
